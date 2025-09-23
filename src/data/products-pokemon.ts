@@ -241,7 +241,7 @@ export const productsPokemon: TypeProductCard[] = [
   {
     id: "sylveon-01",
     name: "Sylveon",
-    price: 1200,
+    price: 3000,
     image: [
       imgSylveon01,
     ],
