@@ -132,6 +132,7 @@
 
 @media (prefers-color-scheme: dark) {
   .product-card {
+    margin: 4px;
     background-color: #ffffff; /* Fondo blanco */
     color: #000000; /* Texto negro */
   }
@@ -159,6 +160,7 @@
 /* Tema claro */
 @media (prefers-color-scheme: light) {
   .product-card {
+    margin: 4px;
     background-color: #333333; /* Fondo oscuro */
     color: #ffffff; /* Texto blanco */
   }
@@ -186,6 +188,7 @@
 /* Tema predeterminado (oscuro si no está definido) */
 @media not (prefers-color-scheme: light), not (prefers-color-scheme: dark) {
   .product-card {
+    margin: 4px;
     background-color: #ffffff; /* Fondo blanco */
     color: #000000; /* Texto negro */
   }
