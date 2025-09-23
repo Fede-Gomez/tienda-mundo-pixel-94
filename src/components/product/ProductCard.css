@@ -1,25 +1,3 @@
-/* Estilo general de las tarjetas */
-.product-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  padding: 8px;
-  background-color: #fff;
-}
-
-.product-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.product-image {
-  width: 100%;
-  height: 360px;
-  object-fit: contain;
-  background-color: #f9f9f9;
-}
-
 /* Contenedor de la información del producto */
 .product-info {
   display: flex;
@@ -150,4 +128,84 @@
 
 .carousel-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+  .product-card {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+  }
+
+  .product-stock.in-stock {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Verde oscuro */
+  }
+
+  .product-stock.out-of-stock {
+    background-color: #f8d7da; /* Rojo claro */
+    color: #721c24; /* Rojo oscuro */
+  }
+
+  .product-button {
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Texto blanco */
+  }
+
+  .product-button:hover {
+    background-color: #0056b3; /* Azul oscuro */
+  }
+}
+
+/* Tema claro */
+@media (prefers-color-scheme: light) {
+  .product-card {
+    background-color: #333333; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+  }
+
+  .product-stock.in-stock {
+    background-color: #155724; /* Verde oscuro */
+    color: #d4edda; /* Verde claro */
+  }
+
+  .product-stock.out-of-stock {
+    background-color: #721c24; /* Rojo oscuro */
+    color: #f8d7da; /* Rojo claro */
+  }
+
+  .product-button {
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Texto blanco */
+  }
+
+  .product-button:hover {
+    background-color: #0056b3; /* Azul oscuro */
+  }
+}
+
+/* Tema predeterminado (oscuro si no está definido) */
+@media not (prefers-color-scheme: light), not (prefers-color-scheme: dark) {
+  .product-card {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+  }
+
+  .product-stock.in-stock {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Verde oscuro */
+  }
+
+  .product-stock.out-of-stock {
+    background-color: #f8d7da; /* Rojo claro */
+    color: #721c24; /* Rojo oscuro */
+  }
+
+  .product-button {
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Texto blanco */
+  }
+
+  .product-button:hover {
+    background-color: #0056b3; /* Azul oscuro */
+  }
 }
