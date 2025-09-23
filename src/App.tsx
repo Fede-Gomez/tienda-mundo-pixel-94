@@ -5,11 +5,8 @@ import "./App.css";
 import FloatingCart from "./components/floating-cart/FloatingCart";
 
 function App() {
-  const path = import.meta.env.MODE === "production" 
-        ? "/tienda-mundo-pixel-94/" 
-        : "/"
   return (
-    <BrowserRouter basename={path}>
+    <BrowserRouter basename={"/"}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/category/:id" element={<CategoryPage />} />
