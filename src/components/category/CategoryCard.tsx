@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import "./CategoryCard.css";
 
 interface Props {
+  name: string;
   slug: string;
   images: string[]; // Lista de imágenes de la categoría
 }
 
-export default function CategoryCard({ slug, images }: Props) {
+export default function CategoryCard({ name, slug, images }: Props) {
   const [currentImage, setCurrentImage] = useState<string>(
     images && images.length > 0 ? images[0] : "/assets/placeholder.jpg" // Usa una imagen de placeholder si no hay imágenes
   );
@@ -31,7 +32,7 @@ export default function CategoryCard({ slug, images }: Props) {
           alt={slug}
           className="card-image"
         />
-        <h2 className="card-title">{slug}</h2>
+        <h2 className="card-title">{name}</h2>
       </div>
     </Link>
   );

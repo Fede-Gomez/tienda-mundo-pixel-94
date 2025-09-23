@@ -8,6 +8,7 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
       {categories.map((category) => (
         <CategoryCard
           key={category.id}
+          name={category.name}
           slug={category.id}
           images={category.products.flatMap((product) => product.image)} // Combina las imágenes de los productos
         />
