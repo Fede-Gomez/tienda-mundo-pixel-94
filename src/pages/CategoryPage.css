@@ -1,0 +1,53 @@
+/* Estilo general de la página */
+.category-page {
+  padding: 16px;
+}
+
+.back-link {
+  color: #007bff;
+  text-decoration: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.category-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.category-not-found {
+  padding: 16px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Contenedor de los productos */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Una columna por defecto */
+  gap: 16px; /* Espaciado entre las tarjetas */
+}
+
+@media (min-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas para tablets pequeñas */
+  }
+}
+
+@media (min-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas para tablets grandes */
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas para pantallas grandes */
+  }
+}
