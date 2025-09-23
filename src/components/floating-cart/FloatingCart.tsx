@@ -50,7 +50,7 @@ export default function FloatingCart() {
           <ul>
             {cart.map((item) => (
               <li key={`${item.id}-${item.option}`} className="cart-item">
-                <img src={item.image} alt={item.name} className="cart-item-image" />
+                <img src={item.image[0]} alt={item.name} className="cart-item-image" />
                 <div className="cart-item-details">
                   <p className="cart-item-name">{item.name} ({item.option})</p>
                   <div className="cart-item-row">
