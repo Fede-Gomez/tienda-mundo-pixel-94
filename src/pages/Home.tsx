@@ -3,11 +3,14 @@ import { categories } from "../data/categories";
 import "./Home.css";
 
 export default function Home() {
+  const pathLogo = import.meta.env.MODE === "production" 
+        ? "/tienda-mundo-pixel-94/" 
+        : "/"
   return (
     <div className="home">
       <header className="home-header">
         <img
-          src="../../public/logo.jpg"
+          src={`${pathLogo}logo.jpg`}
           alt="Mundo Pixel Logo"
           className="home-logo"
         />

@@ -6,7 +6,9 @@ export default function FloatingCart() {
   const { cart, updateQuantity } = useCart();
   const [isVisible, setIsVisible] = useState(false);
 
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  // Calcular el total de productos y el total del precio
+  const totalProducts = cart.reduce((sum, item) => sum + item.quantity, 0); // Suma todas las cantidades
+  const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0); // Suma el precio total
 
   const generateWhatsAppMessage = () => {
     if (cart.length === 0) return "";
@@ -34,7 +36,8 @@ export default function FloatingCart() {
         className="floating-cart"
         onClick={() => setIsVisible((prev) => !prev)}
       >
-        🛒 {cart.length} {cart.length === 1 ? "item" : "items"}
+        {totalProducts !== 0 ? `$${totalPrice}` : "Vacío"} 🛒
+        {totalProducts > 0 && <span className="cart-badge">{totalProducts}</span>} {/* Badge con la cantidad */}
       </div>
       <div className={`cart-list ${isVisible ? "fade-in" : "fade-out"}`}>
         <button
@@ -77,7 +80,7 @@ export default function FloatingCart() {
           </ul>
         )}
         <div className="cart-total">
-          <p>Total: ${total}</p>
+          <p>Total: ${totalPrice}</p>
         </div>
         {cart.length > 0 && (
           <button

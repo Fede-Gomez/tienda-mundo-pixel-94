@@ -1,18 +1,19 @@
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import CategoryPage from "./pages/CategoryPage";
 import "./App.css";
 import FloatingCart from "./components/floating-cart/FloatingCart";
 
 function App() {
+  const path = import.meta.env.MODE === "production" 
+        ? "/tienda-mundo-pixel-94/" 
+        : "/"
   return (
-    <BrowserRouter basename="/tienda-mundo-pixel-94">
-      <Router>
+    <BrowserRouter basename={path}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/category/:id" element={<CategoryPage />} />
         </Routes>
-      </Router>
        <FloatingCart />
     </BrowserRouter>
   );
