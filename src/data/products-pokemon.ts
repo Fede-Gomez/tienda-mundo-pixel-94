@@ -28,6 +28,14 @@ import imgTyplosion01 from "../assets/pokemon/typlosion-01.jpg";
 import imgUmbreon01 from "../assets/pokemon/umbreon-01.jpg";
 import imgVaporeon01 from "../assets/pokemon/vaporeon-01.jpg";
 import imgWartortle01 from "../assets/pokemon/wartortle-01.jpg";
+import imgArcanine01 from "../assets/pokemon/arcanine-01.jpg";
+import imgCroconaw01 from "../assets/pokemon/croconaw-01.jpg";
+import imgGardevoirShiny01 from "../assets/pokemon/gardevoir-shiny-01.jpg";
+import imgHydregon01 from "../assets/pokemon/hydregon-01.jpg";
+import imgInfernape01 from "../assets/pokemon/infernape-01.jpg";
+import imgMetagrossShiny01 from "../assets/pokemon/metagross-shiny-01.jpg";
+import imgStaraptor01 from "../assets/pokemon/staraptor-01.jpg";
+import imgTotodile01 from "../assets/pokemon/totodile-01.jpg";
 
 
 export const productsPokemon: TypeProductCard[] = [
@@ -289,6 +297,78 @@ export const productsPokemon: TypeProductCard[] = [
     price: 3000,
     image: [
       imgWartortle01,
+    ],
+    stock: true
+  },
+  {
+    id: "arcanine-01",
+    name: "Arcanine",
+    price: 4500,
+    image: [
+      imgArcanine01
+    ],
+    stock: true
+  },
+  {
+    id: "croconaw-01",
+    name: "Croconaw",
+    price: 3000,
+    image: [
+      imgCroconaw01
+    ],
+    stock: true
+  },
+  {
+    id: "gardevoir-shiny-01",
+    name: "Gardevoir Shiny",
+    price: 4000,
+    image: [
+      imgGardevoirShiny01,
+    ],
+    stock: true
+  },
+  {
+    id: "hydregon-01",
+    name: "Hydregon",
+    price: 4500,
+    image: [
+      imgHydregon01,
+    ],
+    stock: true
+  },
+  {
+    id: "infernape-01",
+    name: "Infernape",
+    price: 3500,
+    image: [
+      imgInfernape01,
+    ],
+    stock: true
+  },
+  {
+    id: "metagross-shiny-01",
+    name: "Metagross Shiny",
+    price: 4000,
+    image: [
+      imgMetagrossShiny01,
+    ],
+    stock: true
+  },
+  {
+    id: "staraptor-01",
+    name: "Staraptor",
+    price: 3500,
+    image: [
+      imgStaraptor01,
+    ],
+    stock: true
+  },
+  {
+    id: "totodile-01",
+    name: "Totodile",
+    price: 2500,
+    image: [
+      imgTotodile01,
     ],
     stock: true
   },

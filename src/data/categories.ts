@@ -1,9 +1,11 @@
 import type { TypeCategory } from "../types/category";
+import { productsComoEntrenarATuDragon } from "./products-como-entrenar-a-tu-dragon";
 import { productsCuphead } from "./products-cuphead";
 import { productsDigimon } from "./products-digimon";
 import { productsDragonBall } from "./products-dragon-ball";
 import { productsGodOfWar } from "./products-god-of-war";
 import { productsHarryPotter } from "./products-harry-potter";
+import { productsHollowKnight } from "./products-hollow-knight";
 import { productsOriAndTheBlindForest } from "./products-ori-and-the-blind-forest";
 import { productsPokemon } from "./products-pokemon";
 import { productsResidentEvil } from "./products-resident-evil";
@@ -20,6 +22,12 @@ const getRandomImage = (products: { image: string[] }[]) => {
 };
 
 export const categories: TypeCategory[] = [
+  {
+    id: "como-entrenar-a-tu-dragon",
+    name: "Como entrenar a tu dragón",
+    image: getRandomImage(productsComoEntrenarATuDragon), // Imagen aleatoria
+    products: productsComoEntrenarATuDragon,
+  },
   {
     id: "cuphead",
     name: "Cuphead",
@@ -49,6 +57,12 @@ export const categories: TypeCategory[] = [
     name: "Harry Potter",
     image: getRandomImage(productsHarryPotter), // Imagen aleatoria
     products: productsHarryPotter,
+  },
+  {
+    id: "hollow-knight",
+    name: "Hollow Knight",
+    image: getRandomImage(productsHollowKnight), // Imagen aleatoria
+    products: productsHollowKnight,
   },
   {
     id: "ori-and-the-blind-forest",
