@@ -174,3 +174,26 @@
   font-weight: bold;
   text-align: right;
 }
+
+@media (prefers-color-scheme: dark) {
+  .cart-item-price, .cart-item-name, .cart-item-quantity-text {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+  }
+}
+
+/* Tema claro */
+@media (prefers-color-scheme: light) {
+  .cart-item-price, .cart-item-name, .cart-item-quantity-text {
+    background-color: #333333; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+  }
+}
+
+/* Tema predeterminado (oscuro si no está definido) */
+@media not (prefers-color-scheme: light), not (prefers-color-scheme: dark) {
+  .cart-item-price, .cart-item-name, .cart-item-quantity-text {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+  }
+}

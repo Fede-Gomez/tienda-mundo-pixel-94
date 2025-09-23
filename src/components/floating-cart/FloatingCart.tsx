@@ -65,7 +65,7 @@ export default function FloatingCart() {
                       >
                         -
                       </button>
-                      <span>{item.quantity}</span>
+                      <span className="cart-item-quantity-text">{item.quantity}</span>
                       <button
                         className="quantity-button"
                         onClick={() => updateQuantity(item.id, item.option, item.quantity + 1)}
@@ -80,7 +80,7 @@ export default function FloatingCart() {
           </ul>
         )}
         <div className="cart-total">
-          <p>Total: ${totalPrice}</p>
+          <p className="cart-total-text">Total: ${totalPrice}</p>
         </div>
         {cart.length > 0 && (
           <button
