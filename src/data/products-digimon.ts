@@ -29,6 +29,17 @@ import imgGarurumon01 from "../assets/digimon/figura/garurumon-01.jpg";
 import imgVeemon01 from "../assets/digimon/figura/vmon-01.jpg";
 import imgWormmon01 from "../assets/digimon/figura/wormmon-01.jpg";
 import imgXveemon01 from "../assets/digimon/figura/xvmon-01.jpg";
+import imgFlamedramon01 from "../assets/digimon/figura/flamedramon-01.jpg";
+import imgAlphamon01 from "../assets/digimon/dot/alphamon-01.jpg";
+import imgDeathXDorugoramon01 from "../assets/digimon/dot/deathXDorugoramon-01.jpg";
+import imgDexDorugamon01 from "../assets/digimon/dot/dexDorugamon-01.jpg";
+import imgDexDorugreymon01 from "../assets/digimon/dot/dexDorugreymon-01.jpg";
+import imgDodomon01 from "../assets/digimon/dot/dodomon-01.jpg";
+import imgDorimon01 from "../assets/digimon/dot/dorimon-01.jpg";
+import imgDorugamon01 from "../assets/digimon/dot/dorugamon-01.jpg";
+import imgDorugoramon01 from "../assets/digimon/dot/dorugoramon-01.jpg";
+import imgDorugreymon01 from "../assets/digimon/dot/dorugreymon-01.jpg";
+import imgDorumon02 from "../assets/digimon/dot/dorumon-02.jpg";
 
 
 export const productsDigimon: TypeProductCard[] = [
@@ -302,5 +313,105 @@ export const productsDigimon: TypeProductCard[] = [
     ],
     stock: true
   },
+  {
+    id: "flamedramon-01",
+    name: "Flamedramon",
+    price: 7000,
+    image: [
+      imgFlamedramon01
+    ],
+    stock: true
+  },
+  {
+    id: "alphamon-01",
+    name: "Alphamon",
+    price: 2000,
+    image: [
+      imgAlphamon01
+    ],
+    stock: true
+  },
+  {
+    id: "deathXDorugoramon-01",
+    name: "Death-X Dorugoramon",
+    price: 2000,
+    image: [
+      imgDeathXDorugoramon01
+    ],
+    stock: true
+  },
+  {
+    id: "dexDorugamon-01",
+    name: "Dex Dorugamon",
+    price: 2000,
+    image: [
+      imgDexDorugamon01
+    ],
+    stock: true
+  },
+  {
+    id: "dexDorugreymon-01",
+    name: "Dex Dorugreymon",
+    price: 2000,
+    image: [
+      imgDexDorugreymon01
+    ],
+    stock: true
+  },
+  {
+    id: "dodomon-01",
+    name: "Dodomon",
+    price: 2000,
+    image: [
+      imgDodomon01
+    ],
+    stock: true
+  },
+  {
+    id: "dorimon-01",
+    name: "Dorimon",
+    price: 2000,
+    image: [
+      imgDorimon01
+    ],
+    stock: true
+  },
+  {
+    id: "dorugamon-01",
+    name: "Dorugamon",
+    price: 2000,
+    image: [
+      imgDorugamon01
+    ],
+    stock: true
+  },
+  {
+    id: "dorugoramon-01",
+    name: "Dorugoramon",
+    price: 2000,
+    image: [
+      imgDorugoramon01
+    ],
+    stock: true
+  },
+  {
+    id: "dorugreymon-01",
+    name: "Dorugreymon",
+    price: 2000,
+    image: [
+      imgDorugreymon01
+    ],
+    stock: true
+  },
+  {
+    id: "dorumon-02",
+    name: "Dorumon",
+    price: 2000,
+    image: [
+      imgDorumon02
+    ],
+    stock: true
+  },
+
 
 ];

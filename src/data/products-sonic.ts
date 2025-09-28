@@ -6,6 +6,7 @@ import cabezaKnuckles01 from "../assets/sonic/cabeza-knuckles-01.jpeg";
 import cabezaAmy01 from "../assets/sonic/cabeza-amy-01.jpeg";
 import cabezaEggman01 from "../assets/sonic/cabeza-eggman-01.jpeg";
 import cabezaShadow01 from "../assets/sonic/cabeza-shadow-01.jpeg";
+import imgSonic01 from "../assets/sonic/sonic-01.jpg";
 
 export const productsSonic: TypeProductCard[] = [
   {
@@ -61,5 +62,14 @@ export const productsSonic: TypeProductCard[] = [
       cabezaShadow01
     ],
     stock: false
+  },
+  {
+    id: "sonic-01",
+    name: "Sonic",
+    price: 5500,
+    image: [
+      imgSonic01
+    ],
+    stock: true
   },
 ];
