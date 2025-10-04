@@ -208,7 +208,7 @@ export const productsDigimon: TypeProductCard[] = [
   {
     id: "metalgreymon-dot-01",
     name: "Metalgreymon DOT",
-    price: 2000,
+    price: 2500,
     image: [
       imgMetalgreymonDot01
     ],
@@ -325,7 +325,7 @@ export const productsDigimon: TypeProductCard[] = [
   {
     id: "alphamon-01",
     name: "Alphamon",
-    price: 2000,
+    price: 2500,
     image: [
       imgAlphamon01
     ],
@@ -334,7 +334,7 @@ export const productsDigimon: TypeProductCard[] = [
   {
     id: "deathXDorugoramon-01",
     name: "Death-X Dorugoramon",
-    price: 2000,
+    price: 2500,
     image: [
       imgDeathXDorugoramon01
     ],
@@ -343,7 +343,7 @@ export const productsDigimon: TypeProductCard[] = [
   {
     id: "dexDorugamon-01",
     name: "Dex Dorugamon",
-    price: 2000,
+    price: 2500,
     image: [
       imgDexDorugamon01
     ],
@@ -352,7 +352,7 @@ export const productsDigimon: TypeProductCard[] = [
   {
     id: "dexDorugreymon-01",
     name: "Dex Dorugreymon",
-    price: 2000,
+    price: 2500,
     image: [
       imgDexDorugreymon01
     ],
@@ -361,7 +361,7 @@ export const productsDigimon: TypeProductCard[] = [
   {
     id: "dodomon-01",
     name: "Dodomon",
-    price: 2000,
+    price: 1500,
     image: [
       imgDodomon01
     ],
@@ -370,7 +370,7 @@ export const productsDigimon: TypeProductCard[] = [
   {
     id: "dorimon-01",
     name: "Dorimon",
-    price: 2000,
+    price: 1500,
     image: [
       imgDorimon01
     ],
@@ -388,7 +388,7 @@ export const productsDigimon: TypeProductCard[] = [
   {
     id: "dorugoramon-01",
     name: "Dorugoramon",
-    price: 2000,
+    price: 2500,
     image: [
       imgDorugoramon01
     ],
@@ -397,7 +397,7 @@ export const productsDigimon: TypeProductCard[] = [
   {
     id: "dorugreymon-01",
     name: "Dorugreymon",
-    price: 2000,
+    price: 2500,
     image: [
       imgDorugreymon01
     ],
