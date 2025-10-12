@@ -13,6 +13,10 @@ export const productsDragonBall: TypeProductCard[] = [
     image: [
       imgGoku01
     ],
+            size:{
+      ancho: 6.7,
+      alto: 9.1
+    },
     stock: true
   },
   {
@@ -22,6 +26,10 @@ export const productsDragonBall: TypeProductCard[] = [
     image: [
       imgGohan01
     ],
+            size:{
+      ancho: 5.4,
+      alto: 8.6
+    },
     stock: true
   },
   {
@@ -31,6 +39,10 @@ export const productsDragonBall: TypeProductCard[] = [
     image: [
       imgRadarDelDragon01
     ],
+            size:{
+      ancho: 4.6,
+      alto: 5.7
+    },
     stock: true
   },
 ];

@@ -11,6 +11,10 @@ export const productsComoEntrenarATuDragon: TypeProductCard[] = [
     image: [
       imgFuriaNocturnaNegra
     ],
+    size:{
+      ancho:7.8,
+      alto:8.32,
+    },
     stock: true
   },
   {
@@ -20,6 +24,10 @@ export const productsComoEntrenarATuDragon: TypeProductCard[] = [
     image: [
       imgFuriaNocturnaBlanca
     ],
+    size:{
+      ancho:7.8,
+      alto:8.32,
+    },
     stock: true
   },
 ];

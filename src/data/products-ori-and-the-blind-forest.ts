@@ -11,6 +11,10 @@ export const productsOriAndTheBlindForest: TypeProductCard[] = [
     image: [
       imgOri01
     ],
+    size:{
+      ancho: 7.5,
+      alto: 7.8
+    },
     stock: true
   },
 ];

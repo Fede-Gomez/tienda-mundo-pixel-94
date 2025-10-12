@@ -46,6 +46,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgBayleef01,
     ],
+    size:{
+      ancho: 5.2,
+      alto: 5.9
+    },
     stock: true
   },
   {
@@ -55,6 +59,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgBlastoise01,
     ],
+    size:{
+      ancho: 8.8 ,
+      alto: 6.2
+    },
     stock: true
   },
   {
@@ -64,6 +72,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgBlaziken01,
     ],
+    size:{
+      ancho: 5.7,
+      alto: 6.7
+    },
     stock: true
   },
   {
@@ -73,6 +85,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgCharmander01,
     ],
+    size:{
+      ancho: 5.4,
+      alto: 4.6
+    },
     stock: true
   },
   {
@@ -82,6 +98,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgCharmeleon01,
     ],
+    size:{
+      ancho: 5.7,
+      alto: 5.7
+    },
     stock: true
   },
   {
@@ -91,6 +111,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgChicorita01,
     ],
+    size:{
+      ancho: 7.8,
+      alto: 6.2
+    },
     stock: true
   },
   {
@@ -100,6 +124,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgCombusken01,
     ],
+    size:{
+      ancho: 5.7,
+      alto: 6.5
+    },
     stock: true
   },
   {
@@ -109,6 +137,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgEevee01,
     ],
+    size:{
+      ancho: 4.4,
+      alto: 4.6
+    },
     stock: true
   },
   {
@@ -118,6 +150,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgEspeon01,
     ],
+    size:{
+      ancho: 7,
+      alto: 5.4
+    },
     stock: true
   },
   {
@@ -127,6 +163,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgFlareon01,
     ],
+    size:{
+      ancho: 6,
+      alto: 5.4
+    },
     stock: true
   },
   {
@@ -136,6 +176,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgGlaceon01,
     ],
+    size:{
+      ancho: 7,
+      alto: 6
+    },
     stock: true
   },
   {
@@ -145,6 +189,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgJolteon01,
     ],
+    size:{
+      ancho: 5,
+      alto: 5.4
+    },
     stock: true
   },
   {
@@ -154,6 +202,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgLeafeon01,
     ],
+    size:{
+      ancho: 6.5,
+      alto: 5.7
+    },
     stock: true
   },
   {
@@ -163,6 +215,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgMarshtomp01,
     ],
+    size:{
+      ancho: 5.2,
+      alto: 5.4
+    },
     stock: true
   },
   {
@@ -172,6 +228,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgMeganium01,
     ],
+    size:{
+      ancho: 6,
+      alto: 7
+    },
     stock: true
   },
   {
@@ -181,6 +241,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgMudkip01,
     ],
+    size:{
+      ancho: 5,
+      alto: 4.6
+    },
     stock: true
   },
   {
@@ -190,6 +254,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgPokeball01,
     ],
+    size:{
+      ancho: 3.1,
+      alto: 3.1
+    },
     stock: true
   },
   {
@@ -199,6 +267,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgPokeball02,
     ],
+    size:{
+      ancho: 3.1,
+      alto: 3.1
+    },
     stock: true
   },
   {
@@ -208,6 +280,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgPokeball03,
     ],
+    size:{
+      ancho: 3.1,
+      alto: 3.1
+    },
     stock: true
   },
   {
@@ -217,6 +293,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgPokeball04,
     ],
+    size:{
+      ancho: 3.1,
+      alto: 3.1
+    },
     stock: true
   },
   {
@@ -226,6 +306,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgQuilava01,
     ],
+    size:{
+      ancho: 6,
+      alto: 5.2
+    },
     stock: true
   },
   {
@@ -235,6 +319,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgSceptile01,
     ],
+    size:{
+      ancho: 7.2,
+      alto: 6.7
+    },
     stock: true
   },
   {
@@ -244,6 +332,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgSwampert01,
     ],
+    size:{
+      ancho: 6.7,
+      alto: 6.5
+    },
     stock: true
   },
   {
@@ -253,6 +345,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgSylveon01,
     ],
+    size:{
+      ancho: 5.7,
+      alto: 6
+    },
     stock: true
   },
   {
@@ -262,6 +358,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgTorchic01,
     ],
+    size:{
+      ancho: 3.3,
+      alto: 5
+    },
     stock: true
   },
   {
@@ -271,6 +371,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgTyplosion01,
     ],
+    size:{
+      ancho: 6,
+      alto: 6.5
+    },
     stock: true
   },
   {
@@ -280,6 +384,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgUmbreon01,
     ],
+    size:{
+      ancho: 5.2,
+      alto: 5.4
+    },
     stock: true
   },
   {
@@ -289,6 +397,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgVaporeon01,
     ],
+    size:{
+      ancho: 6,
+      alto: 5.4
+    },
     stock: true
   },
   {
@@ -298,6 +410,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgWartortle01,
     ],
+    size:{
+      ancho: 8.8,
+      alto: 6.2
+    },
     stock: true
   },
   {
@@ -307,6 +423,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgArcanine01
     ],
+    size:{
+      ancho: 7.5,
+      alto: 7
+    },
     stock: true
   },
   {
@@ -316,6 +436,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgCroconaw01
     ],
+    size:{
+      ancho: 5.4,
+      alto: 6.5
+    },
     stock: true
   },
   {
@@ -325,6 +449,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgGardevoirShiny01,
     ],
+    size:{
+      ancho: 6.7,
+      alto: 6.2
+    },
     stock: true
   },
   {
@@ -334,6 +462,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgHydregon01,
     ],
+    size:{
+      ancho: 7.5,
+      alto: 6.5
+    },
     stock: true
   },
   {
@@ -343,6 +475,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgInfernape01,
     ],
+    size:{
+      ancho: 6.7,
+      alto: 6.2
+    },
     stock: true
   },
   {
@@ -352,6 +488,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgMetagrossShiny01,
     ],
+    size:{
+      ancho: 8.4,
+      alto: 5.7
+    },
     stock: true
   },
   {
@@ -361,6 +501,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgStaraptor01,
     ],
+    size:{
+      ancho: 6,
+      alto: 6.5
+    },
     stock: true
   },
   {
@@ -370,6 +514,10 @@ export const productsPokemon: TypeProductCard[] = [
     image: [
       imgTotodile01,
     ],
+    size:{
+      ancho: 4.6,
+      alto: 4.6
+    },
     stock: true
   },
 

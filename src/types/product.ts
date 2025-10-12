@@ -4,6 +4,10 @@ export interface TypeProductCard {
   name: string;
   price: number;
   image: string[]; // Cambiamos a un arreglo de imágenes
+  size:{
+    alto:number;
+    ancho:number;
+  }
   stock: boolean;
 }
 

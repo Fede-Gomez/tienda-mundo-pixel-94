@@ -50,6 +50,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice1Dot01
     ],
+    size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -59,6 +63,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice2Dot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -68,6 +76,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice3Dot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -77,6 +89,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice4Dot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -86,6 +102,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice5Dot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -95,6 +115,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice6Dot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -104,6 +128,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice7Dot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -113,6 +141,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice8Dot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -122,6 +154,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgAgumonDot01
     ],
+    size:{
+      ancho: 3.9,
+      alto: 3.9
+    },
     stock: true
   },
   {
@@ -131,6 +167,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgBiyomonDot01
     ],
+        size:{
+      ancho: 3.6,
+      alto: 3.9
+    },
     stock: true
   },
   {
@@ -140,6 +180,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorumonDot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -149,6 +193,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGabumonDot01
     ],
+        size:{
+      ancho: 3.6,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -158,6 +206,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGarurumonDot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 3.9
+    },
     stock: true
   },
   {
@@ -167,6 +219,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGatomonDot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.6
+    },
     stock: true
   },
   {
@@ -176,6 +232,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGomamonDot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 3.3
+    },
     stock: true
   },
   {
@@ -185,6 +245,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGreymonDot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -194,6 +258,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGuilmonDot01
     ],
+        size:{
+      ancho: 3.9,
+      alto: 3.9
+    },
     stock: true
   },
   {
@@ -202,7 +270,10 @@ export const productsDigimon: TypeProductCard[] = [
     price: 2000,
     image: [
       imgKabuterimonDot01
-    ],
+    ],    size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -212,6 +283,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgMetalgreymonDot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -221,6 +296,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgOmnimonDot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 3.6
+    },
     stock: true
   },
   {
@@ -230,6 +309,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgPalmonDot01
     ],
+        size:{
+      ancho: 3.1,
+      alto: 3.9
+    },
     stock: true
   },
   {
@@ -239,6 +322,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgPatamonDot01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 3.6
+    },
     stock: true
   },
   {
@@ -248,6 +335,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgRenamonDot01
     ],
+        size:{
+      ancho: 3.9,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -257,6 +348,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgTentomonDot01
     ],
+            size:{
+      ancho: 3.9,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -266,6 +361,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgTerriermonDot01
     ],
+        size:{
+      ancho: 3.9,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -275,6 +374,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgAgumon01
     ],
+        size:{
+      ancho: 5.7,
+      alto: 6.7
+    },
     stock: true
   },
   {
@@ -284,6 +387,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGarurumon01
     ],
+        size:{
+      ancho: 9.8,
+      alto: 7.8
+    },
     stock: true
   },
   {
@@ -293,6 +400,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgVeemon01
     ],
+        size:{
+      ancho: 5.4,
+      alto: 6.7
+    },
     stock: true
   },
   {
@@ -302,6 +413,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgWormmon01
     ],
+        size:{
+      ancho: 5.9,
+      alto: 6.2
+    },
     stock: true
   },
   {
@@ -311,6 +426,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgXveemon01
     ],
+        size:{
+      ancho: 9.1,
+      alto: 9.1
+    },
     stock: true
   },
   {
@@ -320,6 +439,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgFlamedramon01
     ],
+        size:{
+      ancho: 9.1,
+      alto: 11.2
+    },
     stock: true
   },
   {
@@ -329,6 +452,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgAlphamon01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -338,6 +465,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDeathXDorugoramon01
     ],
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -347,6 +478,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDexDorugamon01
     ],
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -356,6 +491,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDexDorugreymon01
     ],
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -365,6 +504,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDodomon01
     ],
+            size:{
+      ancho: 2.8,
+      alto: 2.6
+    },
     stock: true
   },
   {
@@ -374,6 +517,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorimon01
     ],
+            size:{
+      ancho: 3.6,
+      alto: 2.8
+    },
     stock: true
   },
   {
@@ -383,6 +530,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorugamon01
     ],
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -392,6 +543,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorugoramon01
     ],
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -401,6 +556,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorugreymon01
     ],
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
   {
@@ -410,6 +569,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorumon02
     ],
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
     stock: true
   },
 

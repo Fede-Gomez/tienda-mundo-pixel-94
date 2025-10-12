@@ -11,6 +11,10 @@ export const productsGodOfWar: TypeProductCard[] = [
     image: [
       imgKratos01
     ],
+            size:{
+      ancho: 5.9,
+      alto: 10.1
+    },
     stock: true
   },
 ];

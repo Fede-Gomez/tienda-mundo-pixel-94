@@ -23,6 +23,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCrisRedfield01
     ],
+    size:{
+      ancho: 7,
+      alto: 7.5
+    },
     stock: true
   },
   {
@@ -32,6 +36,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgJillValentine01
     ],
+    size:{
+      ancho: 7.5,
+      alto: 7.8
+    },
     stock: true
   },
   {
@@ -41,6 +49,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgZombie01
     ],
+    size:{
+      ancho: 5.2,
+      alto: 7.5
+    },
     stock: true
   },
   {
@@ -50,6 +62,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgPlanta01
     ],
+    size:{
+      ancho: 3.3,
+      alto: 5.4
+    },
     stock: true
   },
   {
@@ -59,6 +75,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgPlanta02
     ],
+    size:{
+      ancho: 3.3,
+      alto: 5.4
+    },
     stock: true
   },
   {
@@ -68,6 +88,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgPlanta03
     ],
+    size:{
+      ancho: 3.3,
+      alto: 5.4
+    },
     stock: true
   },
   {
@@ -77,6 +101,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgLogoUmbrella01
     ],
+    size:{
+      ancho: 4.4,
+      alto: 4.4
+    },
     stock: true
   },
   {
@@ -86,6 +114,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura01
     ],
+    size:{
+      ancho: 3.3,
+      alto: 3.1
+    },
     stock: true
   },
   {
@@ -95,6 +127,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura02
     ],
+    size:{
+      ancho: 3.3,
+      alto: 3.1
+    },
     stock: true
   },
   {
@@ -104,6 +140,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura03
     ],
+    size:{
+      ancho: 1.8,
+      alto: 5.4
+    },
     stock: true
   },
   {
@@ -113,6 +153,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura04
     ],
+    size:{
+      ancho: 3.3,
+      alto: 3.1
+    },
     stock: true
   },
   {
@@ -122,6 +166,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura05
     ],
+    size:{
+      ancho: 3.3,
+      alto: 3.1
+    },
     stock: true
   },
   {
@@ -131,6 +179,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura06
     ],
+    size:{
+      ancho: 3.3,
+      alto: 3.1
+    },
     stock: true
   },
 ];
