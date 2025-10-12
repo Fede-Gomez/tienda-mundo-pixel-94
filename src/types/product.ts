@@ -8,7 +8,6 @@ export interface TypeProductCard {
     alto:number;
     ancho:number;
   }
-  stock: boolean;
 }
 
 // Tipo extendido para los productos en el carrito

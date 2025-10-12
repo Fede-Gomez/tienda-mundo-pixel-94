@@ -15,7 +15,7 @@ export const productsHollowKnight: TypeProductCard[] = [
       ancho: 5.4,
       alto: 7.5
     },
-    stock: true
+
   },
   {
     id: "grim-01",
@@ -28,6 +28,6 @@ export const productsHollowKnight: TypeProductCard[] = [
       ancho: 6,
       alto: 9.8
     },
-    stock: true
+
   },
 ];

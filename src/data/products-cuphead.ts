@@ -17,7 +17,7 @@ export const productsCuphead: TypeProductCard[] = [
       ancho: 7.5,
       alto: 7.9
     },
-    stock: true
+
   },
   {
     id: "cabeza-cuphead-01",
@@ -31,7 +31,7 @@ export const productsCuphead: TypeProductCard[] = [
       ancho: 9.6,
       alto: 7.54
     },
-    stock: true
+
   },
   {
     id: "cabeza-mugman-01",
@@ -44,6 +44,6 @@ export const productsCuphead: TypeProductCard[] = [
       ancho: 8.5,
       alto: 8.6
     },
-    stock: true
+
   },
 ];

@@ -17,7 +17,7 @@ export const productsHarryPotter: TypeProductCard[] = [
       ancho: 5.7,
       alto: 7.2
     },
-    stock: true
+
   },
   {
     id: "ron-01",
@@ -30,7 +30,7 @@ export const productsHarryPotter: TypeProductCard[] = [
       ancho: 5.7,
       alto: 7.2
     },
-    stock: true
+
   },
   {
     id: "hermione-01",
@@ -43,7 +43,7 @@ export const productsHarryPotter: TypeProductCard[] = [
       ancho: 5.7,
       alto: 7.2
     },
-    stock: true
+
   },
   {
     id: "logo-harry-potter-01",
@@ -56,7 +56,7 @@ export const productsHarryPotter: TypeProductCard[] = [
       ancho: 4.5,
       alto: 5.7
     },
-    stock: true
+
   },
   {
     id: "snitch-dorada-01",
@@ -69,6 +69,6 @@ export const productsHarryPotter: TypeProductCard[] = [
       ancho: 8.6,
       alto: 3.1
     },
-    stock: true
+
   },
 ];

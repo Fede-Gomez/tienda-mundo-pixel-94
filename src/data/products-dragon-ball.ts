@@ -17,7 +17,7 @@ export const productsDragonBall: TypeProductCard[] = [
       ancho: 6.7,
       alto: 9.1
     },
-    stock: true
+
   },
   {
     id: "gohan-ssj2-01",
@@ -30,7 +30,7 @@ export const productsDragonBall: TypeProductCard[] = [
       ancho: 5.4,
       alto: 8.6
     },
-    stock: true
+
   },
   {
     id: "radar-del-dragon-01",
@@ -43,6 +43,6 @@ export const productsDragonBall: TypeProductCard[] = [
       ancho: 4.6,
       alto: 5.7
     },
-    stock: true
+
   },
 ];

@@ -15,6 +15,6 @@ export const productsGodOfWar: TypeProductCard[] = [
       ancho: 5.9,
       alto: 10.1
     },
-    stock: true
+
   },
 ];

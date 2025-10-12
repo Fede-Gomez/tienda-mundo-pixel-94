@@ -15,7 +15,7 @@ export const productsComoEntrenarATuDragon: TypeProductCard[] = [
       ancho:7.8,
       alto:8.32,
     },
-    stock: true
+
   },
   {
     id: "furia-nocturna-blanca-01",
@@ -28,6 +28,6 @@ export const productsComoEntrenarATuDragon: TypeProductCard[] = [
       ancho:7.8,
       alto:8.32,
     },
-    stock: true
+
   },
 ];

@@ -20,7 +20,7 @@ export const productsSonic: TypeProductCard[] = [
       ancho: 4.4,
       alto: 3.9
     },
-    stock: true
+
   },
   {
     id: "cabeza-tails-01",
@@ -33,7 +33,7 @@ export const productsSonic: TypeProductCard[] = [
       ancho: 4.1,
       alto: 3.9
     },
-    stock: true
+
   },
   {
     id: "cabeza-knuckles-01",
@@ -46,7 +46,7 @@ export const productsSonic: TypeProductCard[] = [
       ancho: 4.4,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "cabeza-amy-01",
@@ -59,7 +59,7 @@ export const productsSonic: TypeProductCard[] = [
       ancho: 4.4,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "cabeza-eggman-01",
@@ -72,7 +72,7 @@ export const productsSonic: TypeProductCard[] = [
       ancho: 6.5,
       alto: 3.1
     },
-    stock: true
+
   },
   {
     id: "cabeza-shadow-01",
@@ -98,6 +98,6 @@ export const productsSonic: TypeProductCard[] = [
       ancho: 6.2,
       alto: 9.8
     },
-    stock: true
+
   },
 ];

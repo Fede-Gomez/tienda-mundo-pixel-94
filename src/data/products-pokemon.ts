@@ -50,7 +50,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.2,
       alto: 5.9
     },
-    stock: true
+
   },
   {
     id: "blastoise-01",
@@ -63,7 +63,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 8.8 ,
       alto: 6.2
     },
-    stock: true
+
   },
   {
     id: "blaziken-01",
@@ -76,7 +76,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.7,
       alto: 6.7
     },
-    stock: true
+
   },
   {
     id: "charmander-01",
@@ -89,7 +89,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.4,
       alto: 4.6
     },
-    stock: true
+
   },
   {
     id: "charmeleon-01",
@@ -102,7 +102,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.7,
       alto: 5.7
     },
-    stock: true
+
   },
   {
     id: "chicorita-01",
@@ -115,7 +115,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7.8,
       alto: 6.2
     },
-    stock: true
+
   },
   {
     id: "combusken-01",
@@ -128,7 +128,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.7,
       alto: 6.5
     },
-    stock: true
+
   },
   {
     id: "eevee-01",
@@ -141,7 +141,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 4.4,
       alto: 4.6
     },
-    stock: true
+
   },
   {
     id: "espeon-01",
@@ -154,7 +154,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7,
       alto: 5.4
     },
-    stock: true
+
   },
   {
     id: "flareon-01",
@@ -167,7 +167,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 5.4
     },
-    stock: true
+
   },
   {
     id: "glaceon-01",
@@ -180,7 +180,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7,
       alto: 6
     },
-    stock: true
+
   },
   {
     id: "jolteon-01",
@@ -193,7 +193,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5,
       alto: 5.4
     },
-    stock: true
+
   },
   {
     id: "leafeon-01",
@@ -206,7 +206,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6.5,
       alto: 5.7
     },
-    stock: true
+
   },
   {
     id: "marshtomp-01",
@@ -219,7 +219,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.2,
       alto: 5.4
     },
-    stock: true
+
   },
   {
     id: "meganium-01",
@@ -232,7 +232,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 7
     },
-    stock: true
+
   },
   {
     id: "mudkip-01",
@@ -245,7 +245,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5,
       alto: 4.6
     },
-    stock: true
+
   },
   {
     id: "pokeball-01",
@@ -258,7 +258,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 3.1,
       alto: 3.1
     },
-    stock: true
+
   },
   {
     id: "pokeball-02",
@@ -271,7 +271,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 3.1,
       alto: 3.1
     },
-    stock: true
+
   },
   {
     id: "pokeball-03",
@@ -284,7 +284,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 3.1,
       alto: 3.1
     },
-    stock: true
+
   },
   {
     id: "pokeball-04",
@@ -297,7 +297,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 3.1,
       alto: 3.1
     },
-    stock: true
+
   },
   {
     id: "quilava-01",
@@ -310,7 +310,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 5.2
     },
-    stock: true
+
   },
   {
     id: "sceptile-01",
@@ -323,7 +323,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7.2,
       alto: 6.7
     },
-    stock: true
+
   },
   {
     id: "swampert-01",
@@ -336,7 +336,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6.7,
       alto: 6.5
     },
-    stock: true
+
   },
   {
     id: "sylveon-01",
@@ -349,7 +349,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.7,
       alto: 6
     },
-    stock: true
+
   },
   {
     id: "torchic-01",
@@ -362,7 +362,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 3.3,
       alto: 5
     },
-    stock: true
+
   },
   {
     id: "typlosion-01",
@@ -375,7 +375,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 6.5
     },
-    stock: true
+
   },
   {
     id: "umbreon-01",
@@ -388,7 +388,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.2,
       alto: 5.4
     },
-    stock: true
+
   },
   {
     id: "vaporeon-01",
@@ -401,7 +401,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 5.4
     },
-    stock: true
+
   },
   {
     id: "wartortle-01",
@@ -414,7 +414,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 8.8,
       alto: 6.2
     },
-    stock: true
+
   },
   {
     id: "arcanine-01",
@@ -427,7 +427,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7.5,
       alto: 7
     },
-    stock: true
+
   },
   {
     id: "croconaw-01",
@@ -440,7 +440,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.4,
       alto: 6.5
     },
-    stock: true
+
   },
   {
     id: "gardevoir-shiny-01",
@@ -453,7 +453,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6.7,
       alto: 6.2
     },
-    stock: true
+
   },
   {
     id: "hydregon-01",
@@ -466,7 +466,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7.5,
       alto: 6.5
     },
-    stock: true
+
   },
   {
     id: "infernape-01",
@@ -479,7 +479,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6.7,
       alto: 6.2
     },
-    stock: true
+
   },
   {
     id: "metagross-shiny-01",
@@ -492,7 +492,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 8.4,
       alto: 5.7
     },
-    stock: true
+
   },
   {
     id: "staraptor-01",
@@ -505,7 +505,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 6.5
     },
-    stock: true
+
   },
   {
     id: "totodile-01",
@@ -518,7 +518,7 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 4.6,
       alto: 4.6
     },
-    stock: true
+
   },
 
 ];

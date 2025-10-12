@@ -15,6 +15,6 @@ export const productsOriAndTheBlindForest: TypeProductCard[] = [
       ancho: 7.5,
       alto: 7.8
     },
-    stock: true
+
   },
 ];

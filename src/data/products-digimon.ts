@@ -54,7 +54,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "digivice-dot-02",
@@ -67,7 +67,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "digivice-dot-03",
@@ -80,7 +80,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "digivice-dot-04",
@@ -93,7 +93,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "digivice-dot-05",
@@ -106,7 +106,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "digivice-dot-06",
@@ -119,7 +119,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "digivice-dot-07",
@@ -132,7 +132,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "digivice-dot-08",
@@ -145,7 +145,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "agumon-dot-01",
@@ -158,7 +158,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 3.9,
       alto: 3.9
     },
-    stock: true
+
   },
   {
     id: "biyomon-dot-01",
@@ -171,7 +171,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 3.6,
       alto: 3.9
     },
-    stock: true
+
   },
   {
     id: "dorumon-dot-01",
@@ -184,7 +184,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "gabumon-dot-01",
@@ -197,7 +197,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 3.6,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "garurumon-dot-01",
@@ -210,7 +210,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 3.9
     },
-    stock: true
+
   },
   {
     id: "gatomon-dot-01",
@@ -223,7 +223,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.6
     },
-    stock: true
+
   },
   {
     id: "gomamon-dot-01",
@@ -236,7 +236,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 3.3
     },
-    stock: true
+
   },
   {
     id: "greymon-dot-01",
@@ -249,7 +249,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "guilmon-dot-01",
@@ -262,7 +262,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 3.9,
       alto: 3.9
     },
-    stock: true
+
   },
   {
     id: "kabuterimon-dot-01",
@@ -274,7 +274,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "metalgreymon-dot-01",
@@ -287,7 +287,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "omnimon-dot-01",
@@ -300,7 +300,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 3.6
     },
-    stock: true
+
   },
   {
     id: "palmon-dot-01",
@@ -313,7 +313,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 3.1,
       alto: 3.9
     },
-    stock: true
+
   },
   {
     id: "patamon-dot-01",
@@ -326,7 +326,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 3.6
     },
-    stock: true
+
   },
   {
     id: "renamon-dot-01",
@@ -339,7 +339,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 3.9,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "tentomon-dot-01",
@@ -352,7 +352,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 3.9,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "terriermon-dot-01",
@@ -365,7 +365,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 3.9,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "agumon-01",
@@ -378,7 +378,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 5.7,
       alto: 6.7
     },
-    stock: true
+
   },
   {
     id: "garurumon-01",
@@ -391,7 +391,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 9.8,
       alto: 7.8
     },
-    stock: true
+
   },
   {
     id: "vmon-01",
@@ -404,7 +404,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 5.4,
       alto: 6.7
     },
-    stock: true
+
   },
   {
     id: "wormmon-01",
@@ -417,7 +417,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 5.9,
       alto: 6.2
     },
-    stock: true
+
   },
   {
     id: "xvmon-01",
@@ -430,7 +430,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 9.1,
       alto: 9.1
     },
-    stock: true
+
   },
   {
     id: "flamedramon-01",
@@ -443,7 +443,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 9.1,
       alto: 11.2
     },
-    stock: true
+
   },
   {
     id: "alphamon-01",
@@ -456,7 +456,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "deathXDorugoramon-01",
@@ -469,7 +469,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "dexDorugamon-01",
@@ -482,7 +482,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "dexDorugreymon-01",
@@ -495,7 +495,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "dodomon-01",
@@ -508,7 +508,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 2.8,
       alto: 2.6
     },
-    stock: true
+
   },
   {
     id: "dorimon-01",
@@ -521,7 +521,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 3.6,
       alto: 2.8
     },
-    stock: true
+
   },
   {
     id: "dorugamon-01",
@@ -534,7 +534,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "dorugoramon-01",
@@ -547,7 +547,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "dorugreymon-01",
@@ -560,7 +560,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
   {
     id: "dorumon-02",
@@ -573,7 +573,7 @@ export const productsDigimon: TypeProductCard[] = [
       ancho: 4.1,
       alto: 4.1
     },
-    stock: true
+
   },
 
 

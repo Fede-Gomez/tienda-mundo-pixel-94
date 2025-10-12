@@ -27,7 +27,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 7,
       alto: 7.5
     },
-    stock: true
+
   },
   {
     id: "jill-valentine-01",
@@ -40,7 +40,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 7.5,
       alto: 7.8
     },
-    stock: true
+
   },
   {
     id: "zombie-01",
@@ -53,7 +53,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 5.2,
       alto: 7.5
     },
-    stock: true
+
   },
   {
     id: "planta-01",
@@ -66,7 +66,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 3.3,
       alto: 5.4
     },
-    stock: true
+
   },
   {
     id: "planta-02",
@@ -79,7 +79,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 3.3,
       alto: 5.4
     },
-    stock: true
+
   },
   {
     id: "planta-03",
@@ -92,7 +92,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 3.3,
       alto: 5.4
     },
-    stock: true
+
   },
   {
     id: "logo-umbrella-01",
@@ -105,7 +105,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 4.4,
       alto: 4.4
     },
-    stock: true
+
   },
   {
     id: "cura-01",
@@ -118,7 +118,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 3.3,
       alto: 3.1
     },
-    stock: true
+
   },
   {
     id: "cura-02",
@@ -131,7 +131,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 3.3,
       alto: 3.1
     },
-    stock: true
+
   },
   {
     id: "cura-03",
@@ -144,7 +144,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 1.8,
       alto: 5.4
     },
-    stock: true
+
   },
   {
     id: "cura-04",
@@ -157,7 +157,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 3.3,
       alto: 3.1
     },
-    stock: true
+
   },
   {
     id: "cura-05",
@@ -170,7 +170,7 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 3.3,
       alto: 3.1
     },
-    stock: true
+
   },
   {
     id: "cura-06",
@@ -183,6 +183,6 @@ export const productsResidentEvil: TypeProductCard[] = [
       ancho: 3.3,
       alto: 3.1
     },
-    stock: true
+
   },
 ];
