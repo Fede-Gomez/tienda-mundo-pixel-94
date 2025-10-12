@@ -4,7 +4,7 @@ import './FAQ.css';
 
 const FAQ: React.FC = () => {
   const faqs = [
-    { question: '¿Cómo puedo realizar un pedido?', answer: 'Para realizar un pedido, simplemente agrega productos al carrito y envianos un mensaje por wasap con los productos.' },
+    { question: '¿Cómo puedo realizar un pedido?', answer: 'Agrega los productos que quieras al carrito, dentro del carrito haz click en encargar para enviarnos un mensaje por whatsapp para continar.' },
     { question: '¿Cuáles son los métodos de pago aceptados?', answer: 'Aceptamos transferencia y efectivo.' },
     { question: '¿Cuánto tiempo tarda en preparse mi pedido?', answer: 'De 1 a 3 días habiles segun la cantidad del pedido.' },
     { question: '¿Cuánto tiempo tarda el envío?', answer: 'El tiempo de envío depende de tu ubicación, pero generalmente toma entre 3 y 7 días hábiles.' },
