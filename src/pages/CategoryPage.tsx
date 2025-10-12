@@ -1,8 +1,9 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { categories } from "../data/categories";
 import "./CategoryPage.css"; // Importa el archivo CSS
 import type { TypeProductCard } from "../types/product";
 import ProductCard from "../components/product/ProductCard";
+import Navbar from "../components/navbar/Navbar";
 
 export default function CategoryPage() {
   const { id } = useParams();
@@ -12,7 +13,7 @@ export default function CategoryPage() {
 
   return (
     <div className="category-page">
-      <Link to="/" className="back-link">← Volver</Link>
+      <Navbar />
       <h1 className="category-title">{category.name}</h1>
       <div className="product-grid">
         {category.products.map((p: TypeProductCard) => (

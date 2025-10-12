@@ -3,7 +3,7 @@ import "./ProductCard.css";
 import { useCart } from "../../context/CartContext";
 import type { TypeProductCard } from "../../types/product";
 
-export default function ProductCard( product: TypeProductCard) {
+export default function ProductCard(product: TypeProductCard) {
   const { addToCart } = useCart();
   const [selectedOption, setSelectedOption] = useState<string>("Llavero");
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
@@ -56,9 +56,10 @@ export default function ProductCard( product: TypeProductCard) {
         <div className="product-row">
           <p className="product-name">{product.name}</p>
           <p className="product-price">${product.price}</p>
-          <p className={`product-stock ${product.stock ? "in-stock" : "out-of-stock"}`}>
-            {product.stock ? "¡Disponible ahora!" : "¡Encargar producto!"}
-          </p>
+          <ul className="product-sizes">
+            <li>Alto: {product.size.alto}</li>
+            <li>Ancho: {product.size.ancho}</li>
+          </ul>
         </div>
         <div className="product-actions">
           <select
