@@ -46,7 +46,7 @@ export default function FloatingCart() {
         >
           ✖
         </button>
-        <h2>Carrito</h2>
+        <h2 className="floating-title">Carrito</h2>
         {cart.length === 0 ? (
           <p>No hay productos en el carrito.</p>
         ) : (
