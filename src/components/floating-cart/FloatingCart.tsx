@@ -87,7 +87,7 @@ export default function FloatingCart() {
             className="cart-purchase-button"
             onClick={handleWhatsAppPurchase}
           >
-            Comprar
+            Encargar
           </button>
         )}
       </div>
