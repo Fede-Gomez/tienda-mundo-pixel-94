@@ -13,7 +13,11 @@ export const productsDragonBall: TypeProductCard[] = [
     image: [
       imgGoku01
     ],
-    stock: true
+            size:{
+      ancho: 6.7,
+      alto: 9.1
+    },
+
   },
   {
     id: "gohan-ssj2-01",
@@ -22,7 +26,11 @@ export const productsDragonBall: TypeProductCard[] = [
     image: [
       imgGohan01
     ],
-    stock: true
+            size:{
+      ancho: 5.4,
+      alto: 8.6
+    },
+
   },
   {
     id: "radar-del-dragon-01",
@@ -31,6 +39,10 @@ export const productsDragonBall: TypeProductCard[] = [
     image: [
       imgRadarDelDragon01
     ],
-    stock: true
+            size:{
+      ancho: 4.6,
+      alto: 5.7
+    },
+
   },
 ];

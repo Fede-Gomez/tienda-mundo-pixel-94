@@ -16,7 +16,11 @@ export const productsSonic: TypeProductCard[] = [
     image: [
       cabezaSonic01
     ],
-    stock: true
+    size:{
+      ancho: 4.4,
+      alto: 3.9
+    },
+
   },
   {
     id: "cabeza-tails-01",
@@ -25,7 +29,11 @@ export const productsSonic: TypeProductCard[] = [
     image: [
       cabezaTails01
     ],
-    stock: true
+    size:{
+      ancho: 4.1,
+      alto: 3.9
+    },
+
   },
   {
     id: "cabeza-knuckles-01",
@@ -34,7 +42,11 @@ export const productsSonic: TypeProductCard[] = [
     image: [
       cabezaKnuckles01
     ],
-    stock: true
+    size:{
+      ancho: 4.4,
+      alto: 4.1
+    },
+
   },
   {
     id: "cabeza-amy-01",
@@ -43,7 +55,11 @@ export const productsSonic: TypeProductCard[] = [
     image: [
       cabezaAmy01
     ],
-    stock: true
+    size:{
+      ancho: 4.4,
+      alto: 4.1
+    },
+
   },
   {
     id: "cabeza-eggman-01",
@@ -52,7 +68,11 @@ export const productsSonic: TypeProductCard[] = [
     image: [
       cabezaEggman01
     ],
-    stock: true
+    size:{
+      ancho: 6.5,
+      alto: 3.1
+    },
+
   },
   {
     id: "cabeza-shadow-01",
@@ -61,6 +81,10 @@ export const productsSonic: TypeProductCard[] = [
     image: [
       cabezaShadow01
     ],
+    size:{
+      ancho: 4.6,
+      alto: 4.1
+    },
     stock: false
   },
   {
@@ -70,6 +94,10 @@ export const productsSonic: TypeProductCard[] = [
     image: [
       imgSonic01
     ],
-    stock: true
+    size:{
+      ancho: 6.2,
+      alto: 9.8
+    },
+
   },
 ];

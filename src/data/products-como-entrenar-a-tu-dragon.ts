@@ -11,7 +11,11 @@ export const productsComoEntrenarATuDragon: TypeProductCard[] = [
     image: [
       imgFuriaNocturnaNegra
     ],
-    stock: true
+    size:{
+      ancho:7.8,
+      alto:8.32,
+    },
+
   },
   {
     id: "furia-nocturna-blanca-01",
@@ -20,6 +24,10 @@ export const productsComoEntrenarATuDragon: TypeProductCard[] = [
     image: [
       imgFuriaNocturnaBlanca
     ],
-    stock: true
+    size:{
+      ancho:7.8,
+      alto:8.32,
+    },
+
   },
 ];

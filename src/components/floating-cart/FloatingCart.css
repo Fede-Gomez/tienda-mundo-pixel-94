@@ -81,6 +81,14 @@
   color: #007bff;
 }
 
+.floating-title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
 /* Botón para comprar por WhatsApp */
 .cart-purchase-button {
   width: 100%;

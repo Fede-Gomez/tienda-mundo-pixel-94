@@ -1,0 +1,35 @@
+/* FAQ styles */
+
+.faq {
+  padding: 2rem;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.faq-question:hover {
+  text-decoration: underline;
+}
+
+.faq-answer {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.faq-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.faq-item {
+  margin-bottom: 8px; /* Add spacing between questions */
+  margin-bottom: 8px; /* Add spacing between questions */
+}

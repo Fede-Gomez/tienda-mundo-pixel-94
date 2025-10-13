@@ -1,6 +1,7 @@
 import CategoryGrid from "../components/category/CategoryGrid";
 import { categories } from "../data/categories";
 import "./Home.css";
+import Navbar from "../components/navbar/Navbar";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
           Descubre nuestras categorías y encuentra el pixel perfecto para tu inventario.
         </p>
       </header>
+      <Navbar />
       <CategoryGrid categories={categories} />
     </div>
   );

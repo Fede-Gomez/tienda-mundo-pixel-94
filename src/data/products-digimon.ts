@@ -1,4 +1,4 @@
-import type { TypeProductCard } from "../types/product";
+import { attribute, level, type typeDigimon, type TypeProductCard } from "../types/product";
 import imgDigivice1Dot01 from "../assets/digimon/dot/digivice-01.jpg";
 import imgDigivice2Dot01 from "../assets/digimon/dot/digivice-02.jpg";
 import imgDigivice3Dot01 from "../assets/digimon/dot/digivice-03.jpg";
@@ -41,8 +41,7 @@ import imgDorugoramon01 from "../assets/digimon/dot/dorugoramon-01.jpg";
 import imgDorugreymon01 from "../assets/digimon/dot/dorugreymon-01.jpg";
 import imgDorumon02 from "../assets/digimon/dot/dorumon-02.jpg";
 
-
-export const productsDigimon: TypeProductCard[] = [
+export const productsDigimon: typeDigimon[] = [
   {
     id: "digivice-dot-01",
     name: "Digivice DOT",
@@ -50,7 +49,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice1Dot01
     ],
-    stock: true
+    size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
   },
   {
     id: "digivice-dot-02",
@@ -59,7 +61,11 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice2Dot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+
   },
   {
     id: "digivice-dot-03",
@@ -68,7 +74,11 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice3Dot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+
   },
   {
     id: "digivice-dot-04",
@@ -77,7 +87,11 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice4Dot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+
   },
   {
     id: "digivice-dot-05",
@@ -86,7 +100,11 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice5Dot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+
   },
   {
     id: "digivice-dot-06",
@@ -95,7 +113,11 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice6Dot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+
   },
   {
     id: "digivice-dot-07",
@@ -104,7 +126,11 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice7Dot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+
   },
   {
     id: "digivice-dot-08",
@@ -113,7 +139,11 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDigivice8Dot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+
   },
   {
     id: "agumon-dot-01",
@@ -122,7 +152,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgAgumonDot01
     ],
-    stock: true
+    size:{
+      ancho: 3.9,
+      alto: 3.9
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
   },
   {
     id: "biyomon-dot-01",
@@ -131,7 +166,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgBiyomonDot01
     ],
-    stock: true
+        size:{
+      ancho: 3.6,
+      alto: 3.9
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
   },
   {
     id: "dorumon-dot-01",
@@ -140,7 +180,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorumonDot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+    attribute: attribute.DATA,
+    level: level.ROOKIE,
   },
   {
     id: "gabumon-dot-01",
@@ -149,7 +194,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGabumonDot01
     ],
-    stock: true
+        size:{
+      ancho: 3.6,
+      alto: 4.1
+    },
+    attribute: attribute.DATA,
+    level: level.ROOKIE,
   },
   {
     id: "garurumon-dot-01",
@@ -158,7 +208,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGarurumonDot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 3.9
+    },
+    attribute: attribute.VACCINE,
+    level: level.CHAMPION,
   },
   {
     id: "gatomon-dot-01",
@@ -167,7 +222,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGatomonDot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.6
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
   },
   {
     id: "gomamon-dot-01",
@@ -176,7 +236,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGomamonDot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 3.3
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
   },
   {
     id: "greymon-dot-01",
@@ -185,7 +250,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGreymonDot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+    attribute: attribute.VACCINE,
+    level: level.CHAMPION,
   },
   {
     id: "guilmon-dot-01",
@@ -194,7 +264,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGuilmonDot01
     ],
-    stock: true
+        size:{
+      ancho: 3.9,
+      alto: 3.9
+    },
+    attribute: attribute.VIRUS,
+    level: level.ROOKIE,
   },
   {
     id: "kabuterimon-dot-01",
@@ -202,8 +277,12 @@ export const productsDigimon: TypeProductCard[] = [
     price: 2000,
     image: [
       imgKabuterimonDot01
-    ],
-    stock: true
+    ],    size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+    attribute: attribute.VACCINE,
+    level: level.CHAMPION,
   },
   {
     id: "metalgreymon-dot-01",
@@ -212,7 +291,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgMetalgreymonDot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+    attribute: attribute.VACCINE,
+    level: level.ULTIMATE,
   },
   {
     id: "omnimon-dot-01",
@@ -221,7 +305,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgOmnimonDot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 3.6
+    },
+    attribute: attribute.VACCINE,
+    level: level.MEGA,
   },
   {
     id: "palmon-dot-01",
@@ -230,7 +319,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgPalmonDot01
     ],
-    stock: true
+        size:{
+      ancho: 3.1,
+      alto: 3.9
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
   },
   {
     id: "patamon-dot-01",
@@ -239,7 +333,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgPatamonDot01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 3.6
+    },
+    attribute: attribute.DATA,
+    level: level.ROOKIE,
   },
   {
     id: "renamon-dot-01",
@@ -248,7 +347,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgRenamonDot01
     ],
-    stock: true
+        size:{
+      ancho: 3.9,
+      alto: 4.1
+    },
+    attribute: attribute.DATA,
+    level: level.ROOKIE,
   },
   {
     id: "tentomon-dot-01",
@@ -257,7 +361,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgTentomonDot01
     ],
-    stock: true
+            size:{
+      ancho: 3.9,
+      alto: 4.1
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
   },
   {
     id: "terriermon-dot-01",
@@ -266,7 +375,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgTerriermonDot01
     ],
-    stock: true
+        size:{
+      ancho: 3.9,
+      alto: 4.1
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
   },
   {
     id: "agumon-01",
@@ -275,7 +389,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgAgumon01
     ],
-    stock: true
+        size:{
+      ancho: 5.7,
+      alto: 6.7
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
   },
   {
     id: "garurumon-01",
@@ -284,7 +403,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgGarurumon01
     ],
-    stock: true
+        size:{
+      ancho: 9.8,
+      alto: 7.8
+    },
+    attribute: attribute.VACCINE,
+    level: level.CHAMPION,
   },
   {
     id: "vmon-01",
@@ -293,7 +417,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgVeemon01
     ],
-    stock: true
+        size:{
+      ancho: 5.4,
+      alto: 6.7
+    },
+    attribute: attribute.FREE,
+    level: level.ROOKIE,
   },
   {
     id: "wormmon-01",
@@ -302,7 +431,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgWormmon01
     ],
-    stock: true
+        size:{
+      ancho: 5.9,
+      alto: 6.2
+    },
+    attribute: attribute.FREE,
+    level: level.ROOKIE,
   },
   {
     id: "xvmon-01",
@@ -311,7 +445,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgXveemon01
     ],
-    stock: true
+        size:{
+      ancho: 9.1,
+      alto: 9.1
+    },
+    attribute: attribute.FREE,
+    level: level.CHAMPION,
   },
   {
     id: "flamedramon-01",
@@ -320,7 +459,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgFlamedramon01
     ],
-    stock: true
+        size:{
+      ancho: 9.1,
+      alto: 11.2
+    },
+    attribute: attribute.FREE,
+    level: level.ARMOR,
   },
   {
     id: "alphamon-01",
@@ -329,7 +473,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgAlphamon01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+    attribute: attribute.VACCINE,
+    level: level.MEGA,
   },
   {
     id: "deathXDorugoramon-01",
@@ -338,7 +487,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDeathXDorugoramon01
     ],
-    stock: true
+        size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+    attribute: attribute.VIRUS,
+    level: level.ULTIMATE,
   },
   {
     id: "dexDorugamon-01",
@@ -347,7 +501,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDexDorugamon01
     ],
-    stock: true
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+  attribute: attribute.VIRUS,
+    level: level.CHAMPION,
   },
   {
     id: "dexDorugreymon-01",
@@ -356,7 +515,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDexDorugreymon01
     ],
-    stock: true
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+    attribute: attribute.VIRUS,
+    level: level.ULTIMATE,
   },
   {
     id: "dodomon-01",
@@ -365,7 +529,10 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDodomon01
     ],
-    stock: true
+            size:{
+      ancho: 2.8,
+      alto: 2.6
+    },
   },
   {
     id: "dorimon-01",
@@ -374,7 +541,11 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorimon01
     ],
-    stock: true
+            size:{
+      ancho: 3.6,
+      alto: 2.8
+    },
+
   },
   {
     id: "dorugamon-01",
@@ -383,7 +554,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorugamon01
     ],
-    stock: true
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+attribute: attribute.DATA,
+    level: level.CHAMPION,
   },
   {
     id: "dorugoramon-01",
@@ -392,7 +568,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorugoramon01
     ],
-    stock: true
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+attribute: attribute.DATA,
+    level: level.MEGA,
   },
   {
     id: "dorugreymon-01",
@@ -401,7 +582,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorugreymon01
     ],
-    stock: true
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+attribute: attribute.DATA,
+    level: level.ULTIMATE,
   },
   {
     id: "dorumon-02",
@@ -410,7 +596,12 @@ export const productsDigimon: TypeProductCard[] = [
     image: [
       imgDorumon02
     ],
-    stock: true
+            size:{
+      ancho: 4.1,
+      alto: 4.1
+    },
+attribute: attribute.DATA,
+    level: level.ROOKIE,
   },
 
 

@@ -13,7 +13,11 @@ export const productsCuphead: TypeProductCard[] = [
     image: [
       imgCuphead01
     ],
-    stock: true
+    size:{
+      ancho: 7.5,
+      alto: 7.9
+    },
+
   },
   {
     id: "cabeza-cuphead-01",
@@ -23,7 +27,11 @@ export const productsCuphead: TypeProductCard[] = [
     image: [
       imgCabezaCuphead01
     ],
-    stock: true
+    size:{
+      ancho: 9.6,
+      alto: 7.54
+    },
+
   },
   {
     id: "cabeza-mugman-01",
@@ -32,6 +40,10 @@ export const productsCuphead: TypeProductCard[] = [
     image: [
       imgCabezaMugman01
     ],
-    stock: true
+    size:{
+      ancho: 8.5,
+      alto: 8.6
+    },
+
   },
 ];

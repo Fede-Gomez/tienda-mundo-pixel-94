@@ -23,7 +23,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCrisRedfield01
     ],
-    stock: true
+    size:{
+      ancho: 7,
+      alto: 7.5
+    },
+
   },
   {
     id: "jill-valentine-01",
@@ -32,7 +36,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgJillValentine01
     ],
-    stock: true
+    size:{
+      ancho: 7.5,
+      alto: 7.8
+    },
+
   },
   {
     id: "zombie-01",
@@ -41,7 +49,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgZombie01
     ],
-    stock: true
+    size:{
+      ancho: 5.2,
+      alto: 7.5
+    },
+
   },
   {
     id: "planta-01",
@@ -50,7 +62,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgPlanta01
     ],
-    stock: true
+    size:{
+      ancho: 3.3,
+      alto: 5.4
+    },
+
   },
   {
     id: "planta-02",
@@ -59,7 +75,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgPlanta02
     ],
-    stock: true
+    size:{
+      ancho: 3.3,
+      alto: 5.4
+    },
+
   },
   {
     id: "planta-03",
@@ -68,7 +88,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgPlanta03
     ],
-    stock: true
+    size:{
+      ancho: 3.3,
+      alto: 5.4
+    },
+
   },
   {
     id: "logo-umbrella-01",
@@ -77,7 +101,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgLogoUmbrella01
     ],
-    stock: true
+    size:{
+      ancho: 4.4,
+      alto: 4.4
+    },
+
   },
   {
     id: "cura-01",
@@ -86,7 +114,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura01
     ],
-    stock: true
+    size:{
+      ancho: 3.3,
+      alto: 3.1
+    },
+
   },
   {
     id: "cura-02",
@@ -95,7 +127,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura02
     ],
-    stock: true
+    size:{
+      ancho: 3.3,
+      alto: 3.1
+    },
+
   },
   {
     id: "cura-03",
@@ -104,7 +140,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura03
     ],
-    stock: true
+    size:{
+      ancho: 1.8,
+      alto: 5.4
+    },
+
   },
   {
     id: "cura-04",
@@ -113,7 +153,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura04
     ],
-    stock: true
+    size:{
+      ancho: 3.3,
+      alto: 3.1
+    },
+
   },
   {
     id: "cura-05",
@@ -122,7 +166,11 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura05
     ],
-    stock: true
+    size:{
+      ancho: 3.3,
+      alto: 3.1
+    },
+
   },
   {
     id: "cura-06",
@@ -131,6 +179,10 @@ export const productsResidentEvil: TypeProductCard[] = [
     image: [
       imgCura06
     ],
-    stock: true
+    size:{
+      ancho: 3.3,
+      alto: 3.1
+    },
+
   },
 ];

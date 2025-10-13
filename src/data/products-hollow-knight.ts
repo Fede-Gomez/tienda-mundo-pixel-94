@@ -11,7 +11,11 @@ export const productsHollowKnight: TypeProductCard[] = [
     image: [
       imgGrub
     ],
-    stock: true
+    size:{
+      ancho: 5.4,
+      alto: 7.5
+    },
+
   },
   {
     id: "grim-01",
@@ -20,6 +24,10 @@ export const productsHollowKnight: TypeProductCard[] = [
     image: [
       imgGrim
     ],
-    stock: true
+    size:{
+      ancho: 6,
+      alto: 9.8
+    },
+
   },
 ];

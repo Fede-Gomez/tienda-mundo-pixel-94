@@ -13,7 +13,11 @@ export const productsHarryPotter: TypeProductCard[] = [
     image: [
       imgHarryPotter01
     ],
-    stock: true
+            size:{
+      ancho: 5.7,
+      alto: 7.2
+    },
+
   },
   {
     id: "ron-01",
@@ -22,7 +26,11 @@ export const productsHarryPotter: TypeProductCard[] = [
     image: [
       imgRon01
     ],
-    stock: true
+            size:{
+      ancho: 5.7,
+      alto: 7.2
+    },
+
   },
   {
     id: "hermione-01",
@@ -31,7 +39,11 @@ export const productsHarryPotter: TypeProductCard[] = [
     image: [
       imgHermione01
     ],
-    stock: true
+    size:{
+      ancho: 5.7,
+      alto: 7.2
+    },
+
   },
   {
     id: "logo-harry-potter-01",
@@ -40,7 +52,11 @@ export const productsHarryPotter: TypeProductCard[] = [
     image: [
       imgLogoHarryPotter01
     ],
-    stock: true
+    size:{
+      ancho: 4.5,
+      alto: 5.7
+    },
+
   },
   {
     id: "snitch-dorada-01",
@@ -49,6 +65,10 @@ export const productsHarryPotter: TypeProductCard[] = [
     image: [
       imgSnitchDorada01
     ],
-    stock: true
+    size:{
+      ancho: 8.6,
+      alto: 3.1
+    },
+
   },
 ];
