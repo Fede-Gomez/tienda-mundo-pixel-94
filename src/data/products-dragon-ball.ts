@@ -43,6 +43,29 @@ export const productsDragonBall: TypeProductCard[] = [
       ancho: 4.6,
       alto: 5.7
     },
-
+  },
+  {
+    id: "goku-ssj1-01",
+    name: "Goku SSJ1",
+    price: 8000,
+    image: [
+      imgRadarDelDragon01
+    ],
+    size:{
+      ancho: 6.5,
+      alto: 13.7
+    },
+  },
+  {
+    id: "vegeta-ssj1-01",
+    name: "Vegeta SSJ1",
+    price: 6500,
+    image: [
+      imgRadarDelDragon01
+    ],
+    size:{
+      ancho: 6.2,
+      alto: 12.2
+    },
   },
 ];

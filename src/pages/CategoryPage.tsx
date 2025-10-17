@@ -5,7 +5,8 @@ import "./CategoryPage.css"; // Importa el archivo CSS
 import type { TypeProductCard } from "../types/product";
 import ProductCard from "../components/product/ProductCard";
 import Navbar from "../components/navbar/Navbar";
-import FilterDigimon from "../components/helper/filterDigimon";
+import FilterDigimon from "../helper/FilterDigimon";
+import FilterPokemon from "../helper/FilterPokemon";
 
 export default function CategoryPage() {
   const { id } = useParams();
@@ -21,6 +22,9 @@ export default function CategoryPage() {
       <h1 className="category-title">{category.name}</h1>
       {category.id === "digimon" && (
         <FilterDigimon products={category.products} setFilteredProducts={setFilteredProducts} />
+      )}
+      {category.id === "pokemon" && (
+        <FilterPokemon products={category.products} setFilteredProducts={setFilteredProducts} />
       )}
       <div className="product-grid">
         {(filteredProducts.length > 0 ? filteredProducts : category.products).map((p: TypeProductCard) => (

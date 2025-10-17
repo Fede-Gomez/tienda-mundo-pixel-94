@@ -1,59 +1,41 @@
+/* Retro style for the CategoryCard */
 .card-content {
   overflow: hidden;
   transition: box-shadow 0.3s ease;
   padding: 8px;
   margin: 4px;
-}
-
-.card-content:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: var(--neon-text-color-green);
+  font-family: var(--font-family-retro);
+  text-shadow: var(--neon-text-shadow);
 }
 
 .card-image {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
-  transition: opacity 0.5s ease-in-out; /* Transición suave */
+  height: 150px; /* Fixed height for images */
+  object-fit: contain; /* Ensure images fit within the container */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
 }
 
 .card-title {
   text-align: center;
   margin-top: 8px;
   font-weight: bold;
+  color: var(--neon-text-color-yellow); /* Vibrant yellow */
+  text-shadow: var(--neon-text-shadow-title); /* Pixelated glow effect */
 }
 
+/* Ensure consistent size and centering for CategoryCard */
 
-@media (prefers-color-scheme: dark) {
-  .category-card {
-    background-color: #ffffff; /* Fondo blanco */
-    color: #000000; /* Texto negro */
-  }
-
-  .category-button:hover {
-    background-color: #0056b3; /* Azul oscuro */
-  }
-}
-
-/* Tema claro */
-@media (prefers-color-scheme: light) {
-  .category-card {
-    background-color: #333333; /* Fondo oscuro */
-    color: #ffffff; /* Texto blanco */
-  }
-
-  .category-button:hover {
-    background-color: #0056b3; /* Azul oscuro */
-  }
-}
-
-/* Tema predeterminado (oscuro si no está definido) */
-@media not (prefers-color-scheme: light), not (prefers-color-scheme: dark) {
-  .category-card {
-    background-color: #ffffff; /* Fondo blanco */
-    color: #000000; /* Texto negro */
-  }
-  
-  .category-button:hover {
-    background-color: #0056b3; /* Azul oscuro */
-  }
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px; /* Fixed width */
+  height: 250px; /* Fixed height */
+  margin: 16px auto; /* Center horizontally */
+  border: 2px solid var(--neon-text-color-yellow); /* Vibrant yellow border */
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-neon); /* Neon glow */
+  overflow: hidden;
 }

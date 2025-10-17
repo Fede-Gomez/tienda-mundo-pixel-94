@@ -7,11 +7,12 @@
 .faq-question {
   background: none;
   border: none;
-  color: #333;
+  color: var(--neon-text-color-yellow); /* Vibrant yellow */
   font-size: 1.2rem;
   cursor: pointer;
   text-align: left;
   width: 100%;
+  text-shadow: var(--neon-text-shadow-title); /* Pixelated glow effect */
 }
 
 .faq-question:hover {
@@ -21,7 +22,8 @@
 .faq-answer {
   margin-top: 0.5rem;
   font-size: 1rem;
-  color: #555;
+  color: var(--neon-text-color-green); /* Neon green */
+  text-shadow: var(--neon-glow-green);
 }
 
 .faq-list {
@@ -31,5 +33,13 @@
 
 .faq-item {
   margin-bottom: 8px; /* Add spacing between questions */
-  margin-bottom: 8px; /* Add spacing between questions */
+}
+
+/* Retro style for the FAQ page */
+
+.faq {
+  background-color: #1a1a1a; /* Dark background */
+  color: var(--neon-text-color-green); /* Neon green text */
+  font-family: var(--font-family-retro); /* Pixelated retro font */
+  padding: 2rem;
 }

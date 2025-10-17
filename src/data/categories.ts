@@ -6,6 +6,9 @@ import { productsDragonBall } from "./products-dragon-ball";
 import { productsGodOfWar } from "./products-god-of-war";
 import { productsHarryPotter } from "./products-harry-potter";
 import { productsHollowKnight } from "./products-hollow-knight";
+import { productsMario } from "./products-mario";
+import { productsMetalSlug } from "./products-metal-slug";
+import { productsMortalKombat } from "./products-mortal-kombat";
 import { productsOriAndTheBlindForest } from "./products-ori-and-the-blind-forest";
 import { productsPokemon } from "./products-pokemon";
 import { productsResidentEvil } from "./products-resident-evil";
@@ -87,6 +90,24 @@ export const categories: TypeCategory[] = [
     name: "Sonic",
     image: getRandomImage(productsSonic), // Imagen aleatoria
     products: productsSonic,
+  },
+  {
+    id: "mario",
+    name: "Mario",
+    image: getRandomImage(productsMario), // Imagen aleatoria
+    products: productsMario,
+  },
+  {
+    id: "metal-slug",
+    name: "Metal Slug",
+    image: getRandomImage(productsMetalSlug), // Imagen aleatoria
+    products: productsMetalSlug,
+  },
+  {
+    id: "mortal-kombat",
+    name: "Mortal Kombat",
+    image: getRandomImage(productsMortalKombat), // Imagen aleatoria
+    products: productsMortalKombat,
   },
   
 ];

@@ -1,4 +1,4 @@
-import { attribute, level, type typeDigimon, type TypeProductCard } from "../types/product";
+import { attributeDigimon as attribute, levelDigimon as level, type typeDigimon } from "../types/product";
 import imgDigivice1Dot01 from "../assets/digimon/dot/digivice-01.jpg";
 import imgDigivice2Dot01 from "../assets/digimon/dot/digivice-02.jpg";
 import imgDigivice3Dot01 from "../assets/digimon/dot/digivice-03.jpg";
@@ -586,7 +586,7 @@ attribute: attribute.DATA,
       ancho: 4.1,
       alto: 4.1
     },
-attribute: attribute.DATA,
+    attribute: attribute.DATA,
     level: level.ULTIMATE,
   },
   {
@@ -596,13 +596,110 @@ attribute: attribute.DATA,
     image: [
       imgDorumon02
     ],
-            size:{
+    size:{
       ancho: 4.1,
       alto: 4.1
     },
-attribute: attribute.DATA,
+    attribute: attribute.DATA,
     level: level.ROOKIE,
   },
-
+    {
+    id: "gabumon-01",
+    name: "Gabumon",
+    price: 5000,
+    image: [
+      imgDorumon02
+    ],
+    size:{
+      ancho: 6.7,
+      alto: 7.8
+    },
+    attribute: attribute.DATA,
+    level: level.ROOKIE,
+  },
+  {
+    id: "biyomon-01",
+    name: "Biyomon",
+    price: 5000,
+    image: [
+      imgDorumon02
+    ],
+    size:{
+      ancho: 4.9,
+      alto: 7
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
+  },
+  {
+    id: "patamon-01",
+    name: "Patamon",
+    price: 4500,
+    image: [
+      imgDorumon02
+    ],
+    size:{
+      ancho: 7,
+      alto: 7
+    },
+    attribute: attribute.DATA,
+    level: level.ROOKIE,
+  },
+  {
+    id: "gomamon-01",
+    name: "Gomamon",
+    price: 2500,
+    image: [
+      imgDorumon02
+    ],
+    size:{
+      ancho: 4.6,
+      alto: 5.4
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
+  },
+  {
+    id: "palmon-01",
+    name: "Palmon",
+    price: 4000,
+    image: [
+      imgDorumon02
+    ],
+    size:{
+      ancho: 5.7,
+      alto: 7.5
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
+  },
+  {
+    id: "gatomon-01",
+    name: "Gatomon",
+    price: 5000,
+    image: [
+      imgDorumon02
+    ],
+    size:{
+      ancho: 9.3,
+      alto: 8.5
+    },
+    attribute: attribute.VACCINE,
+    level: level.CHAMPION,
+  },
+  {
+    id: "tentomon-01",
+    name: "Tentomon",
+    price: 4000,
+    image: [
+      imgDorumon02
+    ],
+    size:{
+      ancho: 7,
+      alto: 7.8
+    },
+    attribute: attribute.VACCINE,
+    level: level.ROOKIE,
+  },
 
 ];

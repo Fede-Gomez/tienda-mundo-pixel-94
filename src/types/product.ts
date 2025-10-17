@@ -17,21 +17,54 @@ export interface CartItem extends TypeProductCard {
 }
 
 export interface typeDigimon extends TypeProductCard {
-  level?: level; // Nivel del Digimon (Rookie, Champion, Ultimate, Mega)
-  attribute?: attribute; // Atributo del Digimon (Vaccine, Data, Virus, Free)
+  level?: levelDigimon; // Nivel del Digimon (Rookie, Champion, Ultimate, Mega)
+  attribute?: attributeDigimon; // Atributo del Digimon (Vaccine, Data, Virus, Free)
 }
 
-export enum attribute {
+export interface typePokemon extends TypeProductCard {
+  type?: typePoke; 
+  stage?: stagePokemon;
+}
+
+export enum attributeDigimon {
   VACCINE = "Vacuna",
   DATA = "Data",
   VIRUS = "Virus",
   FREE = "Free",
 }
 
-export enum level {
+export enum levelDigimon {
   ROOKIE = "Rookie",
   CHAMPION = "Champion",
   ULTIMATE = "Ultimate",
   MEGA = "Mega",
   ARMOR = "Armor",
+}
+
+export enum stagePokemon{
+  BASIC = "Básico",
+  STAGE1 = "Stage 1",
+  STAGE2 = "Stage 2",
+}
+
+export enum typePoke{
+  PLANTA = "Planta",
+  FUEGO = "Fuego",
+  AGUA = "Agua",
+  ELECTRICO = "Eléctrico",
+  LUCHA = "Lucha",
+  PSIQUICO = "Psíquico",
+  NORMAL = "Normal",
+  VOLADOR = "Volador",
+  VENENO = "Veneno",
+  BICHO = "Bicho",
+  ROCA = "Roca",
+  TIERRA = "Tierra",
+  HADA = "Hada",
+  FANTASMA = "Fantasma",
+  ACERO = "Acero",
+  DRAGON = "Dragón",
+  OSCURIDAD = "Oscuridad",
+  HIELO = "Hielo",
+  SINIESTRO = "Siniestro",
 }

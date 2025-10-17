@@ -1,4 +1,4 @@
-import type { TypeProductCard } from "../types/product";
+import { stagePokemon, typePoke, type typePokemon } from "../types/product";
 import imgBayleef01 from "../assets/pokemon/bayleef-01.jpg";
 import imgBlastoise01 from "../assets/pokemon/blastoise-01.jpg";
 import imgBlaziken01 from "../assets/pokemon/blaziken-01.jpg";
@@ -38,7 +38,7 @@ import imgStaraptor01 from "../assets/pokemon/staraptor-01.jpg";
 import imgTotodile01 from "../assets/pokemon/totodile-01.jpg";
 
 
-export const productsPokemon: TypeProductCard[] = [
+export const productsPokemon: typePokemon[] = [
   {
     id: "bayleef-01",
     name: "Bayleef",
@@ -50,7 +50,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.2,
       alto: 5.9
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.PLANTA,
   },
   {
     id: "blastoise-01",
@@ -60,10 +61,11 @@ export const productsPokemon: TypeProductCard[] = [
       imgBlastoise01,
     ],
     size:{
-      ancho: 8.8 ,
+      ancho: 6.5,
       alto: 6.2
     },
-
+    stage: stagePokemon.STAGE2,
+    type: typePoke.AGUA,
   },
   {
     id: "blaziken-01",
@@ -76,7 +78,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.7,
       alto: 6.7
     },
-
+    stage: stagePokemon.STAGE2,
+    type: typePoke.FUEGO,
   },
   {
     id: "charmander-01",
@@ -89,7 +92,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.4,
       alto: 4.6
     },
-
+    stage: stagePokemon.BASIC,
+    type: typePoke.FUEGO,
   },
   {
     id: "charmeleon-01",
@@ -102,7 +106,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.7,
       alto: 5.7
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.FUEGO,
   },
   {
     id: "chicorita-01",
@@ -115,7 +120,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7.8,
       alto: 6.2
     },
-
+    stage: stagePokemon.BASIC,
+    type: typePoke.PLANTA,
   },
   {
     id: "combusken-01",
@@ -128,7 +134,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.7,
       alto: 6.5
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.FUEGO,
   },
   {
     id: "eevee-01",
@@ -141,7 +148,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 4.4,
       alto: 4.6
     },
-
+    stage: stagePokemon.BASIC,
+    type: typePoke.NORMAL,
   },
   {
     id: "espeon-01",
@@ -154,7 +162,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7,
       alto: 5.4
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.PSIQUICO,
   },
   {
     id: "flareon-01",
@@ -167,7 +176,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 5.4
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.FUEGO,
   },
   {
     id: "glaceon-01",
@@ -180,7 +190,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7,
       alto: 6
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.HIELO,
   },
   {
     id: "jolteon-01",
@@ -193,7 +204,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5,
       alto: 5.4
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.ELECTRICO,
   },
   {
     id: "leafeon-01",
@@ -206,7 +218,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6.5,
       alto: 5.7
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.PLANTA,
   },
   {
     id: "marshtomp-01",
@@ -219,7 +232,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.2,
       alto: 5.4
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.AGUA,
   },
   {
     id: "meganium-01",
@@ -232,7 +246,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 7
     },
-
+    stage: stagePokemon.STAGE2,
+    type: typePoke.PLANTA,
   },
   {
     id: "mudkip-01",
@@ -245,7 +260,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5,
       alto: 4.6
     },
-
+    stage: stagePokemon.BASIC,
+    type: typePoke.AGUA,
   },
   {
     id: "pokeball-01",
@@ -258,7 +274,6 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 3.1,
       alto: 3.1
     },
-
   },
   {
     id: "pokeball-02",
@@ -271,7 +286,6 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 3.1,
       alto: 3.1
     },
-
   },
   {
     id: "pokeball-03",
@@ -284,7 +298,6 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 3.1,
       alto: 3.1
     },
-
   },
   {
     id: "pokeball-04",
@@ -297,7 +310,6 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 3.1,
       alto: 3.1
     },
-
   },
   {
     id: "quilava-01",
@@ -310,7 +322,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 5.2
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.FUEGO,
   },
   {
     id: "sceptile-01",
@@ -323,7 +336,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7.2,
       alto: 6.7
     },
-
+    stage: stagePokemon.STAGE2,
+    type: typePoke.PLANTA,
   },
   {
     id: "swampert-01",
@@ -336,7 +350,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6.7,
       alto: 6.5
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.AGUA,
   },
   {
     id: "sylveon-01",
@@ -349,7 +364,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.7,
       alto: 6
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.HADA,
   },
   {
     id: "torchic-01",
@@ -362,7 +378,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 3.3,
       alto: 5
     },
-
+    stage: stagePokemon.BASIC,
+    type: typePoke.FUEGO,
   },
   {
     id: "typlosion-01",
@@ -375,7 +392,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 6.5
     },
-
+    stage: stagePokemon.STAGE2,
+    type: typePoke.FUEGO,
   },
   {
     id: "umbreon-01",
@@ -388,7 +406,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.2,
       alto: 5.4
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.SINIESTRO,
   },
   {
     id: "vaporeon-01",
@@ -401,7 +420,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 5.4
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.AGUA,
   },
   {
     id: "wartortle-01",
@@ -411,10 +431,11 @@ export const productsPokemon: TypeProductCard[] = [
       imgWartortle01,
     ],
     size:{
-      ancho: 8.8,
-      alto: 6.2
+      ancho: 6.2,
+      alto: 5.7
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.AGUA,
   },
   {
     id: "arcanine-01",
@@ -427,7 +448,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7.5,
       alto: 7
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.FUEGO,
   },
   {
     id: "croconaw-01",
@@ -440,7 +462,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 5.4,
       alto: 6.5
     },
-
+    stage: stagePokemon.STAGE1,
+    type: typePoke.AGUA,
   },
   {
     id: "gardevoir-shiny-01",
@@ -453,7 +476,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6.7,
       alto: 6.2
     },
-
+    stage: stagePokemon.STAGE2,
+    type: typePoke.PSIQUICO,
   },
   {
     id: "hydregon-01",
@@ -466,7 +490,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 7.5,
       alto: 6.5
     },
-
+    stage: stagePokemon.STAGE2,
+    type: typePoke.DRAGON,
   },
   {
     id: "infernape-01",
@@ -479,7 +504,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6.7,
       alto: 6.2
     },
-
+    stage: stagePokemon.STAGE2,
+    type: typePoke.FUEGO,
   },
   {
     id: "metagross-shiny-01",
@@ -492,7 +518,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 8.4,
       alto: 5.7
     },
-
+    stage: stagePokemon.STAGE2,
+    type: typePoke.ACERO,
   },
   {
     id: "staraptor-01",
@@ -505,7 +532,8 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 6,
       alto: 6.5
     },
-
+    stage: stagePokemon.STAGE2,
+    type: typePoke.NORMAL,
   },
   {
     id: "totodile-01",
@@ -518,7 +546,35 @@ export const productsPokemon: TypeProductCard[] = [
       ancho: 4.6,
       alto: 4.6
     },
-
+    stage: stagePokemon.BASIC,
+    type: typePoke.AGUA,
   },
-
+  {
+    id: "psyduck-01",
+    name: "Psyduck",
+    price: 3000,
+    image: [
+      imgTotodile01,
+    ],
+    size:{
+      ancho: 4.6,
+      alto: 5.4
+    },
+    stage: stagePokemon.BASIC,
+    type: typePoke.AGUA,
+  },
+  {
+    id: "pikachu-01",
+    name: "Pikachu",
+    price: 3000,
+    image: [
+      imgTotodile01,
+    ],
+    size:{
+      ancho: 5.9,
+      alto: 5.4
+    },
+    stage: stagePokemon.BASIC,
+    type: typePoke.ELECTRICO,
+  },
 ];

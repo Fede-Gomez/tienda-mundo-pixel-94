@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { attribute as AttributeEnum, level as LevelEnum, type typeDigimon } from "../../types/product";
+import { 
+  attributeDigimon as AttributeEnum, 
+  levelDigimon as LevelEnum, 
+  type typeDigimon 
+} from "../types/product";
+import "./Filter.css";
 
 interface Props {
   products: typeDigimon[];

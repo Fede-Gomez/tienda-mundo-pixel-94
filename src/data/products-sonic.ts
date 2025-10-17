@@ -85,7 +85,6 @@ export const productsSonic: TypeProductCard[] = [
       ancho: 4.6,
       alto: 4.1
     },
-    stock: false
   },
   {
     id: "sonic-01",
@@ -98,6 +97,17 @@ export const productsSonic: TypeProductCard[] = [
       ancho: 6.2,
       alto: 9.8
     },
-
+  },
+  {
+    id: "shadow-03",
+    name: "Shadow",
+    price: 7000,
+    image: [
+      imgSonic01
+    ],
+    size:{
+      ancho: 12.2,
+      alto: 8.6
+    },
   },
 ];

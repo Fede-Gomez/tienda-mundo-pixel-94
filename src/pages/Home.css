@@ -1,4 +1,9 @@
+/* Retro style for the Home page */
+
 .home {
+  background-color: #1a1a1a; /* Dark background */
+  color: #00ffcc; /* Neon green text */
+  font-family: 'Press Start 2P', cursive; /* Pixelated retro font */
   text-align: center;
   padding: 16px;
 }
@@ -12,15 +17,19 @@
   height: 150px;
   border-radius: 50%;
   margin-bottom: 16px;
+  box-shadow: 0 0 8px #ffcc00, 0 0 16px #ff6600; /* Neon glow effect */
 }
 
 .home-title {
   font-size: 28px;
   font-weight: bold;
+  color: var(--neon-text-color-yellow); /* Vibrant yellow */
+  text-shadow: var(--neon-text-shadow-title); /* Pixelated glow effect */
   margin-bottom: 8px;
 }
 
 .home-subtitle {
   font-size: 16px;
-  color: #666;
+  color: var(--neon-glow-green); /* Neon green */
+  text-shadow: var(--neon-text-shadow); /* Pixelated glow effect */
 }
