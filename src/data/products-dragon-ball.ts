@@ -1,6 +1,4 @@
 import type { TypeProductCard } from "../types/product";
-import imgGohan01 from "../assets/dragon-ball/gohan-ssj2-01.jpg";
-import imgRadarDelDragon01 from "../assets/dragon-ball/radar-del-dragon-01.jpg";
 import { gogetaSsj101, gohanSsj201, gokuSsj01, gokuUltraInstinct01, radarDelDragon01, vegeta01 } from "../assets/dragon-ball";
 
 
