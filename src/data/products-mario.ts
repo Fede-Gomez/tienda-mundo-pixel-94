@@ -1,5 +1,5 @@
 import type { TypeProductCard } from "../types/product";
-import imgKratos01 from "../assets/god-of-war/kratos-01.jpg";
+import { boo, hongo01, hongo02, mario3 } from "../assets/mario-bross";
 
 
 
@@ -9,7 +9,7 @@ export const productsMario: TypeProductCard[] = [
     name: "Mario 3",
     price: 3500,
     image: [
-      imgKratos01
+      mario3
     ],
     size:{
       ancho: 5.4,
@@ -21,11 +21,35 @@ export const productsMario: TypeProductCard[] = [
     name: "Boo",
     price: 3500,
     image: [
-      imgKratos01
+      boo
     ],
     size:{
       ancho: 5.4,
       alto: 6
+    },
+  },
+  {
+    id: "hongo-01",
+    name: "Hongo rojo",
+    price: 1500,
+    image: [
+      hongo01
+    ],
+    size:{
+      ancho: 2.8,
+      alto: 2.8
+    },
+  },
+  {
+    id: "hongo-02",
+    name: "Hongo verde",
+    price: 1500,
+    image: [
+      hongo02
+    ],
+    size:{
+      ancho: 2.8,
+      alto: 2.8
     },
   },
 ];

@@ -1,7 +1,6 @@
 // src/data/products.ts
 import type { TypeProductCard } from "../types/product";
-import imgGrub from "../assets/hollow-knight/grub-01.jpg";
-import imgGrim from "../assets/hollow-knight/grim-01.jpg";
+import { grim01, grub01, hollowKnight01, hornet01 } from "../assets/hollow-knight";
 
 export const productsHollowKnight: TypeProductCard[] = [
   {
@@ -9,7 +8,7 @@ export const productsHollowKnight: TypeProductCard[] = [
     name: "Grub",
     price: 4000,
     image: [
-      imgGrub
+      grub01
     ],
     size:{
       ancho: 5.4,
@@ -22,12 +21,35 @@ export const productsHollowKnight: TypeProductCard[] = [
     name: "Grim",
     price: 5500,
     image: [
-      imgGrim
+      grim01
     ],
     size:{
       ancho: 6,
       alto: 9.8
     },
-
+  },
+  {
+    id: "hornet-01",
+    name: "Hornet",
+    price: 4500,
+    image: [
+      hornet01
+    ],
+    size:{
+      ancho: 10.4,
+      alto: 10.4
+    },
+  },
+  {
+    id: "hollow-knight-01",
+    name: "Hollow Knight",
+    price: 4500,
+    image: [
+      hollowKnight01
+    ],
+    size:{
+      ancho: 5.5,
+      alto: 9.6
+    },
   },
 ];

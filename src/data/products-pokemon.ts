@@ -1,41 +1,12 @@
+import { arcanine01, blastoise01, charmander01, charmeleon01, eevee01, flareon01, jolteon01, pikachu01, psyduck01, vaporeon01, warturtle01 } from "../assets/pokemon/1-gen";
+import { bayleef01, chicorita01, croconaw01, espeon01, meganium01, quilava01, totodile01, typlosion01, umbreon01 } from "../assets/pokemon/2-gen";
+import { blaziken01, combusken01, gardevoirShiny01, grovyle01, marshtomp01, metagrossShiny01, mudkip01, sceptile01, swampert01, torchic01, treecko01 } from "../assets/pokemon/3-gen";
+import { glaceon01, infernape01, leafeon01, staraptor01 } from "../assets/pokemon/4-gen";
+import { hydregon01 } from "../assets/pokemon/5-gen";
+import { sylveon01 } from "../assets/pokemon/6-gen";
+import { pokeball01, pokeball02, pokeball03, pokeball04 } from "../assets/pokemon/pokeballs";
 import { stagePokemon, typePoke, type typePokemon } from "../types/product";
-import imgBayleef01 from "../assets/pokemon/bayleef-01.jpg";
-import imgBlastoise01 from "../assets/pokemon/blastoise-01.jpg";
-import imgBlaziken01 from "../assets/pokemon/blaziken-01.jpg";
-import imgCharmander01 from "../assets/pokemon/charmander-01.jpg";
-import imgCharmeleon01 from "../assets/pokemon/charmeleon-01.jpg";
-import imgChicorita01 from "../assets/pokemon/chicorita-01.jpg";
-import imgCombusken01 from "../assets/pokemon/combusken-01.jpg";
-import imgEevee01 from "../assets/pokemon/eevee-01.jpg";
-import imgEspeon01 from "../assets/pokemon/espeon-01.jpg";
-import imgFlareon01 from "../assets/pokemon/flareon-01.jpg";
-import imgGlaceon01 from "../assets/pokemon/glaceon-01.jpg";
-import imgJolteon01 from "../assets/pokemon/jolteon-01.jpg";
-import imgLeafeon01 from "../assets/pokemon/leafeon-01.jpg";
-import imgMarshtomp01 from "../assets/pokemon/marshtomp-01.jpg";
-import imgMeganium01 from "../assets/pokemon/meganium-01.jpg";
-import imgMudkip01 from "../assets/pokemon/mudkip-01.jpg";
-import imgPokeball01 from "../assets/pokemon/pokeball-01.jpg";
-import imgPokeball02 from "../assets/pokemon/pokeball-02.jpg";
-import imgPokeball03 from "../assets/pokemon/pokeball-03.jpg";
-import imgPokeball04 from "../assets/pokemon/pokeball-04.jpg";
-import imgQuilava01 from "../assets/pokemon/quilava-01.jpg";
-import imgSceptile01 from "../assets/pokemon/sceptile-01.jpg";
-import imgSwampert01 from "../assets/pokemon/swampert-01.jpg";
-import imgSylveon01 from "../assets/pokemon/sylveon-01.jpg";
-import imgTorchic01 from "../assets/pokemon/torchic-01.jpg";
-import imgTyplosion01 from "../assets/pokemon/typlosion-01.jpg";
-import imgUmbreon01 from "../assets/pokemon/umbreon-01.jpg";
-import imgVaporeon01 from "../assets/pokemon/vaporeon-01.jpg";
-import imgWartortle01 from "../assets/pokemon/wartortle-01.jpg";
-import imgArcanine01 from "../assets/pokemon/arcanine-01.jpg";
-import imgCroconaw01 from "../assets/pokemon/croconaw-01.jpg";
-import imgGardevoirShiny01 from "../assets/pokemon/gardevoir-shiny-01.jpg";
-import imgHydregon01 from "../assets/pokemon/hydregon-01.jpg";
-import imgInfernape01 from "../assets/pokemon/infernape-01.jpg";
-import imgMetagrossShiny01 from "../assets/pokemon/metagross-shiny-01.jpg";
-import imgStaraptor01 from "../assets/pokemon/staraptor-01.jpg";
-import imgTotodile01 from "../assets/pokemon/totodile-01.jpg";
+
 
 
 export const productsPokemon: typePokemon[] = [
@@ -44,7 +15,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Bayleef",
     price: 3000,
     image: [
-      imgBayleef01,
+      bayleef01,
     ],
     size:{
       ancho: 5.2,
@@ -58,7 +29,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Blastoise",
     price: 3500,
     image: [
-      imgBlastoise01,
+      blastoise01,
     ],
     size:{
       ancho: 6.5,
@@ -72,7 +43,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Blaziken",
     price: 3500,
     image: [
-      imgBlaziken01,
+      blaziken01,
     ],
     size:{
       ancho: 5.7,
@@ -86,7 +57,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Charmander",
     price: 2500,
     image: [
-      imgCharmander01,
+      charmander01,
     ],
     size:{
       ancho: 5.4,
@@ -100,7 +71,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Charmeleon",
     price: 3000,
     image: [
-      imgCharmeleon01,
+      charmeleon01,
     ],
     size:{
       ancho: 5.7,
@@ -114,7 +85,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Chicorita",
     price: 2500,
     image: [
-      imgChicorita01,
+      chicorita01,
     ],
     size:{
       ancho: 7.8,
@@ -128,7 +99,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Combusken",
     price: 3000,
     image: [
-      imgCombusken01,
+      combusken01,
     ],
     size:{
       ancho: 5.7,
@@ -142,7 +113,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Eevee",
     price: 2500,
     image: [
-      imgEevee01,
+      eevee01,
     ],
     size:{
       ancho: 4.4,
@@ -156,7 +127,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Espeon",
     price: 3000,
     image: [
-      imgEspeon01,
+      espeon01,
     ],
     size:{
       ancho: 7,
@@ -170,7 +141,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Flareon",
     price: 3000,
     image: [
-      imgFlareon01,
+      flareon01,
     ],
     size:{
       ancho: 6,
@@ -184,7 +155,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Glaceon",
     price: 3000,
     image: [
-      imgGlaceon01,
+      glaceon01,
     ],
     size:{
       ancho: 7,
@@ -198,7 +169,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Jolteon",
     price: 2500,
     image: [
-      imgJolteon01,
+      jolteon01,
     ],
     size:{
       ancho: 5,
@@ -212,7 +183,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Leafeon",
     price: 3000,
     image: [
-      imgLeafeon01,
+      leafeon01,
     ],
     size:{
       ancho: 6.5,
@@ -226,7 +197,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Marshtomp",
     price: 3000,
     image: [
-      imgMarshtomp01,
+      marshtomp01,
     ],
     size:{
       ancho: 5.2,
@@ -240,7 +211,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Meganium",
     price: 3500,
     image: [
-      imgMeganium01,
+      meganium01,
     ],
     size:{
       ancho: 6,
@@ -254,7 +225,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Mudkip",
     price: 2500,
     image: [
-      imgMudkip01,
+      mudkip01,
     ],
     size:{
       ancho: 5,
@@ -268,7 +239,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Superball",
     price: 1500,
     image: [
-      imgPokeball01,
+      pokeball01,
     ],
     size:{
       ancho: 3.1,
@@ -280,7 +251,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Masterball",
     price: 1500,
     image: [
-      imgPokeball02,
+      pokeball02,
     ],
     size:{
       ancho: 3.1,
@@ -292,7 +263,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Pokeball",
     price: 1500,
     image: [
-      imgPokeball03,
+      pokeball03,
     ],
     size:{
       ancho: 3.1,
@@ -304,7 +275,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Ultraball",
     price: 1500,
     image: [
-      imgPokeball04,
+      pokeball04,
     ],
     size:{
       ancho: 3.1,
@@ -316,7 +287,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Quilava",
     price: 3000,
     image: [
-      imgQuilava01,
+      quilava01,
     ],
     size:{
       ancho: 6,
@@ -326,11 +297,39 @@ export const productsPokemon: typePokemon[] = [
     type: typePoke.FUEGO,
   },
   {
+    id: "treeko-01",
+    name: "Treecko",
+    price: 2000,
+    image: [
+      treecko01,
+    ],
+    size:{
+      ancho: 5.2,
+      alto: 5.2
+    },
+    stage: stagePokemon.BASIC,
+    type: typePoke.PLANTA,
+  },
+  {
+    id: "grovyle-01",
+    name: "Grovyle",
+    price: 3500,
+    image: [
+      grovyle01,
+    ],
+    size:{
+      ancho: 7.2,
+      alto: 5.7
+    },
+    stage: stagePokemon.STAGE1,
+    type: typePoke.PLANTA,
+  },
+  {
     id: "sceptile-01",
     name: "Sceptile",
     price: 3500,
     image: [
-      imgSceptile01,
+      sceptile01,
     ],
     size:{
       ancho: 7.2,
@@ -344,7 +343,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Swampert",
     price: 4500,
     image: [
-      imgSwampert01,
+      swampert01,
     ],
     size:{
       ancho: 6.7,
@@ -358,7 +357,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Sylveon",
     price: 3000,
     image: [
-      imgSylveon01,
+      sylveon01,
     ],
     size:{
       ancho: 5.7,
@@ -372,7 +371,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Torchic",
     price: 2500,
     image: [
-      imgTorchic01,
+      torchic01,
     ],
     size:{
       ancho: 3.3,
@@ -386,7 +385,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Typlosion",
     price: 3500,
     image: [
-      imgTyplosion01,
+      typlosion01,
     ],
     size:{
       ancho: 6,
@@ -400,7 +399,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Umbreon",
     price: 2500,
     image: [
-      imgUmbreon01,
+      umbreon01,
     ],
     size:{
       ancho: 5.2,
@@ -414,7 +413,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Vaporeon",
     price: 3000,
     image: [
-      imgVaporeon01,
+      vaporeon01,
     ],
     size:{
       ancho: 6,
@@ -428,7 +427,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Wartortle",
     price: 3000,
     image: [
-      imgWartortle01,
+      warturtle01,
     ],
     size:{
       ancho: 6.2,
@@ -442,7 +441,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Arcanine",
     price: 4500,
     image: [
-      imgArcanine01
+      arcanine01
     ],
     size:{
       ancho: 7.5,
@@ -456,7 +455,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Croconaw",
     price: 3000,
     image: [
-      imgCroconaw01
+      croconaw01
     ],
     size:{
       ancho: 5.4,
@@ -470,7 +469,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Gardevoir Shiny",
     price: 4000,
     image: [
-      imgGardevoirShiny01,
+      gardevoirShiny01,
     ],
     size:{
       ancho: 6.7,
@@ -484,7 +483,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Hydregon",
     price: 4500,
     image: [
-      imgHydregon01,
+      hydregon01,
     ],
     size:{
       ancho: 7.5,
@@ -498,7 +497,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Infernape",
     price: 3500,
     image: [
-      imgInfernape01,
+      infernape01,
     ],
     size:{
       ancho: 6.7,
@@ -512,7 +511,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Metagross Shiny",
     price: 4000,
     image: [
-      imgMetagrossShiny01,
+      metagrossShiny01,
     ],
     size:{
       ancho: 8.4,
@@ -526,7 +525,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Staraptor",
     price: 3500,
     image: [
-      imgStaraptor01,
+      staraptor01,
     ],
     size:{
       ancho: 6,
@@ -540,7 +539,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Totodile",
     price: 2500,
     image: [
-      imgTotodile01,
+      totodile01,
     ],
     size:{
       ancho: 4.6,
@@ -554,7 +553,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Psyduck",
     price: 3000,
     image: [
-      imgTotodile01,
+      psyduck01,
     ],
     size:{
       ancho: 4.6,
@@ -568,7 +567,7 @@ export const productsPokemon: typePokemon[] = [
     name: "Pikachu",
     price: 3000,
     image: [
-      imgTotodile01,
+      pikachu01,
     ],
     size:{
       ancho: 5.9,

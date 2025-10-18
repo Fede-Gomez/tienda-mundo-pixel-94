@@ -1,45 +1,55 @@
 import { attributeDigimon as attribute, levelDigimon as level, type typeDigimon } from "../types/product";
-import imgDigivice1Dot01 from "../assets/digimon/dot/digivice-01.jpg";
-import imgDigivice2Dot01 from "../assets/digimon/dot/digivice-02.jpg";
-import imgDigivice3Dot01 from "../assets/digimon/dot/digivice-03.jpg";
-import imgDigivice4Dot01 from "../assets/digimon/dot/digivice-04.jpg";
-import imgDigivice5Dot01 from "../assets/digimon/dot/digivice-05.jpg";
-import imgDigivice6Dot01 from "../assets/digimon/dot/digivice-06.jpg";
-import imgDigivice7Dot01 from "../assets/digimon/dot/digivice-07.jpg";
-import imgDigivice8Dot01 from "../assets/digimon/dot/digivice-08.jpg";
-import imgAgumonDot01 from "../assets/digimon/dot/agumon-01.jpg";
-import imgBiyomonDot01 from "../assets/digimon/dot/biyomon-01.jpg";
-import imgDorumonDot01 from "../assets/digimon/dot/dorumon-01.jpg";
-import imgGabumonDot01 from "../assets/digimon/dot/gabumon-01.jpg";
-import imgGarurumonDot01 from "../assets/digimon/dot/garurumon-01.jpg";
-import imgGatomonDot01 from "../assets/digimon/dot/gatomon-01.jpg";
-import imgGomamonDot01 from "../assets/digimon/dot/gomamon-01.jpg";
-import imgGreymonDot01 from "../assets/digimon/dot/greymon-01.jpg";
-import imgGuilmonDot01 from "../assets/digimon/dot/guilmon-01.jpg";
-import imgKabuterimonDot01 from "../assets/digimon/dot/kabuterimon-01.jpg";
-import imgMetalgreymonDot01 from "../assets/digimon/dot/metalgreymon-01.jpg";
-import imgOmnimonDot01 from "../assets/digimon/dot/omnimon-01.jpg";
-import imgPalmonDot01 from "../assets/digimon/dot/palmon-01.jpg";
-import imgPatamonDot01 from "../assets/digimon/dot/patamon-01.jpg";
-import imgRenamonDot01 from "../assets/digimon/dot/renamon-01.jpg";
-import imgTentomonDot01 from "../assets/digimon/dot/tentomon-01.jpg";
-import imgTerriermonDot01 from "../assets/digimon/dot/terriermon-01.jpg";
-import imgAgumon01 from "../assets/digimon/figura/agumon-01.jpg";
-import imgGarurumon01 from "../assets/digimon/figura/garurumon-01.jpg";
-import imgVeemon01 from "../assets/digimon/figura/vmon-01.jpg";
-import imgWormmon01 from "../assets/digimon/figura/wormmon-01.jpg";
-import imgXveemon01 from "../assets/digimon/figura/xvmon-01.jpg";
-import imgFlamedramon01 from "../assets/digimon/figura/flamedramon-01.jpg";
-import imgAlphamon01 from "../assets/digimon/dot/alphamon-01.jpg";
-import imgDeathXDorugoramon01 from "../assets/digimon/dot/deathXDorugoramon-01.jpg";
-import imgDexDorugamon01 from "../assets/digimon/dot/dexDorugamon-01.jpg";
-import imgDexDorugreymon01 from "../assets/digimon/dot/dexDorugreymon-01.jpg";
-import imgDodomon01 from "../assets/digimon/dot/dodomon-01.jpg";
-import imgDorimon01 from "../assets/digimon/dot/dorimon-01.jpg";
-import imgDorugamon01 from "../assets/digimon/dot/dorugamon-01.jpg";
-import imgDorugoramon01 from "../assets/digimon/dot/dorugoramon-01.jpg";
-import imgDorugreymon01 from "../assets/digimon/dot/dorugreymon-01.jpg";
-import imgDorumon02 from "../assets/digimon/dot/dorumon-02.jpg";
+import { agumonDot01, 
+  biyomonDot01, 
+  digivice1Dot01, 
+  digivice2Dot01, 
+  digivice3Dot01, 
+  digivice4Dot01, 
+  digivice5Dot01, 
+  digivice6Dot01, 
+  digivice7Dot01, 
+  digivice8Dot01, 
+  dorumonDot01, 
+  gabumonDot01, 
+  garurumonDot01,
+  agumon01,
+  alphamon01,
+  deathXDorugoramon01,
+  dexDorugamon01,
+  dexDorugreymon01,
+  dodomon01,
+  dorimon01,
+  dorugamon01,
+  dorugoramon01,
+  dorugreymon01,
+  dorumon02,
+  gatomonDot01,
+  gomamonDot01,
+  greymonDot01,
+  guilmonDot01,
+  kabuterimonDot01,
+  metalgreymonDot01,
+  omnimonDot01,
+  palmonDot01,
+  patamonDot01,
+  renamonDot01,
+  tentomonDot01,
+  terriermonDot01,
+  garurumon01,
+  veemon01,
+  wormmon01,
+  xveemon01,
+  flamedramon01,
+  biyomon01,
+  gabumon01,
+  gomamon01,
+  gatomon01,
+  tentomon01,
+  patamon01,
+  palmon01,
+
+} from "../assets/digimon";
+
 
 export const productsDigimon: typeDigimon[] = [
   {
@@ -47,9 +57,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Digivice DOT",
     price: 2000,
     image: [
-      imgDigivice1Dot01
+      digivice1Dot01
     ],
-    size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
@@ -59,100 +69,93 @@ export const productsDigimon: typeDigimon[] = [
     name: "Digivice DOT",
     price: 2000,
     image: [
-      imgDigivice2Dot01
+      digivice2Dot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
-
   },
   {
     id: "digivice-dot-03",
     name: "Digivice DOT",
     price: 2000,
     image: [
-      imgDigivice3Dot01
+      digivice3Dot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
-
   },
   {
     id: "digivice-dot-04",
     name: "Digivice DOT",
     price: 2000,
     image: [
-      imgDigivice4Dot01
+      digivice4Dot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
-
   },
   {
     id: "digivice-dot-05",
     name: "Digivice DOT",
     price: 2000,
     image: [
-      imgDigivice5Dot01
+      digivice5Dot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
-
   },
   {
     id: "digivice-dot-06",
     name: "Digivice DOT",
     price: 2000,
     image: [
-      imgDigivice6Dot01
+      digivice6Dot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
-
   },
   {
     id: "digivice-dot-07",
     name: "Digivice DOT",
     price: 2000,
     image: [
-      imgDigivice7Dot01
+      digivice7Dot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
-
   },
   {
     id: "digivice-dot-08",
     name: "Digivice DOT",
     price: 2000,
     image: [
-      imgDigivice8Dot01
+      digivice8Dot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
-
   },
   {
     id: "agumon-dot-01",
     name: "Agumon DOT",
     price: 2000,
     image: [
-      imgAgumonDot01
+      agumonDot01
     ],
-    size:{
+    size: {
       ancho: 3.9,
       alto: 3.9
     },
@@ -164,9 +167,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Biyomon DOT",
     price: 2000,
     image: [
-      imgBiyomonDot01
+      biyomonDot01
     ],
-        size:{
+    size: {
       ancho: 3.6,
       alto: 3.9
     },
@@ -178,9 +181,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Dorumon DOT",
     price: 2000,
     image: [
-      imgDorumonDot01
+      dorumonDot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
@@ -192,9 +195,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Gabumon DOT",
     price: 2000,
     image: [
-      imgGabumonDot01
+      gabumonDot01
     ],
-        size:{
+    size: {
       ancho: 3.6,
       alto: 4.1
     },
@@ -206,9 +209,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Garurumon DOT",
     price: 2000,
     image: [
-      imgGarurumonDot01
+      garurumonDot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 3.9
     },
@@ -220,9 +223,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Gatomon DOT",
     price: 2000,
     image: [
-      imgGatomonDot01
+      gatomonDot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.6
     },
@@ -234,9 +237,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Gomamon DOT",
     price: 2000,
     image: [
-      imgGomamonDot01
+      gomamonDot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 3.3
     },
@@ -248,9 +251,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Greymon DOT",
     price: 2000,
     image: [
-      imgGreymonDot01
+      greymonDot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
@@ -262,9 +265,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Guilmon DOT",
     price: 2000,
     image: [
-      imgGuilmonDot01
+      guilmonDot01
     ],
-        size:{
+    size: {
       ancho: 3.9,
       alto: 3.9
     },
@@ -276,8 +279,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Kabuterimon DOT",
     price: 2000,
     image: [
-      imgKabuterimonDot01
-    ],    size:{
+      kabuterimonDot01
+    ],
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
@@ -289,9 +293,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Metalgreymon DOT",
     price: 2500,
     image: [
-      imgMetalgreymonDot01
+      metalgreymonDot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
@@ -303,9 +307,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Omnimon DOT",
     price: 2000,
     image: [
-      imgOmnimonDot01
+      omnimonDot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 3.6
     },
@@ -317,9 +321,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Palmon DOT",
     price: 2000,
     image: [
-      imgPalmonDot01
+      palmonDot01
     ],
-        size:{
+    size: {
       ancho: 3.1,
       alto: 3.9
     },
@@ -331,9 +335,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Patamon DOT",
     price: 2000,
     image: [
-      imgPatamonDot01
+      patamonDot01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 3.6
     },
@@ -345,9 +349,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Renamon DOT",
     price: 2000,
     image: [
-      imgRenamonDot01
+      renamonDot01
     ],
-        size:{
+    size: {
       ancho: 3.9,
       alto: 4.1
     },
@@ -359,9 +363,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Tentomon DOT",
     price: 2000,
     image: [
-      imgTentomonDot01
+      tentomonDot01
     ],
-            size:{
+    size: {
       ancho: 3.9,
       alto: 4.1
     },
@@ -373,9 +377,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Terriermon DOT",
     price: 2000,
     image: [
-      imgTerriermonDot01
+      terriermonDot01
     ],
-        size:{
+    size: {
       ancho: 3.9,
       alto: 4.1
     },
@@ -387,9 +391,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Agumon",
     price: 4000,
     image: [
-      imgAgumon01
+      agumon01
     ],
-        size:{
+    size: {
       ancho: 5.7,
       alto: 6.7
     },
@@ -401,9 +405,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Garurumon",
     price: 6500,
     image: [
-      imgGarurumon01
+      garurumon01
     ],
-        size:{
+    size: {
       ancho: 9.8,
       alto: 7.8
     },
@@ -415,9 +419,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Veemon",
     price: 3500,
     image: [
-      imgVeemon01
+      veemon01
     ],
-        size:{
+    size: {
       ancho: 5.4,
       alto: 6.7
     },
@@ -429,9 +433,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Wormmon",
     price: 3500,
     image: [
-      imgWormmon01
+      wormmon01
     ],
-        size:{
+    size: {
       ancho: 5.9,
       alto: 6.2
     },
@@ -443,9 +447,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Exveemon",
     price: 6500,
     image: [
-      imgXveemon01
+      xveemon01
     ],
-        size:{
+    size: {
       ancho: 9.1,
       alto: 9.1
     },
@@ -457,9 +461,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Flamedramon",
     price: 7000,
     image: [
-      imgFlamedramon01
+      flamedramon01
     ],
-        size:{
+    size: {
       ancho: 9.1,
       alto: 11.2
     },
@@ -471,9 +475,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Alphamon",
     price: 2500,
     image: [
-      imgAlphamon01
+      alphamon01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
@@ -485,9 +489,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Death-X Dorugoramon",
     price: 2500,
     image: [
-      imgDeathXDorugoramon01
+      deathXDorugoramon01
     ],
-        size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
@@ -499,13 +503,13 @@ export const productsDigimon: typeDigimon[] = [
     name: "Dex Dorugamon",
     price: 2500,
     image: [
-      imgDexDorugamon01
+      dexDorugamon01
     ],
-            size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
-  attribute: attribute.VIRUS,
+    attribute: attribute.VIRUS,
     level: level.CHAMPION,
   },
   {
@@ -513,9 +517,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Dex Dorugreymon",
     price: 2500,
     image: [
-      imgDexDorugreymon01
+      dexDorugreymon01
     ],
-            size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
@@ -527,9 +531,9 @@ export const productsDigimon: typeDigimon[] = [
     name: "Dodomon",
     price: 1500,
     image: [
-      imgDodomon01
+      dodomon01
     ],
-            size:{
+    size: {
       ancho: 2.8,
       alto: 2.6
     },
@@ -539,26 +543,25 @@ export const productsDigimon: typeDigimon[] = [
     name: "Dorimon",
     price: 1500,
     image: [
-      imgDorimon01
+      dorimon01
     ],
-            size:{
+    size: {
       ancho: 3.6,
       alto: 2.8
     },
-
   },
   {
     id: "dorugamon-01",
     name: "Dorugamon",
     price: 2000,
     image: [
-      imgDorugamon01
+      dorugamon01
     ],
-            size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
-attribute: attribute.DATA,
+    attribute: attribute.DATA,
     level: level.CHAMPION,
   },
   {
@@ -566,13 +569,13 @@ attribute: attribute.DATA,
     name: "Dorugoramon",
     price: 2500,
     image: [
-      imgDorugoramon01
+      dorugoramon01
     ],
-            size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
-attribute: attribute.DATA,
+    attribute: attribute.DATA,
     level: level.MEGA,
   },
   {
@@ -580,9 +583,9 @@ attribute: attribute.DATA,
     name: "Dorugreymon",
     price: 2500,
     image: [
-      imgDorugreymon01
+      dorugreymon01
     ],
-            size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
@@ -594,23 +597,23 @@ attribute: attribute.DATA,
     name: "Dorumon",
     price: 2000,
     image: [
-      imgDorumon02
+      dorumon02
     ],
-    size:{
+    size: {
       ancho: 4.1,
       alto: 4.1
     },
     attribute: attribute.DATA,
     level: level.ROOKIE,
   },
-    {
+  {
     id: "gabumon-01",
     name: "Gabumon",
     price: 5000,
     image: [
-      imgDorumon02
+      gabumon01
     ],
-    size:{
+    size: {
       ancho: 6.7,
       alto: 7.8
     },
@@ -622,9 +625,9 @@ attribute: attribute.DATA,
     name: "Biyomon",
     price: 5000,
     image: [
-      imgDorumon02
+      biyomon01
     ],
-    size:{
+    size: {
       ancho: 4.9,
       alto: 7
     },
@@ -636,9 +639,9 @@ attribute: attribute.DATA,
     name: "Patamon",
     price: 4500,
     image: [
-      imgDorumon02
+      patamon01
     ],
-    size:{
+    size: {
       ancho: 7,
       alto: 7
     },
@@ -650,9 +653,9 @@ attribute: attribute.DATA,
     name: "Gomamon",
     price: 2500,
     image: [
-      imgDorumon02
+      gomamon01
     ],
-    size:{
+    size: {
       ancho: 4.6,
       alto: 5.4
     },
@@ -664,9 +667,9 @@ attribute: attribute.DATA,
     name: "Palmon",
     price: 4000,
     image: [
-      imgDorumon02
+      palmon01
     ],
-    size:{
+    size: {
       ancho: 5.7,
       alto: 7.5
     },
@@ -678,9 +681,9 @@ attribute: attribute.DATA,
     name: "Gatomon",
     price: 5000,
     image: [
-      imgDorumon02
+      gatomon01
     ],
-    size:{
+    size: {
       ancho: 9.3,
       alto: 8.5
     },
@@ -692,9 +695,9 @@ attribute: attribute.DATA,
     name: "Tentomon",
     price: 4000,
     image: [
-      imgDorumon02
+      tentomon01
     ],
-    size:{
+    size: {
       ancho: 7,
       alto: 7.8
     },

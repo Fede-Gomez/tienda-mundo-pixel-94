@@ -1,5 +1,6 @@
 import type { TypeProductCard } from "../types/product";
 import imgKratos01 from "../assets/god-of-war/kratos-01.jpg";
+import { flameShot01, heavyMachine01, laserGun01 } from "../assets/metal-slug";
 
 
 
@@ -9,7 +10,7 @@ export const productsMetalSlug: TypeProductCard[] = [
     name: "Heavy Machine Gun",
     price: 4500,
     image: [
-      imgKratos01
+      heavyMachine01
     ],
     size:{
       ancho: 5.7,
@@ -22,7 +23,7 @@ export const productsMetalSlug: TypeProductCard[] = [
     name: "Laser Gun",
     price: 4500,
     image: [
-      imgKratos01
+      laserGun01
     ],
     size:{
       ancho: 5.7,
@@ -34,7 +35,7 @@ export const productsMetalSlug: TypeProductCard[] = [
     name: "Flame shot",
     price: 4500,
     image: [
-      imgKratos01
+      flameShot01
     ],
     size:{
       ancho: 5.7,

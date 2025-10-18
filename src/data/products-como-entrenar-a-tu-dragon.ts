@@ -1,7 +1,6 @@
 // src/data/products.ts
+import { furiaNocturnaBlanca, furiaNocturnaNegra } from "../assets/como-entrenar-a-tu-dragon";
 import type { TypeProductCard } from "../types/product";
-import imgFuriaNocturnaNegra from "../assets/como-entrenar-a-tu-dragon/furia-nocturna-negra-01.jpg";
-import imgFuriaNocturnaBlanca from "../assets/como-entrenar-a-tu-dragon/furia-nocturna-blanca-01.jpg";
 
 export const productsComoEntrenarATuDragon: TypeProductCard[] = [
   {
@@ -9,7 +8,7 @@ export const productsComoEntrenarATuDragon: TypeProductCard[] = [
     name: "Chimuelo",
     price: 5000,
     image: [
-      imgFuriaNocturnaNegra
+      furiaNocturnaNegra
     ],
     size:{
       ancho:7.8,
@@ -22,7 +21,7 @@ export const productsComoEntrenarATuDragon: TypeProductCard[] = [
     name: "Furia Nocturna Blanca",
     price: 5000,
     image: [
-      imgFuriaNocturnaBlanca
+      furiaNocturnaBlanca
     ],
     size:{
       ancho:7.8,

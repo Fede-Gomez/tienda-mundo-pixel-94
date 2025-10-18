@@ -1,8 +1,6 @@
 // src/data/products.ts
+import { cabezaCuphead, cabezaMugman, cuphead01 } from "../assets/cuphead";
 import type { TypeProductCard } from "../types/product";
-import imgCuphead01 from "../assets/cuphead/cuphead-01.jpeg";
-import imgCabezaCuphead01 from "../assets/cuphead/cabeza-cuphead-01.jpeg";
-import imgCabezaMugman01 from "../assets/cuphead/cabeza-mugman-01.jpeg";
 
 
 export const productsCuphead: TypeProductCard[] = [
@@ -11,7 +9,7 @@ export const productsCuphead: TypeProductCard[] = [
     name: "Cuphead",
     price: 6500,
     image: [
-      imgCuphead01
+      cuphead01
     ],
     size:{
       ancho: 7.5,
@@ -25,7 +23,7 @@ export const productsCuphead: TypeProductCard[] = [
     price: 3500
 ,
     image: [
-      imgCabezaCuphead01
+      cabezaCuphead
     ],
     size:{
       ancho: 9.6,
@@ -38,7 +36,7 @@ export const productsCuphead: TypeProductCard[] = [
     name: "Cabeza Mugman",
     price: 3500,
     image: [
-      imgCabezaMugman01
+      cabezaMugman
     ],
     size:{
       ancho: 8.5,

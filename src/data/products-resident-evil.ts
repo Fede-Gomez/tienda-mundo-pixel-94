@@ -1,17 +1,6 @@
+import { crisRedfield01, cura01, cura02, cura03, cura04, cura05, cura06, jillValentine01, logoUmbrella01, planta01, planta02, planta03, zombie01 } from "../assets/resident-evil";
 import type { TypeProductCard } from "../types/product";
-import imgCrisRedfield01 from "../assets/resident-evil/cris-redfield-01.jpg";
-import imgJillValentine01 from "../assets/resident-evil/jill-valentine-01.jpg";
-import imgZombie01 from "../assets/resident-evil/zombie-01.jpg";
-import imgPlanta01 from "../assets/resident-evil/planta-01.jpg";
-import imgPlanta02 from "../assets/resident-evil/planta-02.jpg";
-import imgPlanta03 from "../assets/resident-evil/planta-03.jpg";
-import imgLogoUmbrella01 from "../assets/resident-evil/logo-umbrella-01.jpg";
-import imgCura01 from "../assets/resident-evil/cura-01.jpg";
-import imgCura02 from "../assets/resident-evil/cura-02.jpg";
-import imgCura03 from "../assets/resident-evil/cura-03.jpg";
-import imgCura04 from "../assets/resident-evil/cura-04.jpg";
-import imgCura05 from "../assets/resident-evil/cura-05.jpg";
-import imgCura06 from "../assets/resident-evil/cura-06.jpg";
+
 
 
 
@@ -21,7 +10,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Cris Redfield",
     price: 3500,
     image: [
-      imgCrisRedfield01
+      crisRedfield01
     ],
     size:{
       ancho: 7,
@@ -34,7 +23,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Jill Valentine",
     price: 3500,
     image: [
-      imgJillValentine01
+      jillValentine01
     ],
     size:{
       ancho: 7.5,
@@ -47,7 +36,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Zombie",
     price: 3000,
     image: [
-      imgZombie01
+      zombie01
     ],
     size:{
       ancho: 5.2,
@@ -60,7 +49,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Planta azul",
     price: 2000,
     image: [
-      imgPlanta01
+      planta01
     ],
     size:{
       ancho: 3.3,
@@ -73,7 +62,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Planta roja",
     price: 2000,
     image: [
-      imgPlanta02
+      planta02
     ],
     size:{
       ancho: 3.3,
@@ -86,7 +75,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Planta verde",
     price: 2000,
     image: [
-      imgPlanta03
+      planta03
     ],
     size:{
       ancho: 3.3,
@@ -99,7 +88,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Logo Umbrella",
     price: 2500,
     image: [
-      imgLogoUmbrella01
+      logoUmbrella01
     ],
     size:{
       ancho: 4.4,
@@ -112,7 +101,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Combinacion hiervas",
     price: 1500,
     image: [
-      imgCura01
+      cura01
     ],
     size:{
       ancho: 3.3,
@@ -125,7 +114,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Combinacion hiervas",
     price: 1500,
     image: [
-      imgCura02
+      cura02
     ],
     size:{
       ancho: 3.3,
@@ -138,7 +127,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Sprite primeros auxilios",
     price: 2000,
     image: [
-      imgCura03
+      cura03
     ],
     size:{
       ancho: 1.8,
@@ -151,7 +140,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Combinacion hiervas",
     price: 1500,
     image: [
-      imgCura04
+      cura04
     ],
     size:{
       ancho: 3.3,
@@ -164,7 +153,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Combinacion hiervas",
     price: 1500,
     image: [
-      imgCura05
+      cura05
     ],
     size:{
       ancho: 3.3,
@@ -177,7 +166,7 @@ export const productsResidentEvil: TypeProductCard[] = [
     name: "Combinacion hiervas",
     price: 1500,
     image: [
-      imgCura06
+      cura06
     ],
     size:{
       ancho: 3.3,

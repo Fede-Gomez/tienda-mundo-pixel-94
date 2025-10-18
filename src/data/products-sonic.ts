@@ -1,12 +1,7 @@
 
+import { cabezaAmy01, cabezaEggman01, cabezaKnuckles01, cabezaShadow01, cabezaSonic01, cabezaTails01, figuraShadow03, figuraSonic01 } from "../assets/sonic";
 import type { TypeProductCard } from "../types/product";
-import cabezaSonic01 from "../assets/sonic/cabeza-sonic-01.jpeg";
-import cabezaTails01 from "../assets/sonic/cabeza-tails-01.jpeg";
-import cabezaKnuckles01 from "../assets/sonic/cabeza-knuckles-01.jpeg";
-import cabezaAmy01 from "../assets/sonic/cabeza-amy-01.jpeg";
-import cabezaEggman01 from "../assets/sonic/cabeza-eggman-01.jpeg";
-import cabezaShadow01 from "../assets/sonic/cabeza-shadow-01.jpeg";
-import imgSonic01 from "../assets/sonic/sonic-01.jpg";
+
 
 export const productsSonic: TypeProductCard[] = [
   {
@@ -91,7 +86,7 @@ export const productsSonic: TypeProductCard[] = [
     name: "Sonic",
     price: 5500,
     image: [
-      imgSonic01
+      figuraSonic01
     ],
     size:{
       ancho: 6.2,
@@ -103,7 +98,7 @@ export const productsSonic: TypeProductCard[] = [
     name: "Shadow",
     price: 7000,
     image: [
-      imgSonic01
+      figuraShadow03
     ],
     size:{
       ancho: 12.2,

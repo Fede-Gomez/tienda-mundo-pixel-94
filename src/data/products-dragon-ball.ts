@@ -1,7 +1,7 @@
 import type { TypeProductCard } from "../types/product";
-import imgGoku01 from "../assets/dragon-ball/goku-ultra-instinct-01.jpg";
 import imgGohan01 from "../assets/dragon-ball/gohan-ssj2-01.jpg";
 import imgRadarDelDragon01 from "../assets/dragon-ball/radar-del-dragon-01.jpg";
+import { gogetaSsj101, gohanSsj201, gokuSsj01, gokuUltraInstinct01, radarDelDragon01, vegeta01 } from "../assets/dragon-ball";
 
 
 
@@ -11,7 +11,7 @@ export const productsDragonBall: TypeProductCard[] = [
     name: "Goku Ultrainstinct",
     price: 7500,
     image: [
-      imgGoku01
+      gokuUltraInstinct01
     ],
             size:{
       ancho: 6.7,
@@ -24,7 +24,7 @@ export const productsDragonBall: TypeProductCard[] = [
     name: "Gohan SSJ2",
     price: 4500,
     image: [
-      imgGohan01
+      gohanSsj201
     ],
             size:{
       ancho: 5.4,
@@ -37,7 +37,7 @@ export const productsDragonBall: TypeProductCard[] = [
     name: "Radar del dragon",
     price: 3000,
     image: [
-      imgRadarDelDragon01
+      radarDelDragon01
     ],
             size:{
       ancho: 4.6,
@@ -49,7 +49,7 @@ export const productsDragonBall: TypeProductCard[] = [
     name: "Goku SSJ1",
     price: 8000,
     image: [
-      imgRadarDelDragon01
+      gokuSsj01 
     ],
     size:{
       ancho: 6.5,
@@ -61,11 +61,23 @@ export const productsDragonBall: TypeProductCard[] = [
     name: "Vegeta SSJ1",
     price: 6500,
     image: [
-      imgRadarDelDragon01
+      vegeta01
     ],
     size:{
       ancho: 6.2,
       alto: 12.2
+    },
+  },
+  {
+    id: "gogeta-ssj1-01",
+    name: "Gogeta SSJ1",
+    price: 9000,
+    image: [
+      gogetaSsj101
+    ],
+    size:{
+      ancho: 7,
+      alto: 14.3
     },
   },
 ];
