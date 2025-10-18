@@ -1,5 +1,4 @@
 import type { TypeProductCard } from "../types/product";
-import imgKratos01 from "../assets/god-of-war/kratos-01.jpg";
 import { scorpion01 } from "../assets/mortal-kombat";
 
 
