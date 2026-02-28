@@ -4,6 +4,9 @@
   background-color: #333333; /* Dark background */
   padding: 1rem;
   box-shadow: var(--box-shadow-neon); /* Neon glow */
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
 }
 
 .navbar-list {
@@ -12,14 +15,25 @@
   justify-content: space-around;
   margin: 0;
   padding: 0;
+  min-width: 100%;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .navbar-item a {
   color: var(--neon-text-color-green);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-family: var(--font-family-retro); /* Pixelated retro font */
   text-shadow: var(--neon-text-shadow); /* Pixelated glow effect */
+  padding: 0.25rem 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-item a {
+    font-size: 1.2rem;
+    padding: 0;
+  }
 }
 
 .navbar-item a:hover {

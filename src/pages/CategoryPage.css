@@ -47,4 +47,6 @@
   color: #00ffcc; /* Neon green text */
   font-family: 'Press Start 2P', cursive; /* Pixelated retro font */
   padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }

@@ -24,10 +24,19 @@
   --box-shadow-neon: 0 4px 8px rgba(0, 255, 204, 0.5); /* Neon glow */
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
-  display: flex;
-  min-width: 320px;
+  padding: 0;
+  width: 100%;
   min-height: 100vh;
   background-image: repeating-linear-gradient(
     45deg,
@@ -36,4 +45,5 @@ body {
     #333333 10px,
     #333333 20px
   );
+  overflow-x: hidden;
 }
