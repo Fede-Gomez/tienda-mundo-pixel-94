@@ -12,6 +12,15 @@ dist
 dist-ssr
 *.local
 
+# Firebase credentials - NUNCA COMPARTIR
+firebase-key.json
+scripts/firebase-key.json
+.env.local
+.env
+
+# Product data - Stored in Firebase instead
+src/data/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
