@@ -16,11 +16,42 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
+  border: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; /* Eliminar highlight en mobile */
 }
 
-.floating-cart:hover {
-  background-color: #00ccff; /* Brighter neon blue */
-  box-shadow: 0 0 8px #00ffcc, 0 0 16px #0099ff; /* Neon glow */
+/* Estado base (cerrado) */
+.floating-cart:not(.active) {
+  background-color: #333333;
+  box-shadow: 0 4px 8px rgba(0, 255, 204, 0.5);
+}
+
+/* Hover solo cuando NO está activo - SOLO EN DESKTOP */
+@media (hover: hover) {
+  .floating-cart:not(.active):hover {
+    background-color: #00ccff;
+    box-shadow: 0 0 8px #00ffcc, 0 0 16px #0099ff;
+  }
+}
+
+.floating-cart:focus,
+.floating-cart:focus-visible {
+  outline: none;
+}
+
+/* Cuando el carrito está ABIERTO */
+.floating-cart.active {
+  background-color: #00ccff;
+  box-shadow: 0 0 8px #00ffcc, 0 0 16px #0099ff;
+}
+
+@media (hover: hover) {
+  .floating-cart.active:hover {
+    background-color: #00ccff;
+    box-shadow: 0 0 8px #00ffcc, 0 0 16px #0099ff;
+  }
 }
 
 .floating-title {

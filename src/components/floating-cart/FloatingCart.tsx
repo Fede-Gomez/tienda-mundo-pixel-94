@@ -33,8 +33,12 @@ export default function FloatingCart() {
   return (
     <>
       <div
-        className="floating-cart"
+        className={`floating-cart ${isVisible ? "active" : ""}`}
         onClick={() => setIsVisible((prev) => !prev)}
+        onTouchEnd={(e) => {
+          // En mobile, remover el focus después del tap
+          e.currentTarget.blur();
+        }}
       >
         {totalProducts !== 0 ? `$${totalPrice}` : "Vacío"} 🛒
         {totalProducts > 0 && <span className="cart-badge">{totalProducts}</span>} {/* Badge con la cantidad */}
