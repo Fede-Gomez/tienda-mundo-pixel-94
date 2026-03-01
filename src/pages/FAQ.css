@@ -43,3 +43,32 @@
   font-family: var(--font-family-retro); /* Pixelated retro font */
   padding: 2rem;
 }
+
+/* Estilos para la tabla de descuentos */
+.faq-table-container {
+  margin-top: 1rem;
+}
+
+.faq-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #333333;
+  border: 2px solid var(--neon-text-color-yellow);
+}
+
+.faq-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #00ffcc;
+  color: var(--neon-text-color-green);
+  font-size: 0.9rem;
+}
+
+.faq-table tr:nth-child(even) {
+  background-color: #242424;
+}
+
+.faq-table tr:hover {
+  background-color: #3d3d3d;
+}
