@@ -4,6 +4,7 @@ export interface TypeProductCard {
   name: string;
   price: number;
   image: string[]; // Cambiamos a un arreglo de imágenes
+  optionsProduct: optionsProduct[]; // Opciones disponibles para el producto
   size:{
     alto:number;
     ancho:number;
@@ -52,19 +53,26 @@ export enum typePoke{
   FUEGO = "Fuego",
   AGUA = "Agua",
   ELECTRICO = "Eléctrico",
-//  LUCHA = "Lucha",
+  LUCHA = "Lucha",
   PSIQUICO = "Psíquico",
   NORMAL = "Normal",
-//  VOLADOR = "Volador",
-//  VENENO = "Veneno",
-//  BICHO = "Bicho",
-//  ROCA = "Roca",
-//  TIERRA = "Tierra",
+  VOLADOR = "Volador",
+  VENENO = "Veneno",
+  BICHO = "Bicho",
+  ROCA = "Roca",
+  TIERRA = "Tierra",
   HADA = "Hada",
-//  FANTASMA = "Fantasma",
+  FANTASMA = "Fantasma",
   ACERO = "Acero",
   DRAGON = "Dragon",
-//  OSCURIDAD = "Oscuridad",
+  OSCURIDAD = "Oscuridad",
   HIELO = "Hielo",
   SINIESTRO = "Siniestro",
+}
+
+export enum optionsProduct {
+  LLAVERO = "Llavero",
+  IMAN = "Imán",
+  FIGURA = "Figura",
+  PIN = "Pin",
 }

@@ -2,83 +2,96 @@ import { useState } from "react";
 import "./ProductCard.css";
 import { useCart } from "../../context/CartContext";
 import type { TypeProductCard } from "../../types/product";
+import ImagePreview from "./ImagePreview";
+import FigureDisclaimer from "./FigureDisclaimer";
 
 export default function ProductCard(product: TypeProductCard) {
   const { addToCart } = useCart();
-  const [selectedOption, setSelectedOption] = useState<string>("Llavero");
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const [isFading, setIsFading] = useState<boolean>(false); // Estado para controlar el fade
+  const [selectedOption, setSelectedOption] = useState<string>(
+    product.optionsProduct[0] || "Llavero"
+  );
+  const [isPreviewOpen, setIsPreviewOpen] = useState<boolean>(false);
+  const [showFigureDisclaimer, setShowFigureDisclaimer] = useState<boolean>(false);
+
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedOption(e.target.value);
+  };
 
   const handleAddToCart = () => {
+    if (selectedOption === "Figura") {
+      setShowFigureDisclaimer(true);
+    } else {
+      addToCart(product, selectedOption);
+    }
+  };
+
+  const handleFigureAgree = () => {
     addToCart(product, selectedOption);
+    setShowFigureDisclaimer(false);
   };
 
-  const handleNextImage = () => {
-    setIsFading(true); // Activar el fade-out
-    setTimeout(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === product.image.length - 1 ? 0 : prevIndex + 1
-      );
-      setIsFading(false); // Activar el fade-in
-    }, 500); // Duración del fade-out
-  };
-
-  const handlePrevImage = () => {
-    setIsFading(true); // Activar el fade-out
-    setTimeout(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === 0 ? product.image.length - 1 : prevIndex - 1
-      );
-      setIsFading(false); // Activar el fade-in
-    }, 500); // Duración del fade-out
+  const handleFigureDisagree = () => {
+    setShowFigureDisclaimer(false);
   };
 
   return (
-    <div className="product-card">
-      <div className="image-carousel">
-        {product.image.length > 1 && (
-          <>
-            <button className="carousel-button left" onClick={handlePrevImage}>
-              ◀
+    <>
+      <div className="product-card">
+        <div className="image-container">
+          <img
+            src={product.image[0]}
+            alt={product.name}
+            className="product-image"
+            onClick={() => setIsPreviewOpen(true)}
+            style={{ cursor: "pointer" }}
+          />
+        </div>
+        <div className="product-info">
+          <div className="product-row">
+            <p className="product-name">{product.name}</p>
+            <p className="product-price">${product.price}</p>
+            <ul className="product-sizes">
+              <li>Alto: {product.size.alto}</li>
+              <li>Ancho: {product.size.ancho}</li>
+            </ul>
+          </div>
+          <div className="product-actions">
+            <select
+              className="product-options"
+              value={selectedOption}
+              onChange={handleSelectChange}
+            >
+              {product.optionsProduct.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+            <button
+              className="product-button"
+              onClick={handleAddToCart}
+            >
+              Agregar
             </button>
-            <button className="carousel-button right" onClick={handleNextImage}>
-              ▶
-            </button>
-          </>
-        )}
-        <img
-          src={product.image[currentImageIndex]}
-          alt={product.name}
-          className={`product-image ${isFading ? "fade-out" : "fade-in"}`}
+          </div>
+        </div>
+      </div>
+      
+      {isPreviewOpen && (
+        <ImagePreview
+          images={product.image}
+          currentIndex={0}
+          productName={product.name}
+          onClose={() => setIsPreviewOpen(false)}
         />
-      </div>
-      <div className="product-info">
-        <div className="product-row">
-          <p className="product-name">{product.name}</p>
-          <p className="product-price">${product.price}</p>
-          <ul className="product-sizes">
-            <li>Alto: {product.size.alto}</li>
-            <li>Ancho: {product.size.ancho}</li>
-          </ul>
-        </div>
-        <div className="product-actions">
-          <select
-            className="product-options"
-            value={selectedOption}
-            onChange={(e) => setSelectedOption(e.target.value)}
-          >
-            <option value="Llavero">Llavero</option>
-            <option value="Imán">Imán</option>
-            <option value="Figura">Figura</option>
-          </select>
-          <button
-            className="product-button"
-            onClick={handleAddToCart}
-          >
-            Agregar
-          </button>
-        </div>
-      </div>
-    </div>
+      )}
+
+      {showFigureDisclaimer && (
+        <FigureDisclaimer
+          onAgree={handleFigureAgree}
+          onDisagree={handleFigureDisagree}
+        />
+      )}
+    </>
   );
 }

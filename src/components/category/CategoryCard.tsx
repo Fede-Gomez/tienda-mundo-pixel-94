@@ -10,19 +10,27 @@ interface Props {
 
 export default function CategoryCard({ name, slug, images }: Props) {
   const [currentImage, setCurrentImage] = useState<string>(
-    images && images.length > 0 ? images[0] : "/assets/placeholder.jpg" // Usa una imagen de placeholder si no hay imágenes
+    images && images.length > 0 ? images[0] : "/assets/placeholder.jpg"
   );
+  const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    if (images && images.length > 0) {
+    if (images && images.length > 1) {
+      console.log(`[${slug}] Iniciando rotación de imágenes, total: ${images.length}`);
+      
       const interval = setInterval(() => {
-        const randomImage = images[Math.floor(Math.random() * images.length)];
-        setCurrentImage(randomImage); // Cambia la imagen de manera aleatoria
+        setImageIndex((prevIndex) => {
+          const nextIndex = (prevIndex + 1) % images.length;
+          setCurrentImage(images[nextIndex]);
+          return nextIndex;
+        });
       }, 3000); // Cambia cada 3 segundos
 
-      return () => clearInterval(interval); // Limpia el intervalo al desmontar
+      return () => clearInterval(interval);
+    } else if (images && images.length === 1) {
+      setCurrentImage(images[0]);
     }
-  }, [images]);
+  }, [images, slug]);
 
   return (
     <Link to={`/category/${slug}`} className="category-card">
@@ -31,6 +39,7 @@ export default function CategoryCard({ name, slug, images }: Props) {
           src={currentImage}
           alt={slug}
           className="card-image"
+          onError={() => console.error(`Error loading image: ${currentImage}`)}
         />
         <h2 className="card-title">{name}</h2>
       </div>

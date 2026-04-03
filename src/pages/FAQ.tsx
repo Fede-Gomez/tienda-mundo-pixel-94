@@ -4,14 +4,35 @@ import './FAQ.css';
 
 const FAQ: React.FC = () => {
   const faqs = [
-    { question: '¿Cómo puedo realizar un pedido?', answer: 'Agrega los productos que quieras al carrito, dentro del carrito haz click en encargar para enviarnos un mensaje por whatsapp para continuar.' },
-    { question: '¿Cuáles son los métodos de pago aceptados?', answer: 'Aceptamos transferencia y efectivo.' },
-    { question: '¿Cuánto tiempo tarda en preparse mi pedido?', answer: 'De 1 a 3 días habiles según la cantidad del pedido. Para pedidos mayoristas, el tiempo es de 7 a 10 días hábiles.' },
-    { question: '¿Puedo retirarlo en persona?', answer: 'Se retira por Liniers o algún punto intermedio a coordinar.' },
-    { question: '¿Cuánto tiempo tarda el envío?', answer: 'El tiempo de envío depende de tu ubicación, pero generalmente toma entre 3 y 7 días hábiles.' },
-    { question: '¿Hacen pedidos por unidad o por cantidad?', answer: 'Hacemos pedidos tanto por unidad como por cantidad, ¡no hay problema! Podes pedir en los formatos que quieras.' },
-    { question: '¿Qué productos puedo encargar?', answer: 'Hacemos llaveros, imanes, pins o figuras por encargo. Si tenés una imagen pixelada que te guste, pasámela y vemos el tamaño con su precio.' },
-    { question: '¿Cuál es el precio de los productos?', answer: 'El precio depende del tamaño del producto. Si nos decís qué personajes tenés en mente, te pasamos el presupuesto enseguida.' },
+    { question: '¿Cómo funciona el sistema de pago?', answer: 'Para empezar el pedido, pido una seña del 50% enviando mi alias para la transferencia. Una vez recibido el pago, te confirmo el tiempo aproximado en que estará listo tu diseño' },
+    { question: '¿Cómo puedo realizar un pedido?', answer: 'Agrega los productos que te gusten al carrito, dentro del carrito haz click en encargar para enviarnos un mensaje por whatsapp para continuar' },
+    { question: '¿Hacen pedidos por unidad o por cantidad?', answer: 'Hacemos pedidos tanto por unidad como por cantidad, ¡no hay problema! Podes pedir en los formatos que quieras' },
+    { question: '¿Cuáles son los métodos de pago aceptados?', answer: 'Para la seña transferencia. El resto en transferencia y efectivo' },
+    { question: '¿Puedo retirarlo en persona?', answer: 'Se retira por Liniers o algún punto intermedio a coordinar' },
+    { question: '¿Cuánto tiempo tarda si quiero un envío?', answer: 'El tiempo de envío depende de tu ubicación, pero generalmente toma entre 3 y 7 días hábiles' },
+    { question: '¿Si quiero que me lo envíen, como pago el envío?', answer: 'Los envíos corren a cargo del comprador. Se coordina todo por WhatsApp para resolver los detalles' },
+    { question: '¿Cuánto tiempo tarda en preparse mi pedido?', answer: 'Una vez recibido la seña de 1 a 3 días habiles según la cantidad del pedido. Para pedidos mayoristas, el tiempo es de 7 a 10 días hábiles' },
+    { 
+      question: '¿Qué personajes puedo pedir?', 
+      answer: (
+        <span>
+          Hacemos de todo: Mario, Zelda, Dragon Ball, Hollow Knight... ¡el que quieras! Si tenés una imagen pixelada que te guste,{' '}
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              const message = encodeURIComponent('hola queria consultarte por el personaje: ');
+              window.open(`https://wa.me/+5491132341004?text=${message}`, '_blank');
+            }}
+            className="faq-whatsapp-link"
+          >
+            envianos
+          </a>
+          {' '}tu diseño por WhatsApp y te diremos tamaño y precio aproximado
+        </span>
+      )
+    },
+    { question: '¿Qué productos puedo encargar?', answer: 'Hacemos llaveros, imanes, pins o figuras por encargo' },
     { 
       question: '¿Hay descuentos por cantidad?', 
       answer: (
@@ -36,10 +57,7 @@ const FAQ: React.FC = () => {
         </div>
       )
     },
-    { question: '¿Cómo funciona el sistema de pago?', answer: 'Para empezar el pedido, pido una seña del 50%. Una vez recibido el pago, ya te confirmo el tiempo aproximado en que estará listo tu diseño. ✅' },
-    { question: '¿Qué personajes puedo pedir?', answer: 'Hacemos de todo: Mario, Zelda, Dragon Ball, Hollow Knight... ¡el que quieras! Si tenés una imagen pixelada que te guste, pasámela y vemos el tamaño con su precio.' },
-    { question: '¿Cómo pago el envío?', answer: 'Los envíos corren a cargo del comprador. Se coordina todo por WhatsApp para resolver los detalles.' },
-    { question: '¿Dónde puedo ver tus trabajos anteriores?', answer: 'Si querés ver fotos de nuestros trabajos, buscanos en Instagram como @mundo.pixel.94' },
+    { question: '¿Dónde puedo ver más de tus trabajos?', answer: 'Si querés ver fotos de nuestros trabajos, buscanos en Instagram como @mundo.pixel.94' },
   ];
 
   const [openIndex, setOpenIndex] = React.useState<number | null>(null);

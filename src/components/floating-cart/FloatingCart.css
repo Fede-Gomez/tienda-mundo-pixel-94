@@ -224,6 +224,24 @@
   background-color: #0056b3;
 }
 
+/* Nota de descuento */
+.cart-discount-note {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background-color: rgba(0, 255, 204, 0.1);
+  border-left: 3px solid #00ffcc;
+  border-radius: 4px;
+}
+
+.discount-text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 0 0 4px #00ccff, 0 0 8px #0099ff;
+  font-family: 'Press Start 2P', cursive;
+}
+
 /* Total del carrito */
 .cart-total {
   margin-top: 16px;

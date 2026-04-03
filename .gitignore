@@ -12,10 +12,17 @@ dist
 dist-ssr
 *.local
 
+# scripts
+/scripts/*
+
+# config
+src/config/*
+
 # Firebase credentials - NUNCA COMPARTIR
 firebase-key.json
 scripts/firebase-key.json
 .env.local
+.env.debug
 .env
 
 # Product data and scripts - NOT to be shared
@@ -33,3 +40,5 @@ src/scripts/
 *.sln
 *.sw?
 package-lock.json
+*.md
+$filePath

@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
         <li
           className={`navbar-item ${location.pathname === "/faq" ? "active" : ""}`}
         >
-          <Link to="/faq">FAQ</Link>
+          <Link to="/faq">Preguntas</Link>
         </li>
         <li className="navbar-item">
           <a

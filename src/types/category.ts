@@ -5,7 +5,7 @@ export interface TypeCategory {
   id: string;
   name: string;
   image: string;
-  products: TypeProductCard[];
+  products?: TypeProductCard[]; // Opcional: los productos se cargan desde Firebase en CategoryPage
 }
 
 export interface TypeCategoryGrid {

@@ -49,6 +49,20 @@
   margin-top: 1rem;
 }
 
+/* Estilos para el link de WhatsApp en FAQ */
+.faq-whatsapp-link {
+  color: var(--neon-text-color-yellow);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.faq-whatsapp-link:hover {
+  color: var(--neon-text-color-cyan);
+  text-shadow: 0 0 10px var(--neon-text-color-cyan), 0 0 20px var(--neon-text-color-cyan);
+}
+
 .faq-table {
   width: 100%;
   border-collapse: collapse;
