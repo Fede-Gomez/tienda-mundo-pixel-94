@@ -18,8 +18,9 @@ scripts/firebase-key.json
 .env.local
 .env
 
-# Product data - Stored in Firebase instead
+# Product data and scripts - NOT to be shared
 src/data/
+src/scripts/
 
 # Editor directories and files
 .vscode/*
