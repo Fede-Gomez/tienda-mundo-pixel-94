@@ -19,8 +19,15 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Analytics
+// Initialize Analytics con modo debug en localhost
 export const analytics = getAnalytics(app);
+
+// Activar modo debug si estamos en localhost
+if (window.location.hostname === "localhost") {
+  // @ts-ignore - Firebase Analytics doesn't have a direct setter for debug_mode in the SDK,
+  // but this is the common way to force it for the DebugView
+  // window['ga-debug'] = true; 
+}
 
 // Initialize Firestore with local persistence caching
 export const db = initializeFirestore(app, {

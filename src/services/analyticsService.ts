@@ -6,10 +6,23 @@ import { analytics } from "../config/firebase";
  * Wrapper para rastrear el comportamiento del usuario
  */
 
+// Función auxiliar para forzar Modo Debug en localhost o por URL param y que aparezca en el DebugView
+const logEventWithDebug = (eventName: string, eventParams: any = {}) => {
+  const isLocal = window.location.hostname === "localhost";
+  const hasDebugParam = new URLSearchParams(window.location.search).has("debug");
+  
+  const params = {
+    ...eventParams,
+    ...(isLocal || hasDebugParam ? { debug_mode: true } : {})
+  };
+  
+  logEvent(analytics, eventName, params);
+};
+
 export const analyticsService = {
   // 📁 CATEGORÍAS
   trackViewCategory: (categoryId: string, categoryName: string) => {
-    logEvent(analytics, 'view_category', {
+    logEventWithDebug('view_category', {
       category_id: categoryId,
       category_name: categoryName
     });
@@ -17,7 +30,7 @@ export const analyticsService = {
 
   // 👤 PERSONAJES / PRODUCTOS
   trackViewProduct: (productId: string, productName: string, categoryId: string) => {
-    logEvent(analytics, 'view_item', {
+    logEventWithDebug('view_item', {
       item_id: productId,
       item_name: productName,
       item_category: categoryId
@@ -26,14 +39,14 @@ export const analyticsService = {
 
   // 🖼️ PREVIEW DE IMAGEN
   trackImagePreview: (productName: string) => {
-    logEvent(analytics, 'image_preview_open', {
+    logEventWithDebug('image_preview_open', {
       product_name: productName
     });
   },
 
   // 🛒 CARRITO
   trackAddToCart: (productName: string, option: string, price: number) => {
-    logEvent(analytics, 'add_to_cart', {
+    logEventWithDebug('add_to_cart', {
       item_name: productName,
       item_variant: option,
       value: price,
@@ -42,14 +55,14 @@ export const analyticsService = {
   },
 
   trackRemoveFromCart: (productName: string) => {
-    logEvent(analytics, 'remove_from_cart', {
+    logEventWithDebug('remove_from_cart', {
       item_name: productName
     });
   },
 
   // 🛠️ OPCIONES DE PRODUCTO
   trackSelectOption: (productName: string, option: string) => {
-    logEvent(analytics, 'select_product_option', {
+    logEventWithDebug('select_product_option', {
       product_name: productName,
       option_selected: option
     });
@@ -57,20 +70,20 @@ export const analyticsService = {
 
   // 📦 ENVÍO / ENTREGA
   trackShippingSelection: (type: string) => {
-    logEvent(analytics, 'select_shipping', {
+    logEventWithDebug('select_shipping', {
       shipping_type: type
     });
   },
 
   trackDeliverySelection: (type: string) => {
-    logEvent(analytics, 'select_delivery', {
+    logEventWithDebug('select_delivery', {
       delivery_type: type
     });
   },
 
   // 📝 PEDIDO
   trackEncargarClick: (total: number, itemCount: number) => {
-    logEvent(analytics, 'begin_checkout', {
+    logEventWithDebug('begin_checkout', {
       value: total,
       item_count: itemCount,
       currency: 'ARS'
@@ -79,16 +92,16 @@ export const analyticsService = {
 
   // ❓ PREGUNTAS Y SOCIAL
   trackViewQuestions: () => {
-    logEvent(analytics, 'view_questions');
+    logEventWithDebug('view_questions');
   },
 
   trackExpandQuestion: (questionTitle: string) => {
-    logEvent(analytics, 'expand_question', {
+    logEventWithDebug('expand_question', {
       question: questionTitle
     });
   },
 
   trackInstagramClick: () => {
-    logEvent(analytics, 'click_instagram');
+    logEventWithDebug('click_instagram');
   }
 };
