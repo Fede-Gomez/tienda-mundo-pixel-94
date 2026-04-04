@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar/Navbar';
 import './FAQ.css';
 import { analyticsService } from '../services/analyticsService';
+import AdSenseBanner from '../components/common/AdSenseBanner';
 
 const FAQ: React.FC = () => {
+  const AD_FREQUENCY = Number(import.meta.env.VITE_ADS_FREQUENCY) || 4;
+
   useEffect(() => {
     analyticsService.trackViewQuestions();
   }, []);
@@ -94,16 +97,25 @@ const FAQ: React.FC = () => {
 
   return (
     <div className="faq">
-        <Navbar />
+      <Navbar />
       <h1>Preguntas Frecuentes</h1>
       <ul className="faq-list">
         {faqs.map((faq, index) => (
-          <li key={index} className="faq-item">
-            <button onClick={() => toggleFAQ(index)} className="faq-question">
-              {faq.question}
-            </button>
-            {openIndex === index && <div className="faq-answer">{faq.answer}</div>}
-          </li>
+          <React.Fragment key={index}>
+            <li className="faq-item">
+              <button onClick={() => toggleFAQ(index)} className="faq-question">
+                {faq.question}
+              </button>
+              {openIndex === index && <div className="faq-answer">{faq.answer}</div>}
+            </li>
+            
+            {/* Inyectamos anuncio dinámico en la FAQ */}
+            {(index + 1) % AD_FREQUENCY === 0 && (
+              <div className="faq-ad-item" style={{ margin: '15px 0' }}>
+                 <AdSenseBanner format="fluid" />
+              </div>
+            )}
+          </React.Fragment>
         ))}
       </ul>
     </div>

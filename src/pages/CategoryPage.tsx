@@ -57,6 +57,8 @@ export default function CategoryPage() {
     );
   }
 
+  const AD_FREQUENCY = Number(import.meta.env.VITE_ADS_FREQUENCY) || 4;
+
   return (
     <div className="category-page">
       <Navbar />
@@ -71,8 +73,8 @@ export default function CategoryPage() {
         {(filteredProducts.length > 0 ? filteredProducts : (products || [])).map((p: TypeProductCard, index: number) => (
           <div key={p.id} style={{ display: 'contents' }}>
             <ProductCard {...p} />
-            {/* Insertamos un anuncio cada 4 productos para no abrumar */}
-            {(index + 1) % 4 === 0 && (
+            {/* Inyectamos anuncio dinámico cada N productos */}
+            {(index + 1) % AD_FREQUENCY === 0 && (
               <div style={{ gridColumn: '1 / -1' }}>
                 <AdSenseBanner format="fluid" />
               </div>

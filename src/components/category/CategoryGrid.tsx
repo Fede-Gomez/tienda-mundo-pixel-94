@@ -67,6 +67,8 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
     );
   }
 
+  const AD_FREQUENCY = Number(import.meta.env.VITE_ADS_FREQUENCY) || 4;
+
   return (
     <div className="category-grid">
       {categoriesWithProducts.map((category, index) => (
@@ -76,7 +78,7 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
             slug={category.id}
             images={category.categoryImages || []}
           />
-          {(index + 1) % 4 === 0 && (
+          {(index + 1) % AD_FREQUENCY === 0 && (
             <div className="grid-ad-break" style={{ gridColumn: '1 / -1' }}>
               <AdSenseBanner format="fluid" />
             </div>
