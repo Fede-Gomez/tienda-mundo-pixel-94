@@ -6,14 +6,21 @@ import { analytics } from "../config/firebase";
  * Wrapper para rastrear el comportamiento del usuario
  */
 
-// Función auxiliar para forzar Modo Debug en localhost o por URL param y que aparezca en el DebugView
+// Función auxiliar para forzar Modo Debug y que aparezca en el DebugView
 const logEventWithDebug = (eventName: string, eventParams: any = {}) => {
   const isLocal = window.location.hostname === "localhost";
-  const hasDebugParam = new URLSearchParams(window.location.search).has("debug");
+  const urlParams = new URLSearchParams(window.location.search);
   
+  // Guardar en sessionStorage para que persista durante la navegación
+  if (urlParams.has("debug")) {
+    sessionStorage.setItem("ga_debug_mode", "true");
+  }
+
+  const isDebugActive = isLocal || sessionStorage.getItem("ga_debug_mode") === "true";
+
   const params = {
     ...eventParams,
-    ...(isLocal || hasDebugParam ? { debug_mode: true } : {})
+    ...(isDebugActive ? { debug_mode: true } : {})
   };
   
   logEvent(analytics, eventName, params);
