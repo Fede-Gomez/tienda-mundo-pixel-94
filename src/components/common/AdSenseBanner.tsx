@@ -14,10 +14,10 @@ interface AdSenseBannerProps {
 }
 
 const CLIENT_ID = import.meta.env.VITE_ADSENSE_CLIENT;
-const DEFAULT_SLOT = import.meta.env.VITE_ADSENSE_SLOT_HOME;
+const SLOT = import.meta.env.VITE_ADSENSE_SLOT;
 
 export default function AdSenseBanner({
-  slot = DEFAULT_SLOT,
+  slot = SLOT,
   format = 'auto',
   responsive = 'true',
   style = { display: 'block' }
@@ -31,23 +31,28 @@ export default function AdSenseBanner({
     }
   }, [slot]);
 
-  // Si el formato es vertical, ajustamos el contenedor
-  const containerStyle: React.CSSProperties = {
-    margin: format === 'vertical' ? '0' : '20px 0',
-    overflow: 'hidden',
-    textAlign: 'center',
-    width: format === 'vertical' ? '160px' : '100%',
-    height: format === 'vertical' ? '600px' : 'auto',
-  };
+  // Lógica de estilos dinámica basada en el formato y el tamaño de pantalla
+  const isVertical = format === 'vertical';
 
   return (
-    <div className="adsense-container" style={containerStyle}>
+    <div 
+      className={`adsense-container ${isVertical ? 'adsense-sidebar' : 'adsense-horizontal'}`} 
+      style={{
+        margin: isVertical ? '0' : '10px 0',
+        overflow: 'hidden',
+        textAlign: 'center',
+        // Si es vertical ocultamos si no hay espacio (esto se reforzará en CSS)
+        width: isVertical ? '160px' : '100%',
+        minHeight: isVertical ? '600px' : '90px',
+        maxHeight: !isVertical ? '200px' : 'none', // Limitamos altura en horizontal para no molestar
+      }}
+    >
       <ins
         className="adsbygoogle"
-        style={style}
+        style={{ ...style, width: '100%', height: '100%' }}
         data-ad-client={CLIENT_ID}
         data-ad-slot={slot}
-        data-ad-format={format === 'vertical' ? '' : format}
+        data-ad-format={isVertical ? '' : format}
         data-full-width-responsive={responsive}
       />
     </div>

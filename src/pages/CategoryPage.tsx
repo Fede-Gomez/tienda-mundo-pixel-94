@@ -45,8 +45,14 @@ export default function CategoryPage() {
     return (
       <div className="category-page">
         <Navbar />
-        <h1 className="category-title">{category.name}</h1>
-        <p style={{ textAlign: "center", color: "#00ffcc" }}>Cargando productos...</p>
+        <div className="loading-screen">
+          <div className="retro-spinner"></div>
+          <span className="loading-text">Cargando inventario...</span>
+          
+          <div className="loading-ad-wrapper">
+             <AdSenseBanner format="rectangle" />
+          </div>
+        </div>
       </div>
     );
   }
