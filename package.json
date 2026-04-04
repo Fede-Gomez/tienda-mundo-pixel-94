@@ -8,18 +8,19 @@
     "dev:local": "cross-env VITE_ENVIRONMENT=local vite",
     "dev:firebase": "cross-env VITE_ENVIRONMENT=firebase vite",
     "dev:debug": "cross-env VITE_ENVIRONMENT=debug vite",
+    "dev:prod": "cross-env VITE_ENVIRONMENT=production vite",
     "build": "cross-env VITE_ENVIRONMENT=production tsc -b && vite build",
     "build:local": "cross-env VITE_ENVIRONMENT=local tsc -b && vite build",
     "build:firebase": "cross-env VITE_ENVIRONMENT=firebase tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "firebase": "^12.10.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router-dom": "^7.9.1"
+    "react-router-dom": "^7.9.1",
+    "swr": "^2.4.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",
@@ -32,7 +33,6 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "firebase-admin": "^13.7.0",
-    "gh-pages": "^6.3.0",
     "globals": "^16.4.0",
     "postcss": "^8.5.6",
     "tsx": "^4.21.0",

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import useSWR from "swr";
 import { categories } from "../data/categories";
 import "./CategoryPage.css";
 import type { TypeProductCard } from "../types/product";
@@ -14,34 +15,22 @@ export default function CategoryPage() {
   const { id } = useParams();
   const category = categories.find((c: any) => c.id === id);
 
-  const [products, setProducts] = useState<TypeProductCard[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<TypeProductCard[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  // Cargar productos locales cuando el componente monta o cambia la categoría
+  // SWR para manejar el fetch, caché y revalidación automáticamente
+  const { data: products, error, isValidating } = useSWR(
+    id ? `products/${id}` : null,
+    () => getProductsByCategory(id!)
+  );
+
+  // Resetear filtros cuando cambia la data de productos
   useEffect(() => {
-    const loadProducts = async () => {
-      if (!id) {
-        setIsLoading(false);
-        return;
-      }
+    setFilteredProducts([]);
+  }, [products]);
 
-      try {
-        setIsLoading(true);
-        const products = await getProductsByCategory(id) || [];
-        console.log(`[CategoryPage] Productos de ${id}: ${products.length}`);
-        setProducts(products);
-        setFilteredProducts([]); // Reset filtros
-      } catch (error) {
-        console.error("Error loading products:", error);
-        setProducts([]);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  if (!category) return <p className="category-not-found">Categoría no encontrada</p>;
 
-    loadProducts();
-  }, [id]);
+  const isLoading = isValidating && !products;
 
   if (!category) return <p className="category-not-found">Categoría no encontrada</p>;
 
