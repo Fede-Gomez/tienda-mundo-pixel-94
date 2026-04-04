@@ -23,6 +23,7 @@ import { productsPokemon } from "../data/products-pokemon";
 import { productsResidentEvil } from "../data/products-resident-evil";
 import { productsSonic } from "../data/products-sonic";
 import { productsComoEntrenarATuDragon } from "../data/products-como-entrenar-a-tu-dragon";
+import { getProductsByCategory } from "../services/productService";
 
 // Mapeo de categorías a productos locales
 const localProductsMap: Record<string, TypeProductCard[]> = {
@@ -52,7 +53,7 @@ export default function CategoryPage() {
 
   // Cargar productos locales cuando el componente monta o cambia la categoría
   useEffect(() => {
-    const loadProducts = () => {
+    const loadProducts = async () => {
       if (!id) {
         setIsLoading(false);
         return;
@@ -60,9 +61,9 @@ export default function CategoryPage() {
 
       try {
         setIsLoading(true);
-        const localProducts = localProductsMap[id] || [];
-        console.log(`[CategoryPage] Productos de ${id}: ${localProducts.length}`);
-        setProducts(localProducts);
+        const products = await getProductsByCategory(id) || [];
+        console.log(`[CategoryPage] Productos de ${id}: ${products.length}`);
+        setProducts(products);
         setFilteredProducts([]); // Reset filtros
       } catch (error) {
         console.error("Error loading products:", error);

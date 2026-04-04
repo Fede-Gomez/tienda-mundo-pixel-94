@@ -18,13 +18,14 @@ import { productsPokemon } from "../../data/products-pokemon";
 import { productsResidentEvil } from "../../data/products-resident-evil";
 import { productsSonic } from "../../data/products-sonic";
 import { productsComoEntrenarATuDragon } from "../../data/products-como-entrenar-a-tu-dragon";
+import { getProductsByCategory } from "../../services/productService";
 
 // Mapeo de categorías a productos locales
 const localProductsMap: Record<string, any[]> = {
   "harry-potter": productsHarryPotter,
   "cuphead": productsCuphead,
   "digimon": productsDigimon,
-  "dragon-ball": productsDragonBall,
+  "dragon-ball": productsDragonBall,    
   "god-of-war": productsGodOfWar,
   "hollow-knight": productsHollowKnight,
   "mario": productsMario,
@@ -62,8 +63,9 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
     const loadCategoryImages = () => {
       try {
         setIsLoading(true);
-        const updatedCategories = categories.map((category) => {
-          const products = localProductsMap[category.id] || [];
+        const updatedCategories = categories.map(async (category) => {
+          // Si estás dentro de una función async
+        const products = await getProductsByCategory(category.id) || []; 
           console.log(`[${category.id}] Productos locales: ${products.length}`);
           
           if (products.length > 0) {
