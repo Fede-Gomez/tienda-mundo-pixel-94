@@ -18,7 +18,7 @@ export default function CategoryPage() {
   const [filteredProducts, setFilteredProducts] = useState<TypeProductCard[]>([]);
 
   // SWR para manejar el fetch, caché y revalidación automáticamente
-  const { data: products, error, isValidating } = useSWR(
+  const { data: products, isValidating } = useSWR(
     id ? `products/${id}` : null,
     () => getProductsByCategory(id!)
   );
@@ -31,8 +31,6 @@ export default function CategoryPage() {
   if (!category) return <p className="category-not-found">Categoría no encontrada</p>;
 
   const isLoading = isValidating && !products;
-
-  if (!category) return <p className="category-not-found">Categoría no encontrada</p>;
 
   if (isLoading) {
     return (
@@ -49,13 +47,13 @@ export default function CategoryPage() {
       <Navbar />
       <h1 className="category-title">{category.name}</h1>
       {id === "digimon" && (
-        <FilterDigimon products={products} setFilteredProducts={setFilteredProducts} />
+        <FilterDigimon products={products || []} setFilteredProducts={setFilteredProducts} />
       )}
       {id === "pokemon" && (
-        <FilterPokemon products={products} setFilteredProducts={setFilteredProducts} />
+        <FilterPokemon products={products || []} setFilteredProducts={setFilteredProducts} />
       )}
       <div className="product-grid">
-        {(filteredProducts.length > 0 ? filteredProducts : products).map((p: TypeProductCard) => (
+        {(filteredProducts.length > 0 ? filteredProducts : (products || [])).map((p: TypeProductCard) => (
           <ProductCard key={p.id} {...p} />
         ))}
       </div>
