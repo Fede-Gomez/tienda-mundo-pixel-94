@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
+import { analyticsService } from "../../services/analyticsService";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -23,6 +24,7 @@ const Navbar: React.FC = () => {
             href="https://www.instagram.com/mundo.pixel.94/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={analyticsService.trackInstagramClick}
           >
             Instagram
           </a>

@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ProductCard.css";
 import { useCart } from "../../context/CartContext";
 import type { TypeProductCard } from "../../types/product";
 import ImagePreview from "./ImagePreview";
 import FigureDisclaimer from "./FigureDisclaimer";
+import { analyticsService } from "../../services/analyticsService";
 
 export default function ProductCard(product: TypeProductCard) {
   const { addToCart } = useCart();
@@ -13,16 +14,28 @@ export default function ProductCard(product: TypeProductCard) {
   const [isPreviewOpen, setIsPreviewOpen] = useState<boolean>(false);
   const [showFigureDisclaimer, setShowFigureDisclaimer] = useState<boolean>(false);
 
+  // Rastreo de Analytics al cargar el personaje
+  useEffect(() => {
+    analyticsService.trackViewProduct(product.id, product.name, product.category || "unknown");
+  }, [product.id, product.name, product.category]);
+
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedOption(e.target.value);
+    analyticsService.trackSelectOption(product.name, e.target.value);
   };
 
   const handleAddToCart = () => {
+    analyticsService.trackAddToCart(product.name, selectedOption, product.price);
     if (selectedOption === "Figura") {
       setShowFigureDisclaimer(true);
     } else {
       addToCart(product, selectedOption);
     }
+  };
+
+  const handleOpenPreview = () => {
+    setIsPreviewOpen(true);
+    analyticsService.trackImagePreview(product.name);
   };
 
   const handleFigureAgree = () => {
@@ -42,7 +55,7 @@ export default function ProductCard(product: TypeProductCard) {
             src={product.image[0]}
             alt={product.name}
             className="product-image"
-            onClick={() => setIsPreviewOpen(true)}
+            onClick={handleOpenPreview}
             style={{ cursor: "pointer" }}
           />
         </div>

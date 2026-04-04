@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./DeliveryModal.css";
+import { analyticsService } from "../../services/analyticsService";
 
 interface DeliveryModalProps {
   onConfirm: (deliveryData: { type: "envio" | "retiro"; location?: "liniers" | "coordinar" }) => void;
@@ -11,6 +12,7 @@ export default function DeliveryModal({ onConfirm, onCancel }: DeliveryModalProp
   const [deliveryType, setDeliveryType] = useState<"envio" | "retiro" | null>(null);
 
   const handleTypeSelect = (type: "envio" | "retiro") => {
+    analyticsService.trackShippingSelection(type);
     setDeliveryType(type);
     if (type === "envio") {
       onConfirm({ type });
@@ -20,6 +22,7 @@ export default function DeliveryModal({ onConfirm, onCancel }: DeliveryModalProp
   };
 
   const handleLocationSelect = (loc: "liniers" | "coordinar") => {
+    analyticsService.trackDeliverySelection(loc);
     onConfirm({ type: deliveryType as "retiro", location: loc });
   };
 

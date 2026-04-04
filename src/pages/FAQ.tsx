@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar/Navbar';
 import './FAQ.css';
+import { analyticsService } from '../services/analyticsService';
 
 const FAQ: React.FC = () => {
+  useEffect(() => {
+    analyticsService.trackViewQuestions();
+  }, []);
+
   const faqs = [
     { question: '¿Cómo funciona el sistema de pago?', answer: 'Para empezar el pedido, pido una seña del 50% enviando mi alias para la transferencia. Una vez recibido el pago, te confirmo el tiempo aproximado en que estará listo tu diseño' },
     { question: '¿Cómo puedo realizar un pedido?', answer: 'Agrega los productos que te gusten al carrito, dentro del carrito haz click en encargar para enviarnos un mensaje por whatsapp para continuar' },
@@ -57,13 +62,34 @@ const FAQ: React.FC = () => {
         </div>
       )
     },
-    { question: '¿Dónde puedo ver más de tus trabajos?', answer: 'Si querés ver fotos de nuestros trabajos, buscanos en Instagram como @mundo.pixel.94' },
+    { 
+      question: '¿Dónde puedo ver más de tus trabajos?', 
+      answer: (
+        <span>
+          Si querés ver fotos de nuestros trabajos, buscanos en Instagram como {' '}
+          <a 
+            href="https://www.instagram.com/mundo.pixel.94/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            onClick={analyticsService.trackInstagramClick}
+            style={{ color: '#00ffcc', fontWeight: 'bold' }}
+          >
+            @mundo.pixel.94
+          </a>
+        </span>
+      )
+    },
   ];
 
-  const [openIndex, setOpenIndex] = React.useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    const isOpening = openIndex !== index;
+    setOpenIndex(isOpening ? index : null);
+    
+    if (isOpening) {
+      analyticsService.trackExpandQuestion(faqs[index].question);
+    }
   };
 
   return (
