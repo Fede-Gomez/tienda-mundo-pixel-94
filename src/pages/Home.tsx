@@ -2,6 +2,7 @@ import CategoryGrid from "../components/category/CategoryGrid";
 import { categories } from "../data/categories";
 import "./Home.css";
 import Navbar from "../components/navbar/Navbar";
+import AdSenseBanner from "../components/common/AdSenseBanner";
 
 export default function Home() {
   return (
@@ -18,6 +19,10 @@ export default function Home() {
         </p>
       </header>
       <Navbar />
+
+      {/* Google AdSense - Banner Principal */}
+      <AdSenseBanner />
+
       <CategoryGrid categories={categories} />
     </div>
   );

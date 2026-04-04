@@ -11,6 +11,7 @@ import FilterPokemon from "../helper/FilterPokemon";
 
 import { getProductsByCategory } from "../services/productService";
 import { analyticsService } from "../services/analyticsService";
+import AdSenseBanner from "../components/common/AdSenseBanner";
 
 export default function CategoryPage() {
   const { id } = useParams();
@@ -65,6 +66,9 @@ export default function CategoryPage() {
           <ProductCard key={p.id} {...p} />
         ))}
       </div>
+
+      {/* Google AdSense - Banner Inferior */}
+      <AdSenseBanner />
     </div>
   );
 }
