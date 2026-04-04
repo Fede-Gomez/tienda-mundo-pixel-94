@@ -11,7 +11,7 @@ export const categories: TypeCategory[] = [
   {
     id: "como-entrenar-a-tu-dragon",
     name: "Como entrenar a tu dragón",
-    image: "", // Se actualiza en CategoryGrid
+    image: "",
   },
   {
     id: "cuphead",
@@ -76,6 +76,31 @@ export const categories: TypeCategory[] = [
   {
     id: "mortal-kombat",
     name: "Mortal Kombat",
+    image: "",
+  },
+  {
+    id: "assassins-creed",
+    name: "Assassins Creed",
+    image: "",
+  },
+  {
+    id: "megaman",
+    name: "Megaman",
+    image: "",
+  },
+  {
+    id: "spiderman",
+    name: "Spiderman",
+    image: "",
+  },
+  {
+    id: "street-fighter",
+    name: "Street Fighter",
+    image: "",
+  },
+  {
+    id: "crash-bandicoot",
+    name: "Crash Bandicoot",
     image: "",
   },
 ];
