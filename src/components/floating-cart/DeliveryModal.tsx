@@ -9,7 +9,6 @@ interface DeliveryModalProps {
 export default function DeliveryModal({ onConfirm, onCancel }: DeliveryModalProps) {
   const [step, setStep] = useState<"type" | "location">("type");
   const [deliveryType, setDeliveryType] = useState<"envio" | "retiro" | null>(null);
-  const [location, setLocation] = useState<"liniers" | "coordinar" | null>(null);
 
   const handleTypeSelect = (type: "envio" | "retiro") => {
     setDeliveryType(type);
@@ -21,14 +20,12 @@ export default function DeliveryModal({ onConfirm, onCancel }: DeliveryModalProp
   };
 
   const handleLocationSelect = (loc: "liniers" | "coordinar") => {
-    setLocation(loc);
     onConfirm({ type: deliveryType as "retiro", location: loc });
   };
 
   const handleBack = () => {
     setStep("type");
     setDeliveryType(null);
-    setLocation(null);
   };
 
   return (

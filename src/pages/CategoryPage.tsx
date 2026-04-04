@@ -12,7 +12,7 @@ import { getProductsByCategory } from "../services/productService";
 
 export default function CategoryPage() {
   const { id } = useParams();
-  const category = categories.find((c) => c.id === id);
+  const category = categories.find((c: any) => c.id === id);
 
   const [products, setProducts] = useState<TypeProductCard[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<TypeProductCard[]>([]);
