@@ -9,15 +9,15 @@ import AdSenseBanner from "./components/common/AdSenseBanner";
 function App() {
   return (
     <BrowserRouter basename={"/"}>
-      <div className="main-layout-container" style={{ display: 'flex', justifyContent: 'center', minHeight: '100vh', background: '#121212' }}>
+      <div className="main-layout-container">
         
         {/* Sidebar Izquierdo */}
-        <aside className="sidebar-ad left" style={{ padding: '20px', display: 'flex', alignItems: 'flex-start' }}>
+        <aside className="sidebar-ad left">
           <AdSenseBanner format="vertical" />
         </aside>
 
-        {/* Contenido Principal de la Tienda */}
-        <main style={{ flex: '1', maxWidth: '1200px', width: '100%', position: 'relative' }}>
+        {/* Contenido Principal */}
+        <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/category/:id" element={<CategoryPage />} />
@@ -26,7 +26,7 @@ function App() {
         </main>
 
         {/* Sidebar Derecho */}
-        <aside className="sidebar-ad right" style={{ padding: '20px', display: 'flex', alignItems: 'flex-start' }}>
+        <aside className="sidebar-ad right">
           <AdSenseBanner format="vertical" />
         </aside>
 

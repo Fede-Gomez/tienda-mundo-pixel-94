@@ -6,12 +6,9 @@
   "scripts": {
     "dev": "vite",
     "dev:local": "cross-env VITE_ENVIRONMENT=local vite",
-    "dev:firebase": "cross-env VITE_ENVIRONMENT=firebase vite",
-    "dev:debug": "cross-env VITE_ENVIRONMENT=debug vite",
     "dev:prod": "cross-env VITE_ENVIRONMENT=production vite",
     "build": "cross-env VITE_ENVIRONMENT=production tsc -b && vite build",
     "build:local": "cross-env VITE_ENVIRONMENT=local tsc -b && vite build",
-    "build:firebase": "cross-env VITE_ENVIRONMENT=firebase tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

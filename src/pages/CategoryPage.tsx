@@ -68,8 +68,16 @@ export default function CategoryPage() {
         <FilterPokemon products={products || []} setFilteredProducts={setFilteredProducts} />
       )}
       <div className="product-grid">
-        {(filteredProducts.length > 0 ? filteredProducts : (products || [])).map((p: TypeProductCard) => (
-          <ProductCard key={p.id} {...p} />
+        {(filteredProducts.length > 0 ? filteredProducts : (products || [])).map((p: TypeProductCard, index: number) => (
+          <div key={p.id} style={{ display: 'contents' }}>
+            <ProductCard {...p} />
+            {/* Insertamos un anuncio cada 4 productos para no abrumar */}
+            {(index + 1) % 4 === 0 && (
+              <div style={{ gridColumn: '1 / -1' }}>
+                <AdSenseBanner format="fluid" />
+              </div>
+            )}
+          </div>
         ))}
       </div>
 

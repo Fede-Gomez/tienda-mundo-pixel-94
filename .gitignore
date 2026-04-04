@@ -22,8 +22,7 @@ dist-ssr
 firebase-key.json
 scripts/firebase-key.json
 .env.local
-.env.debug
-.env
+.env.production
 
 # Product data - Keep ignored except essential metadata
 src/data/products-*.ts
