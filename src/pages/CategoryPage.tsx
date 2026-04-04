@@ -8,40 +8,7 @@ import Navbar from "../components/navbar/Navbar";
 import FilterDigimon from "../helper/FilterDigimon";
 import FilterPokemon from "../helper/FilterPokemon";
 
-// Importar todos los productos locales
-import { productsHarryPotter } from "../data/products-harry-potter";
-import { productsCuphead } from "../data/products-cuphead";
-import { productsDigimon } from "../data/products-digimon";
-import { productsDragonBall } from "../data/products-dragon-ball";
-import { productsGodOfWar } from "../data/products-god-of-war";
-import { productsHollowKnight } from "../data/products-hollow-knight";
-import { productsMario } from "../data/products-mario";
-import { productsMetalSlug } from "../data/products-metal-slug";
-import { productsMortalKombat } from "../data/products-mortal-kombat";
-import { productsOriAndTheBlindForest } from "../data/products-ori-and-the-blind-forest";
-import { productsPokemon } from "../data/products-pokemon";
-import { productsResidentEvil } from "../data/products-resident-evil";
-import { productsSonic } from "../data/products-sonic";
-import { productsComoEntrenarATuDragon } from "../data/products-como-entrenar-a-tu-dragon";
 import { getProductsByCategory } from "../services/productService";
-
-// Mapeo de categorías a productos locales
-const localProductsMap: Record<string, TypeProductCard[]> = {
-  "harry-potter": productsHarryPotter,
-  "cuphead": productsCuphead,
-  "digimon": productsDigimon,
-  "dragon-ball": productsDragonBall,
-  "god-of-war": productsGodOfWar,
-  "hollow-knight": productsHollowKnight,
-  "mario": productsMario,
-  "metal-slug": productsMetalSlug,
-  "mortal-kombat": productsMortalKombat,
-  "ori-and-the-blind-forest": productsOriAndTheBlindForest,
-  "pokemon": productsPokemon,
-  "resident-evil": productsResidentEvil,
-  "sonic": productsSonic,
-  "como-entrenar-a-tu-dragon": productsComoEntrenarATuDragon,
-};
 
 export default function CategoryPage() {
   const { id } = useParams();
