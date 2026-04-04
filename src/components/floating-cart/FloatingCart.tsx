@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useCart } from "../../context/CartContext";
 import DeliveryModal from "./DeliveryModal";
 import "./FloatingCart.css";
+import { analyticsService } from "../../services/analyticsService";
 
 export default function FloatingCart() {
   const { cart, updateQuantity } = useCart();
@@ -36,6 +37,13 @@ export default function FloatingCart() {
 
   const discountInfo = getDiscountInfo();
 
+  const handleUpdateQuantity = (id: string, option: string, name: string, newQuantity: number) => {
+    if (newQuantity <= 0) {
+      analyticsService.trackRemoveFromCart(name);
+    }
+    updateQuantity(id, option, newQuantity);
+  };
+
   const generateWhatsAppMessage = (deliveryInfo?: {
     type: "envio" | "retiro";
     location?: "liniers" | "coordinar";
@@ -67,6 +75,7 @@ export default function FloatingCart() {
   };
 
   const handleWhatsAppPurchase = () => {
+    analyticsService.trackEncargarClick(discountInfo.finalPrice, totalProducts);
     setShowDeliveryModal(true);
   };
 
@@ -123,14 +132,14 @@ export default function FloatingCart() {
                     <div className="cart-item-quantity">
                       <button
                         className="quantity-button"
-                        onClick={() => updateQuantity(item.id, item.option, item.quantity - 1)}
+                        onClick={() => handleUpdateQuantity(item.id, item.option, item.name, item.quantity - 1)}
                       >
                         -
                       </button>
                       <span className="cart-item-quantity-text">{item.quantity}</span>
                       <button
                         className="quantity-button"
-                        onClick={() => updateQuantity(item.id, item.option, item.quantity + 1)}
+                        onClick={() => handleUpdateQuantity(item.id, item.option, item.name, item.quantity + 1)}
                       >
                         +
                       </button>

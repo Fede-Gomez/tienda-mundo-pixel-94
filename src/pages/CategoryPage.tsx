@@ -10,10 +10,18 @@ import FilterDigimon from "../helper/FilterDigimon";
 import FilterPokemon from "../helper/FilterPokemon";
 
 import { getProductsByCategory } from "../services/productService";
+import { analyticsService } from "../services/analyticsService";
 
 export default function CategoryPage() {
   const { id } = useParams();
   const category = categories.find((c: any) => c.id === id);
+
+  // Rastreo de Analytics al entrar a la categoría
+  useEffect(() => {
+    if (category && id) {
+      analyticsService.trackViewCategory(id, category.name);
+    }
+  }, [id, category]);
 
   const [filteredProducts, setFilteredProducts] = useState<TypeProductCard[]>([]);
 

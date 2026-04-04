@@ -1,8 +1,8 @@
-// Tipo base para un producto
 export interface TypeProductCard {
   id: string;
   name: string;
   price: number;
+  category?: string; // Categoría del producto
   image: string[]; // Cambiamos a un arreglo de imágenes
   optionsProduct: optionsProduct[]; // Opciones disponibles para el producto
   size:{
