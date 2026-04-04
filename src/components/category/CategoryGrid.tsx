@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CategoryCard from "./CategoryCard";
 import "./CategoryGrid.css";
 import type { TypeCategoryGrid } from "../../types/category";
+import AdSenseBanner from "../common/AdSenseBanner";
 
 import { getProductsByCategory } from "../../services/productService";
 
@@ -68,13 +69,19 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
 
   return (
     <div className="category-grid">
-      {categoriesWithProducts.map((category) => (
-        <CategoryCard
-          key={category.id}
-          name={category.name}
-          slug={category.id}
-          images={category.categoryImages || []}
-        />
+      {categoriesWithProducts.map((category, index) => (
+        <div key={category.id} style={{ display: 'contents' }}>
+          <CategoryCard
+            name={category.name}
+            slug={category.id}
+            images={category.categoryImages || []}
+          />
+          {(index + 1) % 4 === 0 && (
+            <div className="grid-ad-break" style={{ gridColumn: '1 / -1' }}>
+              <AdSenseBanner format="fluid" />
+            </div>
+          )}
+        </div>
       ))}
     </div>
   );
