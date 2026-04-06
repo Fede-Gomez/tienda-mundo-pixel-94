@@ -48,10 +48,6 @@ export default function CategoryPage() {
         <div className="loading-screen">
           <div className="retro-spinner"></div>
           <span className="loading-text">Cargando inventario...</span>
-          
-          <div className="loading-ad-wrapper">
-             <AdSenseBanner format="rectangle" />
-          </div>
         </div>
       </div>
     );

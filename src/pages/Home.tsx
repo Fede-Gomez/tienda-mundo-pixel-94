@@ -8,7 +8,7 @@ import AdSenseBanner from "../components/common/AdSenseBanner";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
-  // Simular carga para mostrar el spinner retro y un anuncio
+  // Simular carga para mostrar el spinner retro (sin banner de AdSense para cumplir políticas de Google)
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -23,9 +23,6 @@ export default function Home() {
         <div className="loading-screen">
           <div className="retro-spinner"></div>
           <span className="loading-text">Cargando Mundos...</span>
-          <div className="loading-ad-wrapper">
-             <AdSenseBanner format="rectangle" />
-          </div>
         </div>
       </div>
     );
