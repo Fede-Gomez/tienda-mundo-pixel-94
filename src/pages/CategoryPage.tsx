@@ -12,6 +12,7 @@ import FilterPokemon from "../helper/FilterPokemon";
 import { getProductsByCategory } from "../services/productService";
 import { analyticsService } from "../services/analyticsService";
 import AdSenseBanner from "../components/common/AdSenseBanner";
+import LoadingScreen from "../components/common/LoadingScreen";
 
 export default function CategoryPage() {
   const { id } = useParams();
@@ -45,10 +46,7 @@ export default function CategoryPage() {
     return (
       <div className="category-page">
         <Navbar />
-        <div className="loading-screen">
-          <div className="retro-spinner"></div>
-          <span className="loading-text">Cargando inventario...</span>
-        </div>
+        <LoadingScreen text="Cargando inventario..." />
       </div>
     );
   }
@@ -65,9 +63,9 @@ export default function CategoryPage() {
       {id === "pokemon" && (
         <FilterPokemon products={products || []} setFilteredProducts={setFilteredProducts} />
       )}
+      {/* Google AdSense - Banner Superior */}
+      <AdSenseBanner />
       <div className="product-grid">
-        {/* Google AdSense - Banner Superior */}
-        <AdSenseBanner />
         {(filteredProducts.length > 0 ? filteredProducts : (products || [])).map((p: TypeProductCard, index: number) => (
           <div key={p.id} style={{ display: 'contents' }}>
             <ProductCard {...p} />

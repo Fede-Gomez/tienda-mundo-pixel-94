@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import CategoryGrid from "../components/category/CategoryGrid";
+import LoadingScreen from "../components/common/LoadingScreen";
 import { categories } from "../data/categories";
 import "./Home.css";
 import Navbar from "../components/navbar/Navbar";
@@ -20,10 +21,7 @@ export default function Home() {
     return (
       <div className="home">
         <Navbar />
-        <div className="loading-screen">
-          <div className="retro-spinner"></div>
-          <span className="loading-text">Cargando Mundos...</span>
-        </div>
+        <LoadingScreen text="Cargando Mundos..." />
       </div>
     );
   }

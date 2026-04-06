@@ -3,6 +3,7 @@ import CategoryCard from "./CategoryCard";
 import "./CategoryGrid.css";
 import type { TypeCategoryGrid } from "../../types/category";
 import AdSenseBanner from "../common/AdSenseBanner";
+import LoadingScreen from "../common/LoadingScreen";
 
 import { getProductsByCategory } from "../../services/productService";
 
@@ -58,13 +59,7 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
   }, [categories]);
 
   if (isLoading) {
-    return (
-      <div className="category-grid">
-        <p style={{ gridColumn: "1 / -1", textAlign: "center", color: "#00ffcc" }}>
-          Cargando categorías...
-        </p>
-      </div>
-    );
+    return <LoadingScreen text="Cargando categorías..." minHeight="auto" padding="40px 0" />;
   }
 
   const AD_FREQUENCY = Number(import.meta.env.VITE_ADS_FREQUENCY) || 4;
