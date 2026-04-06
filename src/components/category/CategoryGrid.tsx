@@ -70,21 +70,24 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
   const AD_FREQUENCY = Number(import.meta.env.VITE_ADS_FREQUENCY) || 4;
 
   return (
-    <div className="category-grid">
-      {categoriesWithProducts.map((category, index) => (
-        <div key={category.id} style={{ display: 'contents' }}>
-          <CategoryCard
-            name={category.name}
-            slug={category.id}
-            images={category.categoryImages || []}
-          />
-          {(index + 1) % AD_FREQUENCY === 0 && (
-            <div className="grid-ad-break" style={{ gridColumn: '1 / -1' }}>
-              <AdSenseBanner format="fluid" />
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+    <>
+      <AdSenseBanner />
+      <div className="category-grid">
+        {categoriesWithProducts.map((category, index) => (
+          <div key={category.id} style={{ display: 'contents' }}>
+            <CategoryCard
+              name={category.name}
+              slug={category.id}
+              images={category.categoryImages || []}
+            />
+            {(index + 1) % AD_FREQUENCY === 0 && (
+              <div className="grid-ad-break" style={{ gridColumn: '1 / -1' }}>
+                <AdSenseBanner format="fluid" />
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

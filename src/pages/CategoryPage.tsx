@@ -66,6 +66,8 @@ export default function CategoryPage() {
         <FilterPokemon products={products || []} setFilteredProducts={setFilteredProducts} />
       )}
       <div className="product-grid">
+        {/* Google AdSense - Banner Superior */}
+        <AdSenseBanner />
         {(filteredProducts.length > 0 ? filteredProducts : (products || [])).map((p: TypeProductCard, index: number) => (
           <div key={p.id} style={{ display: 'contents' }}>
             <ProductCard {...p} />
