@@ -49,8 +49,8 @@ export default function ProductCard(product: TypeProductCard) {
 
   return (
     <>
-      <div className="product-card">
-        <div className="image-container">
+      <article className="product-card">
+        <figure className="image-container">
           <img
             src={product.image[0]}
             alt={product.name}
@@ -58,17 +58,17 @@ export default function ProductCard(product: TypeProductCard) {
             onClick={handleOpenPreview}
             style={{ cursor: "pointer" }}
           />
-        </div>
-        <div className="product-info">
+        </figure>
+        <section className="product-info">
           <div className="product-row">
-            <p className="product-name">{product.name}</p>
-            <p className="product-price">${product.price}</p>
+            <h3 className="product-name">{product.name}</h3>
+            <span className="product-price">${product.price}</span>
             <ul className="product-sizes">
               <li>Alto: {product.size.alto}</li>
               <li>Ancho: {product.size.ancho}</li>
             </ul>
           </div>
-          <div className="product-actions">
+          <footer className="product-actions">
             <select
               className="product-options"
               value={selectedOption}
@@ -86,9 +86,9 @@ export default function ProductCard(product: TypeProductCard) {
             >
               Agregar
             </button>
-          </div>
-        </div>
-      </div>
+          </footer>
+        </section>
+      </article>
       
       {isPreviewOpen && (
         <ImagePreview

@@ -32,16 +32,16 @@ export default function DeliveryModal({ onConfirm, onCancel }: DeliveryModalProp
   };
 
   return (
-    <div className="delivery-overlay">
-      <div className="delivery-modal">
-        <div className="delivery-header">
+    <aside className="delivery-overlay" aria-modal="true" role="dialog">
+      <article className="delivery-modal">
+        <header className="delivery-header">
           <h2>Tipo de Entrega</h2>
-        </div>
+        </header>
 
         {step === "type" && (
-          <div className="delivery-content">
+          <main className="delivery-content">
             <p className="delivery-label">¿Cómo deseas recibir tu pedido?</p>
-            <div className="delivery-options">
+            <nav className="delivery-options">
               <button
                 className="delivery-btn envio-btn"
                 onClick={() => handleTypeSelect("envio")}
@@ -54,14 +54,14 @@ export default function DeliveryModal({ onConfirm, onCancel }: DeliveryModalProp
               >
                 🏪 Retiro
               </button>
-            </div>
-          </div>
+            </nav>
+          </main>
         )}
 
         {step === "location" && (
-          <div className="delivery-content">
+          <main className="delivery-content">
             <p className="delivery-label">¿Dónde deseas retirar?</p>
-            <div className="delivery-options">
+            <nav className="delivery-options">
               <button
                 className="delivery-btn location-btn liniers-btn"
                 onClick={() => handleLocationSelect("liniers")}
@@ -74,17 +74,17 @@ export default function DeliveryModal({ onConfirm, onCancel }: DeliveryModalProp
               >
                 📞 Punto a Coordinar
               </button>
-            </div>
+            </nav>
             <button className="delivery-back-btn" onClick={handleBack}>
               ← Volver
             </button>
-          </div>
+          </main>
         )}
 
-        <button className="delivery-close-btn" onClick={onCancel}>
+        <button className="delivery-close-btn" onClick={onCancel} aria-label="Cerrar modal">
           ✖
         </button>
-      </div>
-    </div>
+      </article>
+    </aside>
   );
 }

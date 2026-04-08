@@ -7,12 +7,12 @@ interface FigureDisclaimerProps {
 
 export default function FigureDisclaimer({ onAgree, onDisagree }: FigureDisclaimerProps) {
   return (
-    <div className="disclaimer-overlay">
-      <div className="disclaimer-modal">
-        <div className="disclaimer-header">
+    <aside className="disclaimer-overlay" aria-modal="true" role="dialog">
+      <article className="disclaimer-modal">
+        <header className="disclaimer-header">
           <h2>Información sobre Figuras</h2>
-        </div>
-        <div className="disclaimer-content">
+        </header>
+        <main className="disclaimer-content">
           <p>
             La figura ya viene con un soporte genérico para mantenerlo parado.
           </p>
@@ -22,16 +22,16 @@ export default function FigureDisclaimer({ onAgree, onDisagree }: FigureDisclaim
           <p className="disclaimer-warning">
             La tienda no se hace cargo ante tales eventuales roturas por mal encastre.
           </p>
-        </div>
-        <div className="disclaimer-actions">
+        </main>
+        <footer className="disclaimer-actions">
           <button className="btn-agree" onClick={onAgree}>
             Entendido
           </button>
           <button className="btn-disagree" onClick={onDisagree}>
             Mejor no
           </button>
-        </div>
-      </div>
-    </div>
+        </footer>
+      </article>
+    </aside>
   );
 }

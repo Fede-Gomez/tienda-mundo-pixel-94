@@ -96,29 +96,35 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="faq">
+    <section className="faq">
       <Navbar />
-      <h1>Preguntas Frecuentes</h1>
-      <ul className="faq-list">
-        {faqs.map((faq, index) => (
-          <React.Fragment key={index}>
-            <li className="faq-item">
-              <button onClick={() => toggleFAQ(index)} className="faq-question">
-                {faq.question}
-              </button>
-              {openIndex === index && <div className="faq-answer">{faq.answer}</div>}
-            </li>
-            
-            {/* Inyectamos anuncio dinámico en la FAQ */}
-            {(index + 1) % AD_FREQUENCY === 0 && (
-              <div className="faq-ad-item" style={{ margin: '15px 0' }}>
-                 <AdSenseBanner format="fluid" />
-              </div>
-            )}
-          </React.Fragment>
-        ))}
-      </ul>
-    </div>
+      <header className="faq-header">
+        <h1>Preguntas Frecuentes</h1>
+      </header>
+      <main className="faq-main-content">
+        <ul className="faq-list">
+          {faqs.map((faq, index) => (
+            <React.Fragment key={index}>
+              <li className="faq-item">
+                <article>
+                  <button onClick={() => toggleFAQ(index)} className="faq-question">
+                    {faq.question}
+                  </button>
+                  {openIndex === index && <div className="faq-answer">{faq.answer}</div>}
+                </article>
+              </li>
+              
+              {/* Inyectamos anuncio dinámico en la FAQ */}
+              {(index + 1) % AD_FREQUENCY === 0 && (
+                <aside className="faq-ad-item" style={{ margin: '15px 0' }}>
+                   <AdSenseBanner format="fluid" />
+                </aside>
+              )}
+            </React.Fragment>
+          ))}
+        </ul>
+      </main>
+    </section>
   );
 };
 

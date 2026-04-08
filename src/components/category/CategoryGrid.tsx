@@ -67,7 +67,7 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
   return (
     <>
       <AdSenseBanner />
-      <div className="category-grid">
+      <section className="category-grid">
         {categoriesWithProducts.map((category, index) => (
           <div key={category.id} style={{ display: 'contents' }}>
             <CategoryCard
@@ -76,13 +76,13 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
               images={category.categoryImages || []}
             />
             {(index + 1) % AD_FREQUENCY === 0 && (
-              <div className="grid-ad-break" style={{ gridColumn: '1 / -1' }}>
+              <aside className="grid-ad-break" style={{ gridColumn: '1 / -1' }}>
                 <AdSenseBanner format="fluid" />
-              </div>
+              </aside>
             )}
           </div>
         ))}
-      </div>
+      </section>
     </>
   );
 }

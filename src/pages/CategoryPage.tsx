@@ -18,12 +18,26 @@ export default function CategoryPage() {
   const { id } = useParams();
   const category = categories.find((c: any) => c.id === id);
 
-  // Rastreo de Analytics al entrar a la categoría
+  // Actualizar Meta Tags, Título y Analytics dinámicamente
   useEffect(() => {
     if (category && id) {
+      document.title = `${category.name} | Mundo Pixel 94`;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      const content = `Explora nuestra colección de ${category.name} en Pixel Art. Llaveros, imanes y figuras coleccionables de alta calidad en Mundo Pixel 94.`;
+      
+      if (metaDescription) {
+        metaDescription.setAttribute("content", content);
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = "description";
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+
+      // Rastreo de Analytics
       analyticsService.trackViewCategory(id, category.name);
     }
-  }, [id, category]);
+  }, [category, id]);
 
   const [filteredProducts, setFilteredProducts] = useState<TypeProductCard[]>([]);
 
@@ -41,46 +55,57 @@ export default function CategoryPage() {
   if (!category) return <p className="category-not-found">Categoría no encontrada</p>;
 
   const isLoading = isValidating && !products;
-
-  if (isLoading) {
-    return (
-      <div className="category-page">
-        <Navbar />
-        <LoadingScreen text="Cargando inventario..." />
-      </div>
-    );
-  }
-
   const AD_FREQUENCY = Number(import.meta.env.VITE_ADS_FREQUENCY) || 4;
 
   return (
-    <div className="category-page">
+    <section className="category-page">
       <Navbar />
       <h1 className="category-title">{category.name}</h1>
-      {id === "digimon" && (
-        <FilterDigimon products={products || []} setFilteredProducts={setFilteredProducts} />
-      )}
-      {id === "pokemon" && (
-        <FilterPokemon products={products || []} setFilteredProducts={setFilteredProducts} />
-      )}
-      {/* Google AdSense - Banner Superior */}
-      <AdSenseBanner />
-      <div className="product-grid">
-        {(filteredProducts.length > 0 ? filteredProducts : (products || [])).map((p: TypeProductCard, index: number) => (
-          <div key={p.id} style={{ display: 'contents' }}>
-            <ProductCard {...p} />
-            {/* Inyectamos anuncio dinámico cada N productos */}
-            {(index + 1) % AD_FREQUENCY === 0 && (
-              <div style={{ gridColumn: '1 / -1' }}>
-                <AdSenseBanner format="fluid" />
+      
+      {isLoading ? (
+        <LoadingScreen text="Cargando inventario..." />
+      ) : (
+        <main className="category-main-content">
+          {id === "digimon" && (
+            <FilterDigimon products={products || []} setFilteredProducts={setFilteredProducts} />
+          )}
+          {id === "pokemon" && (
+            <FilterPokemon products={products || []} setFilteredProducts={setFilteredProducts} />
+          )}
+          
+          {/* Google AdSense - Banner Superior */}
+          <aside className="ad-container top-ad">
+            <AdSenseBanner />
+          </aside>
+          
+          <div className="product-grid">
+            {(filteredProducts.length > 0 ? filteredProducts : (products || [])).map((p: TypeProductCard, index: number) => (
+              <div key={p.id} style={{ display: 'contents' }}>
+                <ProductCard {...p} />
+                {/* Inyectamos anuncio dinámico cada N productos */}
+                {(index + 1) % AD_FREQUENCY === 0 && (
+                  <aside className="ad-container grid-ad" style={{ gridColumn: '1 / -1' }}>
+                    <AdSenseBanner format="fluid" />
+                  </aside>
+                )}
               </div>
-            )}
+            ))}
           </div>
-        ))}
-      </div>
 
-      {/* Google AdSense - Banner Inferior */}
-      <AdSenseBanner />
-    </div>
+          {/* Google AdSense - Banner Inferior */}
+          <aside className="ad-container bottom-ad">
+            <AdSenseBanner />
+          </aside>
+
+          <footer className="category-info-footer">
+            <p className="category-description-box">
+              Estás en la sección de <strong>{category.name}</strong>. Aquí encontrarás todos nuestros productos 
+              disponibles en pixel art: llaveros, imanes y figuras decorativas inspiradas en este universo. 
+              Cada pieza está hecha con dedicación para capturar la esencia retro y la magia de los videojuegos clásicos.
+            </p>
+          </footer>
+        </main>
+      )}
+    </section>
   );
 }

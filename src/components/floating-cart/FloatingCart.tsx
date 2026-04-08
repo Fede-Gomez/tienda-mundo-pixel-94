@@ -99,76 +99,86 @@ export default function FloatingCart() {
 
   return (
     <>
-      <div
+      <button
         className={`floating-cart ${isVisible ? "active" : ""}`}
         onClick={() => setIsVisible((prev) => !prev)}
-        onTouchEnd={(e) => {
-          // En mobile, remover el focus después del tap
-          e.currentTarget.blur();
-        }}
+        aria-label="Ver carrito"
+        type="button"
       >
         {totalProducts !== 0 ? `$${discountInfo.finalPrice.toFixed(2)}` : "Vacío"} 🛒
         {totalProducts > 0 && <span className="cart-badge">{totalProducts}</span>} {/* Badge con la cantidad */}
-      </div>
-      <div className={`cart-list ${isVisible ? "fade-in" : "fade-out"}`}>
+      </button>
+      <aside 
+        className={`cart-list ${isVisible ? "fade-in" : "fade-out"}`}
+        aria-labelledby="cart-title"
+      >
         <button
           className="cart-close-button"
           onClick={() => setIsVisible(false)}
+          aria-label="Cerrar carrito"
         >
           ✖
         </button>
-        <h2 className="floating-title">Carrito</h2>
+        <h2 id="cart-title" className="floating-title">Carrito</h2>
+        
         {cart.length === 0 ? (
-          <p>No hay productos en el carrito.</p>
+          <p className="cart-empty-msg">No hay productos en el carrito.</p>
         ) : (
-          <ul>
-            {cart.map((item) => (
-              <li key={`${item.id}-${item.option}`} className="cart-item">
-                <img src={item.image[0]} alt={item.name} className="cart-item-image" />
-                <div className="cart-item-details">
-                  <p className="cart-item-name">{item.name} ({item.option})</p>
-                  <div className="cart-item-row">
-                    <p className="cart-item-price">${(item.price * item.quantity)}</p>
-                    <div className="cart-item-quantity">
-                      <button
-                        className="quantity-button"
-                        onClick={() => handleUpdateQuantity(item.id, item.option, item.name, item.quantity - 1)}
-                      >
-                        -
-                      </button>
-                      <span className="cart-item-quantity-text">{item.quantity}</span>
-                      <button
-                        className="quantity-button"
-                        onClick={() => handleUpdateQuantity(item.id, item.option, item.name, item.quantity + 1)}
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <section className="cart-items-container">
+            <ul>
+              {cart.map((item) => (
+                <li key={`${item.id}-${item.option}`} className="cart-item">
+                  <img src={item.image[0]} alt={item.name} className="cart-item-image" />
+                  <section className="cart-item-details">
+                    <p className="cart-item-name">{item.name} ({item.option})</p>
+                    <footer className="cart-item-row">
+                      <span className="cart-item-price">${(item.price * item.quantity)}</span>
+                      <div className="cart-item-quantity">
+                        <button
+                          className="quantity-button"
+                          onClick={() => handleUpdateQuantity(item.id, item.option, item.name, item.quantity - 1)}
+                          aria-label="Disminuir cantidad"
+                        >
+                          -
+                        </button>
+                        <span className="cart-item-quantity-text">{item.quantity}</span>
+                        <button
+                          className="quantity-button"
+                          onClick={() => handleUpdateQuantity(item.id, item.option, item.name, item.quantity + 1)}
+                          aria-label="Aumentar cantidad"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </footer>
+                  </section>
+                </li>
+              ))}
+            </ul>
+          </section>
         )}
-        {discountInfo.level > 0 && (
-          <div className="cart-discount-note">
-            <p className="discount-text">
-              descuento nivel {discountInfo.level}: ${discountInfo.discount.toFixed(2)}
-            </p>
-          </div>
-        )}
-        <div className="cart-total">
-          <p className="cart-total-text">Total: ${discountInfo.finalPrice.toFixed(2)}</p>
-        </div>
-        {cart.length > 0 && (
-          <button
-            className="cart-purchase-button"
-            onClick={handleWhatsAppPurchase}
-          >
-            Encargar
-          </button>
-        )}
-      </div>
+
+        <footer className="cart-footer">
+          {discountInfo.level > 0 && (
+            <div className="cart-discount-note">
+              <p className="discount-text">
+                Descuento nivel {discountInfo.level}: <strong>-${discountInfo.discount.toFixed(2)}</strong>
+              </p>
+            </div>
+          )}
+          
+          <p className="cart-total">Total: <strong>${discountInfo.finalPrice.toFixed(2)}</strong></p>
+
+          {cart.length > 0 && (
+            <button
+              className="cart-purchase-button"
+              onClick={handleWhatsAppPurchase}
+            >
+              Encargar
+            </button>
+          )}
+        </footer>
+      </aside>
 
       {showDeliveryModal && (
         <DeliveryModal

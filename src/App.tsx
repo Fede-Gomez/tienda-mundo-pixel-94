@@ -9,17 +9,16 @@ import FAQ from "./pages/FAQ";
 function App() {
   return (
     <BrowserRouter basename={"/"}>
-      <div className="main-layout-container">
-        {/* Contenido Principal */}
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/category/:id" element={<CategoryPage />} />
-            <Route path="/faq" element={<FAQ />} />
-          </Routes>
-        </main>
+      {/* Usamos el fragmento de React para no añadir nodos innecesarios al DOM si no es necesario, 
+          pero mantenemos el main para el contenido principal */}
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:id" element={<CategoryPage />} />
+          <Route path="/faq" element={<FAQ />} />
+        </Routes>
+      </main>
 
-      </div>
       <FloatingCart />
     </BrowserRouter>
   );

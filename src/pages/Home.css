@@ -42,4 +42,88 @@
   /* Neon green */
   text-shadow: var(--neon-text-shadow);
   /* Pixelated glow effect */
+  margin-bottom: 24px;
+}
+
+.home-intro-text {
+  display: none;
+}
+
+/* 🕹️ ARCADE MARQUEE (Moving Text) */
+.arcade-marquee {
+  width: 100%;
+  background-color: #000;
+  border-top: 2px solid var(--neon-text-color-green);
+  border-bottom: 2px solid var(--neon-text-color-green);
+  padding: 10px 0;
+  overflow: hidden;
+  margin: 10px 0 20px 0;
+  display: flex;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 11px;
+  color: var(--neon-text-color-yellow);
+  animation: marquee 40s linear infinite; /* Aumentamos el tiempo por el largo del texto */
+  width: max-content;
+}
+
+.marquee-content span {
+  padding-right: 50px; /* Espacio entre el texto original y el duplicado */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Al estar duplicado, el -50% es el final exacto del primer bloque */
+}
+
+/* 📚 RETRO MANUAL FOOTER */
+.home-info-footer {
+  margin-top: 80px;
+  padding: 40px 16px;
+  border-top: 4px dashed #333;
+}
+
+.retro-manual-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #1a1a1a;
+  border: 4px double #00ffcc;
+  text-align: left;
+  box-shadow: 10px 10px 0px rgba(0, 255, 204, 0.2);
+}
+
+.retro-manual-box h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  color: var(--neon-text-color-yellow);
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #333;
+  padding-bottom: 15px;
+}
+
+.retro-manual-box h3 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: var(--neon-text-color-green);
+  margin: 25px 0 15px 0;
+  text-transform: uppercase;
+}
+
+.retro-manual-box p {
+  font-family: 'system-ui', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.retro-manual-box strong {
+  color: #00ffcc;
+  font-weight: 700;
 }
