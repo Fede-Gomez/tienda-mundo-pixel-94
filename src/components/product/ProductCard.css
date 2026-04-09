@@ -82,14 +82,22 @@
 .image-container {
   position: relative;
   width: 100%;
-  height: 160px;
+  height: 200px; /* Incrementado de 160px para mayor visibilidad */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  margin-bottom: 8px;
 }
 
 .product-image {
-  width: 100%;
-  height: 100%;
+  max-width: 95%;
+  max-height: 95%;
   object-fit: contain;
+  /* CRÍTICO PARA PIXEL ART: mantiene la nitidez al escalar */
+  image-rendering: pixelated; 
+  image-rendering: crisp-edges;
+  filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.5)); /* Sombra retro */
 }
 
 @media (prefers-color-scheme: dark) {

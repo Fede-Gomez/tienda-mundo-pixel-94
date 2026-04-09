@@ -1,11 +1,6 @@
+// ... imports
 import { useEffect } from 'react';
 
-/**
- * Componente Reutilizable para Google AdSense
- * @param slot El ID del bloque de anuncios (puedes pasar uno específico por prop o usar el de env)
- * @param format 'auto', 'fluid', 'rectangle', 'vertical'
- * @param responsive Si debe ser responsivo (true/false)
- */
 interface AdSenseBannerProps {
   slot?: string;
   format?: 'auto' | 'fluid' | 'rectangle' | 'vertical';
@@ -23,28 +18,38 @@ export default function AdSenseBanner({
   style = { display: 'block' }
 }: AdSenseBannerProps) {
 
+  // Efecto para inicializar el anuncio de AdSense
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (err) {
-      console.warn("AdSense error:", err);
-    }
+    // Solo cargamos si estamos en producción y tenemos window.adsbygoogle
+    const pushAd = () => {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (err) {
+        console.warn("AdSense error:", err);
+      }
+    };
+
+    // Pequeño delay para asegurar que el DOM esté listo y evitar "Inventory: No Content"
+    const timer = setTimeout(pushAd, 500);
+    return () => clearTimeout(timer);
   }, [slot]);
 
-  // Lógica de estilos dinámica basada en el formato y el tamaño de pantalla
   const isVertical = format === 'vertical';
 
   return (
     <div 
-      className={`adsense-container ${isVertical ? 'adsense-sidebar' : 'adsense-horizontal'}`} 
+      className={`adsense-wrapper ${isVertical ? 'adsense-sidebar' : 'adsense-horizontal'}`} 
       style={{
-        margin: isVertical ? '0' : '10px 0',
-        overflow: 'hidden',
+        margin: '20px auto',
         textAlign: 'center',
-        // Si es vertical ocultamos si no hay espacio (esto se reforzará en CSS)
+        background: 'rgba(255, 255, 255, 0.03)', // Placeholder sutil
+        overflow: 'hidden',
+        // PREVENCIÓN DE CLS: Reservamos espacio mínimo según el formato
+        minHeight: isVertical ? '600px' : (format === 'fluid' ? '250px' : '90px'),
         width: isVertical ? '160px' : '100%',
-        minHeight: isVertical ? '600px' : '90px',
-        maxHeight: !isVertical ? '200px' : 'none', // Limitamos altura en horizontal para no molestar
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
       }}
     >
       <ins

@@ -27,6 +27,25 @@ function getAllProductImages(products: any[]): string[] {
 export default function CategoryGrid({ categories }: TypeCategoryGrid) {
   const [categoriesWithProducts, setCategoriesWithProducts] = useState<CategoryWithProducts[]>(categories);
   const [isLoading, setIsLoading] = useState(true);
+  const [columns, setColumns] = useState(2);
+
+  // Detectar número de columnas basado en los breakpoints de CategoryGrid.css
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width >= 1200) {
+        setColumns(4);
+      } else if (width >= 768) {
+        setColumns(3);
+      } else {
+        setColumns(2);
+      }
+    };
+
+    handleResize(); // Ejecutar inicialmente
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const loadCategoryImages = async () => {
@@ -35,11 +54,7 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
         const updatedCategories = await Promise.all(
           categories.map(async (category) => {
             const products = (await getProductsByCategory(category.id)) || [];
-            console.log(`[${category.id}] Productos encontrados: ${products.length}`);
-
             const allImages = getAllProductImages(products);
-            console.log(`[${category.id}] Total imágenes: ${allImages.length}`);
-
             return {
               ...category,
               categoryImages: allImages,
@@ -62,7 +77,9 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
     return <LoadingScreen text="Cargando categorías..." minHeight="auto" padding="40px 0" />;
   }
 
-  const AD_FREQUENCY = Number(import.meta.env.VITE_ADS_FREQUENCY) || 4;
+  // Frecuencia dinámica: 2 filas completas
+  // EXCEPCIÓN: Si hay 1 sola columna (mobile), cada 4 productos (pedido del usuario)
+  const currentAdFrequency = columns === 1 ? 4 : columns * 2;
 
   return (
     <>
@@ -75,7 +92,8 @@ export default function CategoryGrid({ categories }: TypeCategoryGrid) {
               slug={category.id}
               images={category.categoryImages || []}
             />
-            {(index + 1) % AD_FREQUENCY === 0 && (
+            {/* Inyectamos anuncio dinámico cada 2 filas exactas */}
+            {(index + 1) % currentAdFrequency === 0 && (
               <aside className="grid-ad-break" style={{ gridColumn: '1 / -1' }}>
                 <AdSenseBanner format="fluid" />
               </aside>

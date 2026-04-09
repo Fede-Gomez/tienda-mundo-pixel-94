@@ -84,11 +84,12 @@ html {
 }
 
 .main-content {
-  flex: 1;
-  max-width: 1200px;
+  max-width: 1440px; /* Sincronizado con #root en App.css */
   width: 100%;
+  margin: 0 auto; /* CRÍTICO: Centra el contenido horizontalmente */
   position: relative;
   overflow-x: hidden;
+  padding: 0 15px; /* Espaciado de seguridad para que el contenido no toque los bordes */
 }
 
 .sidebar-ad {

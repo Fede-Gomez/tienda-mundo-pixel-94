@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import useSWR from "swr";
 import { categories } from "../data/categories";
 import "./CategoryPage.css";
@@ -8,23 +8,45 @@ import ProductCard from "../components/product/ProductCard";
 import Navbar from "../components/navbar/Navbar";
 import FilterDigimon from "../helper/FilterDigimon";
 import FilterPokemon from "../helper/FilterPokemon";
+import Footer from "../components/footer/Footer";
 
 import { getProductsByCategory } from "../services/productService";
 import { analyticsService } from "../services/analyticsService";
 import AdSenseBanner from "../components/common/AdSenseBanner";
 import LoadingScreen from "../components/common/LoadingScreen";
+import Header from "../components/common/Header";
 
 export default function CategoryPage() {
   const { id } = useParams();
   const category = categories.find((c: any) => c.id === id);
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [columns, setColumns] = useState(1);
+
+  // Detectar número de columnas en tiempo real para inyectar publicidad cada 2 filas exactas
+  useEffect(() => {
+    if (!gridRef.current) return;
+
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const width = entry.contentRect.width;
+        // Basado en CSS: minmax(280px, 1fr) y gap: 20px
+        const minWidthWithGap = 280 + 20;
+        const currentCols = Math.floor((width + 20) / minWidthWithGap) || 1;
+        setColumns(currentCols);
+      }
+    });
+
+    observer.observe(gridRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   // Actualizar Meta Tags, Título y Analytics dinámicamente
   useEffect(() => {
     if (category && id) {
-      document.title = `${category.name} | Mundo Pixel 94`;
+      document.title = `Llaveros e Imanes de ${category.name} en Pixel Art | Mundo Pixel 94`;
       const metaDescription = document.querySelector('meta[name="description"]');
-      const content = `Explora nuestra colección de ${category.name} en Pixel Art. Llaveros, imanes y figuras coleccionables de alta calidad en Mundo Pixel 94.`;
-      
+      const content = `Explora nuestra colección de ${category.name} en Pixel Art. Llaveros, imanes y figuras coleccionables de alta calidad, hechas a mano por Mundo Pixel 94.`;
+
       if (metaDescription) {
         metaDescription.setAttribute("content", content);
       } else {
@@ -55,13 +77,16 @@ export default function CategoryPage() {
   if (!category) return <p className="category-not-found">Categoría no encontrada</p>;
 
   const isLoading = isValidating && !products;
-  const AD_FREQUENCY = Number(import.meta.env.VITE_ADS_FREQUENCY) || 4;
+  // Calculamos la frecuencia: 2 filas completas
+  // EXCEPCIÓN: Si hay 1 sola columna (mobile), cada 4 productos (pedido del usuario)
+  const currentAdFrequency = columns === 1 ? 4 : columns * 2;
 
   return (
     <section className="category-page">
+      <Header />
       <Navbar />
-      <h1 className="category-title">{category.name}</h1>
-      
+      <h1 className="category-title">{category.name} en Pixel Art</h1>
+
       {isLoading ? (
         <LoadingScreen text="Cargando inventario..." />
       ) : (
@@ -72,18 +97,13 @@ export default function CategoryPage() {
           {id === "pokemon" && (
             <FilterPokemon products={products || []} setFilteredProducts={setFilteredProducts} />
           )}
-          
-          {/* Google AdSense - Banner Superior */}
-          <aside className="ad-container top-ad">
-            <AdSenseBanner />
-          </aside>
-          
-          <div className="product-grid">
+
+          <div className="product-grid" ref={gridRef}>
             {(filteredProducts.length > 0 ? filteredProducts : (products || [])).map((p: TypeProductCard, index: number) => (
               <div key={p.id} style={{ display: 'contents' }}>
                 <ProductCard {...p} />
-                {/* Inyectamos anuncio dinámico cada N productos */}
-                {(index + 1) % AD_FREQUENCY === 0 && (
+                {/* Inyectamos anuncio dinámico cada 2 filas exactas */}
+                {(index + 1) % currentAdFrequency === 0 && (
                   <aside className="ad-container grid-ad" style={{ gridColumn: '1 / -1' }}>
                     <AdSenseBanner format="fluid" />
                   </aside>
@@ -92,20 +112,22 @@ export default function CategoryPage() {
             ))}
           </div>
 
-          {/* Google AdSense - Banner Inferior */}
-          <aside className="ad-container bottom-ad">
-            <AdSenseBanner />
-          </aside>
-
           <footer className="category-info-footer">
             <p className="category-description-box">
-              Estás en la sección de <strong>{category.name}</strong>. Aquí encontrarás todos nuestros productos 
-              disponibles en pixel art: llaveros, imanes y figuras decorativas inspiradas en este universo. 
-              Cada pieza está hecha con dedicación para capturar la esencia retro y la magia de los videojuegos clásicos.
+              Estás en la sección de <strong>{category.name}</strong>. Aquí encontrarás todos nuestros productos
+              disponibles en pixel art: llaveros, imanes y figuras decorativas inspiradas en este universo.
+              Cada pieza está hecha 100% a mano con dedicación para capturar la esencia retro y la magia de los videojuegos clásicos.
+              Realizamos envíos a todo el país desde Argentina.
             </p>
+
+            {/* Google AdSense - Banner Inferior para no molestar arriba */}
+            <aside className="ad-container bottom-ad" style={{ marginTop: '30px' }}>
+              <AdSenseBanner />
+            </aside>
           </footer>
         </main>
       )}
+      <Footer />
     </section>
   );
 }

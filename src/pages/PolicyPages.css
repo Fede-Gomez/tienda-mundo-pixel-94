@@ -1,0 +1,84 @@
+.policy-page {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+.policy-header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.policy-header h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  color: #00ffcc;
+  text-shadow: 2px 2px #000;
+}
+
+.policy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.retro-manual-small {
+  background: #111;
+  border: 2px solid #00ffcc;
+  padding: 2rem;
+  box-shadow: 4px 4px 0px #004d40;
+}
+
+.retro-manual-small section {
+  margin-bottom: 2rem;
+}
+
+.retro-manual-small h2 {
+  font-size: 1.1rem;
+  color: #ff00ff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.retro-manual-small p {
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 0.8rem;
+}
+
+.contact-button-retro {
+  background: #00ffcc;
+  color: #000;
+  border: none;
+  padding: 15px 30px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #004d40;
+  transition: all 0.2s;
+  margin-top: 20px;
+}
+
+.contact-button-retro:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #004d40;
+}
+
+.contact-button-retro:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #004d40;
+}
+
+@media (max-width: 600px) {
+  .policy-header h1 {
+    font-size: 1rem;
+  }
+  .retro-manual-small {
+    padding: 1rem;
+  }
+  .contact-button-retro {
+    font-size: 0.6rem;
+    padding: 10px 20px;
+  }
+}

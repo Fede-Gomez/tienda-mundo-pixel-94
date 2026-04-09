@@ -1,0 +1,80 @@
+.about-us {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+.about-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.about-header h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  color: #00ffcc;
+  text-shadow: 3px 3px #000;
+  margin: 0;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.retro-manual {
+  background: #1e1e1e;
+  border: 4px solid #fff;
+  padding: 2.5rem;
+  box-shadow: 8px 8px 0px #333;
+  position: relative;
+}
+
+.about-section {
+  margin-bottom: 2rem;
+}
+
+.about-section:last-child {
+  margin-bottom: 0;
+}
+
+.about-section h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.2rem;
+  color: #ff00ff;
+  border-bottom: 2px solid #ff00ff;
+  padding-bottom: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.about-section p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.about-section strong {
+  color: #00ffcc;
+}
+
+@media (max-width: 600px) {
+  .about-header h1 {
+    font-size: 1.2rem;
+  }
+  
+  .retro-manual {
+    padding: 1.5rem;
+  }
+  
+  .about-section h2 {
+    font-size: 0.9rem;
+  }
+
+  .about-section p {
+    font-size: 0.95rem;
+  }
+}

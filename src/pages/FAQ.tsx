@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar/Navbar';
 import './FAQ.css';
 import { analyticsService } from '../services/analyticsService';
-import AdSenseBanner from '../components/common/AdSenseBanner';
+import Footer from '../components/footer/Footer';
+import Header from '../components/common/Header';
 
 const FAQ: React.FC = () => {
-  const AD_FREQUENCY = Number(import.meta.env.VITE_ADS_FREQUENCY) || 4;
+  // Nota: Hemos eliminado la publicidad de esta página para cumplir con las políticas 
+  // de "Inventario valioso" de Google AdSense durante la fase de revisión.
 
   useEffect(() => {
     analyticsService.trackViewQuestions();
@@ -97,6 +99,7 @@ const FAQ: React.FC = () => {
 
   return (
     <section className="faq">
+      <Header />
       <Navbar />
       <header className="faq-header">
         <h1>Preguntas Frecuentes</h1>
@@ -113,17 +116,11 @@ const FAQ: React.FC = () => {
                   {openIndex === index && <div className="faq-answer">{faq.answer}</div>}
                 </article>
               </li>
-              
-              {/* Inyectamos anuncio dinámico en la FAQ */}
-              {(index + 1) % AD_FREQUENCY === 0 && (
-                <aside className="faq-ad-item" style={{ margin: '15px 0' }}>
-                   <AdSenseBanner format="fluid" />
-                </aside>
-              )}
             </React.Fragment>
           ))}
         </ul>
       </main>
+      <Footer />
     </section>
   );
 };

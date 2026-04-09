@@ -38,25 +38,18 @@
 /* Contenedor de los productos */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Una columna por defecto */
-  gap: 16px; /* Espaciado entre las tarjetas */
+  /* CAMBIO CLAVE: Usa auto-fill para que las columnas se ajusten al espacio real disponible */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+  gap: 20px; 
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-@media (min-width: 600px) {
+/* Ajustes finos para centrar la última fila si hay pocos elementos */
+@media (max-width: 600px) {
   .product-grid {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas para tablets pequeñas */
-  }
-}
-
-@media (min-width: 900px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas para tablets grandes */
-  }
-}
-
-@media (min-width: 1200px) {
-  .product-grid {
-    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas para pantallas grandes */
+    grid-template-columns: 1fr;
   }
 }
 
